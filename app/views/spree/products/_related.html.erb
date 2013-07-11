@@ -1,0 +1,7 @@
+<% if @product.relations.any? %>
+	<h6 class="product-section-title"><%= Spree.t('related_products') %></h6>
+	<% @product.relations.each do |relation| %>
+		<%= link_to relation.related_to.name, relation.related_to %> <br />
+		<%= product_image(relation.related_to, :itemprop => "image", width: 50) %> <br />
+	<% end %>
+<% end %>

@@ -1,0 +1,33 @@
+<% if @product.relations.any? %>
+	<h6 class="product-section-title">
+    <%= Spree.t('related_products') %>
+    <small><%= Spree.t 'save_when_you_buy_together' %></small>
+  </h6>
+  <div id="related-products-carousel" class="<%= "carousel" if @product.relations.count > 3 %> slide">
+    <div class="carousel-inner">
+      <% @product.relations.each_slice(3).with_index do |slide, key| %>
+        <div class="item<%= " active " unless key > 0 %>">
+          <% slide.each do |relation| %>
+            <div class="span4 related-product">
+              <div class="row-fluid">
+                <div class="span6"><%= product_image(relation.related_to, :itemprop => "image") %></div> 
+                <div class="span6">
+                  <div class="product-title"><%= link_to relation.related_to.name, relation.related_to %></div>
+                  <div class="price"><%= display_discounted_price relation %></div>
+                  <% if relation.discount_amount > 0 %>
+                    <div class="discount"><%= Spree.t 'save' %> <%= display_discount relation %></div>
+                  <% end -%>
+                </div> 
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+    <% if @product.relations.count > 3 %>
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    <% end -%>  
+  </div>
+<% end %>

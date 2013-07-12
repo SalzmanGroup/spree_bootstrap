@@ -1,0 +1,14 @@
+#related-products-carousel {
+  .related-product {
+  }
+  .carousel-control { 
+    &.left {
+      right: 100%;
+      left: auto;
+    }
+    &.right {
+      right: auto;
+      left: 100%;
+    }
+  }
+}

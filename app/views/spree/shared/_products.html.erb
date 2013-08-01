@@ -8,20 +8,65 @@
   <h6 class="search-results-title"><%= Spree.t(:search_results, :keywords => h(params[:keywords])) %></h6>
 <% end %>
 
+
+
+
+
+
+
+
 <% if products.any? %>
-<ul id="products" class="inline product-listing" data-hook>
-  <% products.each do |product| %>
-    <li id="product_<%= product.id %>" class="span3 <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
-      <div class="product-image">
+
+<% products.each_slice(3) do |products_3| %>
+
+
+<div class="row-fluid" data-hook>
+  <ul class="thumbnails products-list" data-hook>
+  <% products_3.each do |product| %>
+
+    <li id="product_<%= product.id %>" class="span4" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+     
+      <div class="thumbnail">
+        <div class="area-image same-height-left" style="height: 249px;">
+
         <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
+        <div class="caption">
+      <p>DYNAMIC CAPTIONS LATER</p>
+        </div>
+        
+        </div>
+
+<h3>
+  <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
+</h3>
+<ul class="star-rating">
+                      <li><a href="#" title="Rate this 1 star out of 5" class="one-star">1</a></li>
+                      <li><a href="#" title="Rate this 2 stars out of 5" class="two-stars">2</a></li>
+                      <li><a href="#" title="Rate this 3 stars out of 5" class="three-stars">3</a></li>
+                      <li class="active"><a href="#" title="Rate this 4 stars out of 5" class="four-stars">4</a></li>
+                      <li><a href="#" title="Rate this 5 stars out of 5" class="five-stars">5</a></li>
+                    </ul>
+
+        <div class="area-cart">
+                      <span class="price" itemprop="price"><%= display_price(product) %></span>
+                      <a href="#" class="btn">ADD TO CART</a>
+                    </div>
       </div>
-      <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
-      <span class="price selling" itemprop="price"><%= display_price(product) %></span>
+      
+      
     </li>
   <% end %>
+
+
+
+
+
+
   <% reset_cycle("classes") %>
 </ul>
+</div>
 <% end %>
+<%end %>
 
 <% if paginated_products.respond_to?(:num_pages) %>
   <%= paginate paginated_products %>

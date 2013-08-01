@@ -1,0 +1,20 @@
+.navbar-inverse .navbar-inner,
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover{
+	filter:none;
+}
+@media \0screen{
+	body{min-width:990px;}
+	.thumbnail:before,
+	.thumbnail:after{
+		height:0 !important;
+		width:0 !important;
+	}
+	.products-list .thumbnail .area-cart .btn,
+	.cart-form .btn,
+	.box-price .btn{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f6', endColorstr='#abaeb0',GradientType=0 );}
+	.products-list .thumbnail .area-cart .btn:hover,
+	.cart-form .btn:hover
+	.box-price .btn:hover{filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abaeb0', endColorstr='#f5f5f6',GradientType=0 );}
+}
+@media print{body{min-width:1px;}}

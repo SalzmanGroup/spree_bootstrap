@@ -21,6 +21,25 @@
 
 <% else %>
 
+<div class="row-fluid sort-panel">
+              <div class="span6">
+                <form action="#" class="sort-form">
+                  <label for="sort">SORT BY:</label>
+                  <select id="sort">
+                    <option>Best Selling</option>
+                    <option>Best Selling</option>
+                  </select>
+                </form>
+              </div>
+              <div class="span6">
+                <ul class="product-category">
+                  <li><a href="#">DRIP</a></li>
+                  <li><a href="#">ALL COFFEE</a></li>
+                  <li><a href="#">ESPRESSO</a></li>
+                </ul>
+              </div>
+            </div>
+
   <div data-hook="homepage_products">
     <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
   </div>

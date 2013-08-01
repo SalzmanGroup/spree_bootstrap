@@ -94,7 +94,7 @@ figure{
 	float:right;
 	margin:-1px 7px 1px 6px;
 	padding:0;
-	background:url(/images/bg-sprite.png) no-repeat 0 -70px;
+	background:url(/assets/bg-sprite.png) no-repeat 0 -70px;
 	border-radius:0;
 	border:none;
 	width:15px;
@@ -175,7 +175,7 @@ figure{
 	position:absolute;
 	top:9px;
 	left:32px;
-	background:url(/images/bg-sprite.png) no-repeat -180px 0;
+	background:url(/assets/bg-sprite.png) no-repeat -180px 0;
 	width:43px;
 	height:40px;
 	content:"";
@@ -246,7 +246,7 @@ figure{
 	right:18px;
 	overflow:hidden;
 	padding:24px 40px 0 17px;
-	background:url(/images/bg-sprite.png) no-repeat 0 -120px;
+	background:url(/assets/bg-sprite.png) no-repeat 0 -120px;
 	width:126px;
 	height:54px;
 	font:11px/14px Arial, Helvetica, sans-serif;
@@ -287,7 +287,7 @@ figure{
 }
 .carousel a.thumbnail .price{
 	position:absolute;
-	background:url(/images/bg-price.png);
+	background:url(/assets/bg-price.png);
 	top:50%;
 	right:12.3%;
 	margin:-55px 0 0;
@@ -373,7 +373,7 @@ figure{
 	bottom:29px;
 	margin:0;
 	padding:8px 29px 7px;
-	background:url(/images/bg-thumbnail.png);
+	background:url(/assets/bg-thumbnail.png);
 	font:bold 37px/40px Arial, Helvetica, sans-serif;
 	color:#575756;
 	text-transform:uppercase;
@@ -480,7 +480,7 @@ figure{
 	right:0;
 	top:-9999px;
 	padding:3px 11px 5px;
-	background:url(/images/bg-area-image.png);
+	background:url(/assets/bg-area-image.png);
 	font-size:11px;
 	line-height:15px;
 	color:#000;
@@ -609,7 +609,7 @@ figure{
 .star-rating{
 	position:relative;
 	margin:0;
-	background:url(/images/bg-stars.png) repeat-x;
+	background:url(/assets/bg-stars.png) repeat-x;
 	width:70px;
 	height:13px;
 	list-style:none;
@@ -636,7 +636,7 @@ figure{
 .star-rating li.setted a{
 	z-index:1;
 	left:0;
-	background:url(/images/bg-stars.png) 0 -20px;
+	background:url(/assets/bg-stars.png) 0 -20px;
 }
 .sidebar .star-rating li a:hover,
 .sidebar .star-rating li.active a,
@@ -763,7 +763,7 @@ figure{
 .block-product .star-rating,
 .block-reviews .star-rating{
 	margin:0 0 13px;
-	background:url(/images/bg-stars-product.png) repeat-x;
+	background:url(/assets/bg-stars-product.png) repeat-x;
 	width:90px;
 	height:15px;
 }
@@ -778,7 +778,7 @@ figure{
 .block-reviews .star-rating li a:hover,
 .block-reviews .star-rating li.active a,
 .block-reviews .star-rating li.setted a{
-	background:url(/images/bg-stars-product.png) 0 100%;
+	background:url(/assets/bg-stars-product.png) 0 100%;
 	left:0;
 }
 .block-product .star-rating a.one-star,
@@ -1017,7 +1017,7 @@ figure{
 }
 .products-carousel .star-rating{
 	margin:0 0 8px;
-	background:url(/images/bg-stars-carousel.png) repeat-x;
+	background:url(/assets/bg-stars-carousel.png) repeat-x;
 	width:60px;
 	height:11px;
 }
@@ -1028,7 +1028,7 @@ figure{
 .products-carousel .star-rating li a:hover,
 .products-carousel .star-rating li.active a,
 .products-carousel .star-rating li.setted a{
-	background:url(/images/bg-stars-carousel.png) 0 100%;
+	background:url(/assets/bg-stars-carousel.png) 0 100%;
 	left:0;
 }
 .products-carousel .star-rating a.one-star{left:0;}
@@ -1058,7 +1058,7 @@ figure{
 	margin:-22px 0 0;
 	border-radius:0;
 	opacity:1 !important;
-	background:url(/images/bg-sprite.png) no-repeat -60px 0;
+	background:url(/assets/bg-sprite.png) no-repeat -60px 0;
 	width:20px;
 	height:38px;
 	font-size:0;
@@ -1087,7 +1087,7 @@ figure{
 }
 .box-user .star-rating{
 	margin:0 0 42px;
-	background:url(/images/bg-stars-user.png) repeat-x;
+	background:url(/assets/bg-stars-user.png) repeat-x;
 	width:140px;
 	height:24px;
 }
@@ -1098,7 +1098,7 @@ figure{
 .box-user .star-rating li a:hover,
 .box-user .star-rating li.active a,
 .box-user .star-rating li.setted a{
-	background:url(/images/bg-stars-user.png) 0 100%;
+	background:url(/assets/bg-stars-user.png) 0 100%;
 	left:0;
 }
 .box-user .star-rating a.one-star{left:0;}
@@ -1250,7 +1250,7 @@ figure{
 	top:0;
 	left:50%;
 	margin:0 0 0 -9px;
-	background:url(/images/bg-sprite.png) no-repeat -125px 0;
+	background:url(/assets/bg-sprite.png) no-repeat -125px 0;
 	width:17px;
 	height:21px;
 	content:"";
@@ -1379,7 +1379,7 @@ figure{
 	position:absolute;
 	top:-10px;
 	left:0;
-	background:url(/images/bg-sprite.png) no-repeat -9999px -9999px;
+	background:url(/assets/bg-sprite.png) no-repeat -9999px -9999px;
 	height:36px;
 	content:"";
 }
@@ -1452,7 +1452,7 @@ figure{
 	position:absolute;
 	top:0;
 	right:0;
-	background:url(/images/bg-sprite.png) no-repeat -206px -70px;
+	background:url(/assets/bg-sprite.png) no-repeat -206px -70px;
 	width:17px;
 	height:17px;
 }

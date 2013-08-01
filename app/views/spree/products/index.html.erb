@@ -1,46 +1,46 @@
 <% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <% if "spree/products" == params[:controller] && @taxon %>
-      <%= render :partial => 'spree/shared/filters' %>
-    <% else %>
-      <%= render :partial => 'spree/shared/taxonomies' %>
-    <% end %>
-  </div>
+<div data-hook="homepage_sidebar_navigation">
+  <% if "spree/products" == params[:controller] && @taxon %>
+  <%= render :partial => 'spree/shared/filters' %>
+  <% else %>
+  <%= render :partial => 'spree/shared/taxonomies' %>
+  <% end %>
+</div>
 <% end %>
 
 
 <% if params[:keywords] %>
 
-  <div data-hook="search_results">
-    <% if @products.empty? %>
-      <h6 class="search-results-title"><%= Spree.t(:no_products_found) %></h6>
-    <% else %>
-      <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
-    <% end %>
-  </div>
+<div data-hook="search_results">
+  <% if @products.empty? %>
+  <h6 class="search-results-title"><%= Spree.t(:no_products_found) %></h6>
+  <% else %>
+  <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
+  <% end %>
+</div>
 
 <% else %>
 
 <div class="row-fluid sort-panel">
-              <div class="span6">
-                <form action="#" class="sort-form">
-                  <label for="sort">SORT BY:</label>
-                  <select id="sort">
-                    <option>Best Selling</option>
-                    <option>Best Selling</option>
-                  </select>
-                </form>
-              </div>
-              <div class="span6">
-                <ul class="product-category">
-                  <li><a href="#">DRIP</a></li>
-                  <li><a href="#">ALL COFFEE</a></li>
-                  <li><a href="#">ESPRESSO</a></li>
-                </ul>
-              </div>
-            </div>
+  <div class="span6">
+    <form class="sort-form" action="#">
+      <label for="sort">SORT BY:</label>
+      <span class="jcf-unselectable select-area" style="width: 134px;"><span class="select-holder"><a class="select-opener"></a><span class="center jcf-unselectable">Best Selling</span></span></span><select id="sort" class="jcf-hidden">
+      <option>Best Selling</option>
+      <option>Best Selling</option>
+    </select>
+  </form>
+</div>
+<div class="span6">
+  <ul class="product-category">
+    <li>DRIP</li>
+    <li><a href="#">ALL COFFEE</a></li>
+    <li><a href="#">ESPRESSO</a></li>
+  </ul>
+</div>
+</div>
 
-  <div data-hook="homepage_products" class="row-fluid">
-    <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
-  </div>
+<div data-hook="homepage_products" class="row-fluid">
+  <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
+</div>
 <% end %>

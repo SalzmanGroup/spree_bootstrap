@@ -1,19 +1,39 @@
-<h1 class="taxon-title"><%= @taxon.name %></h1>
+
 
 <% content_for :sidebar do %>
-  <div data-hook="taxon_sidebar_navigation">
-    <%= render :partial => 'spree/shared/taxonomies' %>
-    <%= render :partial => 'spree/shared/filters' if @taxon.children.empty? %>
-  </div>
+<div data-hook="taxon_sidebar_navigation">
+	<%= render :partial => 'spree/shared/taxonomies' %>
+	<%= render :partial => 'spree/shared/filters' if @taxon.children.empty? %>
+</div>
 <% end %>
 
+<div class="row-fluid sort-panel">
+	<div class="span6">
+		<form class="sort-form" action="#">
+			<label for="sort">SORT BY:</label>
+			<span class="jcf-unselectable select-area" style="width: 134px;"><span class="select-holder"><a class="select-opener"></a><span class="center jcf-unselectable">Best Selling</span></span></span><select id="sort" class="jcf-hidden">
+			<option>Best Selling</option>
+			<option>Best Selling</option>
+		</select>
+	</form>
+</div>
+<div class="span6">
+	<ul class="product-category">
+		<li><a href="#">DRIP</a></li>
+		<li><a href="#">ALL COFFEE</a></li>
+		<li><a href="#">ESPRESSO</a></li>
+	</ul>
+</div>
+</div>
+
+
 <div data-hook="taxon_products">
-  <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
+	<%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
 </div>
 
 <% unless params[:keywords].present? %>
-  <div data-hook="taxon_children">
-    <%= render :partial => 'taxon', :collection => @taxon.children %>
-  </div>
-<% end %>
+<div data-hook="taxon_children">
+	<%= render :partial => 'taxon', :collection => @taxon.children %>
+</div>
 
+<% end %>

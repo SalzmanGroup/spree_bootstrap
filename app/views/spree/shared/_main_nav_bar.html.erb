@@ -1,59 +1,45 @@
 <div class="navbar navbar-inverse">
-					<div class="navbar-inner">
-						<div class="container-fluid">
-							<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							
-							<a class="brand" href="<%= spree.root_path %>"> <img height="61" width="170" alt="Lavazza Store" src="images/logo.png">
-							</a>
-							
-							<!--<a class="brand" href="#"><img height="61" width="170" alt="Lavazza Store" src="images/logo.png"></a>-->
-							<div class="nav-collapse collapse">
-								<ul class="nav">
-									<li class="active">
-										<a href="/products">SHOP PRODUCTS</a>
-										<div class="drop-holder">
-											<ul class="drop">
-												<li class="dropdown active">
-													<a data-toggle="dropdown" class="dropdown-toggle" href="#">COFFEE</a>
-													<ul class="dropdown-menu">
-														<li><a href="#">Drip</a></li>
-														<li><a href="#">Espresso</a></li>
-													</ul>
-												</li>
-												<li><a href="#">EQUIPMENT</a></li>
-												<li><a href="#">DRINKWARE</a></li>
-												<li><a href="#">GIFTS/EXTRAS</a></li>
-											</ul>
-										</div>
-									</li>
-									<li><a href="#">CONTACT US</a></li>
-									<li><a href="#">SIGN IN</a></li>
-								<li><a class="cart-link" href="/cart">SHOPPING CART</a></li>
-								</ul>
-							</div>
-							<div class="area-text">
-								<p><strong>FREE SHIPPING!</strong> Purchase $50 or more</p>
-							</div>
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<a class="brand" href="<%= spree.root_path %>"> <img height="61" width="170" alt="Lavazza Store" src="/images/logo.png">
+			</a>
+
+
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li class="active">
+						<a href="/products">SHOP PRODUCTS</a>
+						<div class="drop-holder">
+							<ul class="drop">
+
+								<li class="dropdown active">
+									<a data-toggle="dropdown" class="dropdown-toggle" href="/t/categories/coffee">COFFEE</a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Drip</a></li>
+										<li><a href="#">Espresso</a></li>
+									</ul>
+								</li>
+								<li><a href="/t/categories/equipment">EQUIPMENT</a></li>
+								<li><a href="/t/categories/drinkware">DRINKWARE</a></li>
+								<li><a href="/t/categories/gifts-extras">GIFTS/EXTRAS</a></li>
+
+							</ul>
 						</div>
-					</div>
-				</div>
-
-
-
-
-
-
-
-
-<!--
-<nav class="row-fluid">
-  <ul id="main-nav-bar" class="inline" data-hook>
-    <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
-    <li id="link-to-cart" data-hook><%= link_to_cart %></li>
-  </ul>
-</nav>
--->
+					</li>
+					<li><a href="#">CONTACT US</a></li>
+					<li><a href="#">SIGN IN</a></li>
+					<li><a class="cart-link" href="/cart">SHOPPING CART</a></li>
+				</ul>
+			</div>
+			<div class="area-text">
+				<p><strong>FREE SHIPPING!</strong> Purchase $50 or more</p>
+			</div>
+		</div>
+	</div>
+</div>

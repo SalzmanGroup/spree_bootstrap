@@ -9,18 +9,18 @@
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
 
-    <div class="container row">
+    <div id="wrapper">
 
       <%= render :partial => 'spree/shared/header' %>
 
-      <div id="wrapper" class="row-fluid" data-hook>
+      <div id="main" class="container-fluid" data-hook>
 
         <%= breadcrumbs(@taxon) %>
 
         <div class='row-fluid'>
           <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
 
-          <div id="content" class="span<%= !content_for?(:sidebar) ? "12" : "8" %>" data-hook>
+          <div id="content" class="span<%= !content_for?(:sidebar) ? "12" : "9" %>" data-hook>
             <%= flash_messages %>
             <%= yield %>
           </div>

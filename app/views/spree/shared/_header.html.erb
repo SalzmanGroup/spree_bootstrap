@@ -1,5 +1,20 @@
-<header id="header" class="row-fluid" data-hook>
-  <figure id="logo" class="span4" data-hook><%= logo %></figure>
-  <%= render :partial => 'spree/shared/nav_bar' %>
+<!--removed class fluid-row from header -->
+<header id="header"  data-hook>
+
+<!--add user panel-->
+<div class="users-panel">
+					<div class="container-fluid">
+						<form class="form-search">
+							<label for="search">MAIN SITE</label>
+							<input id="search" class="search-query" placeholder="Search..." type="text">
+							<button type="submit" class="btn">Search</button>
+						</form>
+					</div>
+				</div>
+				
+<!--end user bar -->
+
+ <!-- <figure id="logo" class="span4" data-hook><%= logo %></figure>-->
+
   <%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
 </header>

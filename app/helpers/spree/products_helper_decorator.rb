@@ -7,10 +7,8 @@ module Spree
       end
     end
 
-    def subcategory_tree category
-      if category.children.any?
-
-      end
-    end
+    def get_reviews
+      Spree::Review.last(5)
+    end 
   end
 end

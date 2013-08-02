@@ -1,15 +1,27 @@
 <% stars = product.stars %>
 <% reviews_count = product.reviews_count %>
-<div class="ratings">
-  <p><%= Spree.t('average_customer_rating') %>: </p>
-  <p class="ratings-stars">
-    <span title="<%= txt_stars(stars) %>">
-      <%= render :partial => "spree/reviews/stars", :locals => {:stars => stars} %>
-    </span>
-  </p>
-  <p class="ratings-basedupon">(<%= Spree.t('based_upon_review_count', :count => reviews_count) %>)</p>
-  <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-    <meta itemprop="ratingValue" content="<%= stars %>" />
-    <meta itemprop="reviewCount" content="<%= reviews_count %>" />
-  </div>
+<div class="ratings box-user">
+  <dl class="dl-horizontal">
+    <%= Spree.t('Average_Rating') %> :  <span>( <%= txt_stars(stars) %> )</span> 
+ 
+
+   
+      <span title="<%= txt_stars(stars) %>">
+        
+        <%= render :partial => "spree/reviews/stars", :locals => {:stars => stars} %>
+     
+      </span>
+   </dl>
+
+<br/>
+
+ 
+
+<% if !Spree::Reviews::Config[:require_login] || spree_current_user %>
+<%= link_to Spree.t('write_a_review'), new_product_review_path(@product), :class => "button",
+:rel => "nofollow,noindex" %>
+<% end %>
+
 </div>
+
+

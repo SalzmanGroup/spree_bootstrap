@@ -772,12 +772,27 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	margin:0 0 13px;
 	background:url(/assets/bg-stars-product.png) repeat-x;
 	width:90px;
-	height:15px;
+	height:22px;
+	background-position:0 5px;
+}
+
+.reviews-rating{
+display:block;
+margin-bottom:15px;
+}
+
+dt.rating{
+	text-transform:capitalize;
+}
+
+
+div.star-rating{
+	width:17px !important;
 }
 .block-product .star-rating a,
 .block-reviews .star-rating a{
 	width:18px;
-	height:15px;
+	height:20px;
 }
 .block-product .star-rating li a:hover,
 .block-product .star-rating li.active a,
@@ -1136,6 +1151,8 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	color:#fff;
 	text-decoration:none;
 	vertical-align:top;
+	border:0px;
+	text-transform:uppercase;
 }
 .block-reviews{
 	position:relative;

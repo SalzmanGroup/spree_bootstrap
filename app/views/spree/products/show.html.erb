@@ -1,54 +1,117 @@
+
 <div data-hook="product_show" itemscope itemtype="http://schema.org/Product">
+
+
   <% @body_id = 'product-details' %>
-<artcile class="block-product row-fluid">
-  <div class="columns six alpha" data-hook="product_left_part">
-    <div class="row" data-hook="product_left_part_wrap">
 
-      <div id="product-images" data-hook="product_images">
-        <div id="main-image" data-hook>
-          <%= render :partial => 'image' %>
+  <article class="block-product row-fluid">
+
+    <div class="box-image span4" data-hook="product_left_part">
+
+      <div class="image" data-hook="product_left_part_wrap">
+
+        <div id="product-images" data-hook="product_images">
+          <div id="main-image " data-hook>
+            <%= render :partial => 'image' %>
+          </div>
+
+          <div id="thumbnails" data-hook>
+            <%= render :partial => 'thumbnails' %>
+          </div>
         </div>
-        <div id="thumbnails" data-hook>
-          <%= render :partial => 'thumbnails' %>
-        </div>
-      </div>
 
-      <div data-hook="product_properties">
-        <%= render :partial => 'properties' %>
       </div>
+      <ul>
+        <li><a href="#">[+] View Larger</a></li>
+        <li><a href="#">View Other Images</a></li>
+      </ul>
 
-      <div data-hook="promotions">
-        <%= render :partial => 'promotions' %>
-      </div>
     </div>
-  </div>
-</article>
 
-  <div class="columns ten omega" data-hook="product_right_part">
-    <div class="row" data-hook="product_right_part_wrap">
+
+    <div class="span5">
+
+      <!--breadcrumbs-->
+      <div data-hook="product_taxons">
+        <ul class="breadcrumb" data-hook>
+          <% @product.taxons.each do |taxon| %>
+          <li><%= link_to taxon.name, seo_url(taxon) %> <span> / </span><%= accurate_title %></li>
+          <% end %>
+        </ul>
+      </div>
+
+
+      <!--title-->
+      <h1 class="product-title" itemprop="name"><%= accurate_title %>
+      </h1>
+
+      <!--star rating-->
+      <ul class="star-rating">
+        <li><a href="#" title="Rate this 1 star out of 5" class="one-star">1</a></li>
+        <li><a href="#" title="Rate this 2 stars out of 5" class="two-stars">2</a></li>
+        <li><a href="#" title="Rate this 3 stars out of 5" class="three-stars">3</a></li>
+        <li class="active"><a href="#" title="Rate this 4 stars out of 5" class="four-stars">4</a></li>
+        <li><a href="#" title="Rate this 5 stars out of 5" class="five-stars">5</a></li>
+      </ul>
+
+      <!--review links  NEEDS TO MADE DYNAMIC-->
+
+      <ul class="links-list">
+        <li><a href="#">Read Reviews</a></li>
+        <li><a href="#">Write A Review</a></li>
+      </ul>
 
       <div id="product-description" data-hook="product_description">
-
-        <h1 class="product-title" itemprop="name"><%= accurate_title %></h1>
 
         <div itemprop="description" data-hook="description">
           <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
         </div>
 
-        <div id="cart-form" data-hook="cart_form">
-          <%= render :partial => 'cart_form' %>
+      </div>
+
+      <div data-hook="product_properties">
+        <%= render :partial => 'properties' %>
+      </div> 
+    
+    </div>
+
+
+    <div class="columns ten omega" data-hook="product_right_part">
+      <div class="row" data-hook="product_right_part_wrap">
+
+        <div id="product-description" data-hook="product_description">
+
+
+
+          <div itemprop="description" data-hook="description">
+            <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+          </div>
+
+          <div id="cart-form" data-hook="cart_form">
+            <%= render :partial => 'cart_form' %>
+          </div>
+
         </div>
 
-      </div>
 
-      <div class="row-fluid">
-        <%= render :partial => 'taxons' %>
-      </div>
-
-      <div class="row-fluid" data-hook="related_products">
-        <%= render partial: 'related' %>
       </div>
     </div>
+  </article>
+
+
+<div class="row-fluid" data-hook="related_products">
+
+  <div class="heading">
+    <h3>SUGGESTED PRODUCTS</h3>
   </div>
+  <%= render partial: 'related' %>
+</div>
+
+<div data-hook="promotions">
+  <%= render :partial => 'promotions' %>
+</div>
+
+
+
 
 </div>

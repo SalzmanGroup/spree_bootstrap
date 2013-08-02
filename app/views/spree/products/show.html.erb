@@ -76,22 +76,17 @@
     </div>
 
 
-    <div class="columns ten omega" data-hook="product_right_part">
-      <div class="row" data-hook="product_right_part_wrap">
+    <div class="span3" data-hook="product_right_part">
+      <div class="box-price" data-hook="product_right_part_wrap">
 
-        <div id="product-description" data-hook="product_description">
+        
 
-
-
-          <div itemprop="description" data-hook="description">
-            <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
-          </div>
 
           <div id="cart-form" data-hook="cart_form">
             <%= render :partial => 'cart_form' %>
           </div>
 
-        </div>
+       
 
 
       </div>

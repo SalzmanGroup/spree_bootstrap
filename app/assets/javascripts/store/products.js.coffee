@@ -1,0 +1,4 @@
+$ ->
+  $('.ellipsis').ellipsis( {
+      setTitle: true
+    } )

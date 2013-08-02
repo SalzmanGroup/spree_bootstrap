@@ -6,11 +6,16 @@ module SpreeBootstrap
 
       def add_javascripts
         append_file 'app/assets/javascripts/store/all.js', "//= require store/spree_bootstrap\n"
+        append_file 'app/assets/javascripts/store/all.js', "//= require store/jquery.autoellipsis\n"
+        append_file 'app/assets/javascripts/store/all.js', "//= require store/products\n"
         append_file 'app/assets/javascripts/admin/all.js', "//= require admin/spree_bootstrap\n"
       end
 
       def add_stylesheets
         inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_bootstrap\n", :before => /\*\//, :verbose => true
+        inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/bootstrap\n", :before => /\*\//, :verbose => true
+        inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/ie\n", :before => /\*\//, :verbose => true
+        inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/custom\n", :before => /\*\//, :verbose => true
         inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_bootstrap\n", :before => /\*\//, :verbose => true
       end
 

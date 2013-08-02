@@ -18,16 +18,19 @@
 						<div class="drop-holder">
 							<ul class="drop">
 
-								<li class="dropdown active">
-									<a data-toggle="dropdown" class="dropdown-toggle" href="/t/categories/coffee">COFFEE</a>
-									<ul class="dropdown-menu">
-										<li><a href="#">Drip</a></li>
-										<li><a href="#">Espresso</a></li>
-									</ul>
-								</li>
-								<li><a href="/t/categories/equipment">EQUIPMENT</a></li>
-								<li><a href="/t/categories/drinkware">DRINKWARE</a></li>
-								<li><a href="/t/categories/gifts-extras">GIFTS/EXTRAS</a></li>
+								
+								<% get_categories.each do |category| %>
+									<li class="dropdown" data-trigger="hover">
+										<%= link_to category.name, seo_url(category) %>
+										<% if category.children.any? %>
+											<ul class="dropdown-menu">
+												<% category.children.each do |subcategory| %>
+													<li><%= link_to subcategory.name, seo_url(subcategory) %></li>													
+												<% end -%>
+											</ul>
+										<% end -%>
+									</li>
+								<% end -%>
 
 							</ul>
 						</div>

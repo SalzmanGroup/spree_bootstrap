@@ -209,13 +209,20 @@ figure{
 	text-transform:uppercase;
 	text-decoration:none;
 }
-.navbar .nav .drop>li>a:hover,
+.navbar .nav .drop>li:hover,
 .navbar .nav .drop>li.dropdown.active>a,
 .navbar .nav .drop>li.dropdown.open>a,
 .navbar .nav .drop>li.dropdown.active.open>a{
 	background:#f1f1f3;
 	color:#000;
 }
+
+/* Allow hovering Dropdown Menu */
+ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
+    display: block;    
+}
+
+
 .dropdown-menu{
 	left:auto;
 	margin:-8px 0 0;

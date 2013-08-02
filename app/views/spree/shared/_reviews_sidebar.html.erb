@@ -1,0 +1,18 @@
+<% if get_reviews.any? %>
+  <div>
+    <fieldset>
+      <legend>Latest Reviews</legend>
+      <% get_reviews.each do |review| %>
+        <blockquote>
+          "<%= review.review %>"
+        </blockquote>
+        <p>
+          <%# Stars %>
+        </p>
+        <p>
+          - <%= review.name %>
+        </p>
+      <% end -%>
+    </fieldset>
+  </div>
+<% end -%>

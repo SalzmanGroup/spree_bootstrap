@@ -14,5 +14,16 @@ module Spree
       crumb_list = content_tag(:ul, raw(crumbs.flatten.map{|li| li.mb_chars}.join), class: 'inline')
       content_tag(:nav, crumb_list, id: 'breadcrumbs', class: 'span12')
     end
+
+    def get_categories
+      top_level = Spree::Taxonomy.find_by_name('Categories').try(:taxons).to_a
+      if top_level.length
+        return top_level.first.children
+      end
+    end
+
+    def get_reviews
+      Spree::Review.last(5)
+    end
   end
 end

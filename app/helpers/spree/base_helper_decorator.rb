@@ -17,9 +17,7 @@ module Spree
 
     def get_categories
       top_level = Spree::Taxonomy.find_by_name('Categories').try(:taxons).to_a
-      if top_level.length
-        return top_level.first.children
-      end
+      return top_level.any? ? top_level.first.children : []
     end
 
     def get_reviews

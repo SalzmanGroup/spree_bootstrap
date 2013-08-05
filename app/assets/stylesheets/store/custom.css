@@ -64,7 +64,9 @@ figure{
 	min-height:1px;
 	text-align:right;
 }
-.users-panel .form-search label{
+.users-panel .form-search a{
+	color: white;
+	text-decoration: none;
 	display:inline-block;
 	vertical-align:top;
 	float:none;

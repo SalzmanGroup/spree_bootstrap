@@ -1,27 +1,29 @@
-<%= form_for review, :url => product_reviews_path(product), :html => {:method => :post} do |f| %>
+<div class="span6 reviewForm">
+  <%= form_for review, :url => product_reviews_path(product), :html => {:method => :post} do |f| %>
   <%= render "spree/shared/error_messages", :target => review %>
 
-  <p class="review_rating_field">
-    <%= f.label :rating %> <span class="required">*</span><br />
-    <%= render :partial => "spree/reviews/stars", :locals => {:stars => review.rating, :edit_enabled => true} %>
-  </p>
+  <div class="row-fluid review_rating_field">
+    <span class="span4"><%= f.label :rating %> <span class="required">*</span></span>
+   <span class="span6 reviewFormInput"> <%= render :partial => "spree/reviews/stars", :locals => {:stars => review.rating, :edit_enabled => true} %></span>
+  </div>
 
-  <p class="review_name_field">
-    <%= f.label :name %> <span class="required">*</span><br />
-    <%= f.text_field :name, :maxlength => "255", :size => "50" %>
-  </p>
+  <div class="row-fluid review_name_field">
+    <span class="span4"><%= f.label :name %> <span class="required">*</span></span>
+     <span class="span6 reviewFormInput"><%= f.text_field :name, :maxlength => "255", :size => "50" %></span>
+  </div>
 
-  <p class="review_title_field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title, :maxlength => "255", :size => "50" %>
-  </p>
+   <div class="row-fluid review_title_field">
+    <span class="span4"><%= f.label :title %></span>
+    <span class="span6 reviewFormInput"><%= f.text_field :title, :maxlength => "255", :size => "50" %></span>
+    </div>
   
-  <p class="review_review_field">
-    <%= f.label :review %> <span class="required">*</span><br />
-    <%= f.text_area :review, :wrap => "virtual", :rows => "10", :cols => "50" %>
-  </p>
+  <div class="row-fluid review_review_field">
+    <span class="span4"><%= f.label :review %> <span class="required">*</span></span>
+    <span class="span6 reviewFormInput"><%= f.text_area :review, :wrap => "virtual", :rows => "10", :cols => "50" %></span>
+   </div>
 
   <p class="review_submit">
     <%= f.submit Spree.t(:submit_your_review), :class => "button bg_darkfirst" %>
   </p>
+</div>
 <% end %>

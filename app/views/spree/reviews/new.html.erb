@@ -1,5 +1,10 @@
 <%= content_tag :h2, Spree.t(:leave_us_a_review_for, :name => @product.name), :class => 'new-review-title' %> 
-
+<div class="row-fluid">
 <%= render 'form', { :review => @review, :product => @product } %>
-
+</div>
 <%= render :partial => "spree/reviews/fine_print" %>
+
+<div class="row-fluid" data-hook="related_products">
+  <%= render partial: '/spree/products/related' %>
+</div>
+

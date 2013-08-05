@@ -1784,3 +1784,21 @@ display:block;
 	.thumbnails{text-align:left;}
 	.thumbnails img{margin:0;}
 }
+
+
+
+
+
+.reviewForm label {
+    float: left;
+    font: bold 15px/14px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    text-transform: uppercase;
+}
+
+.reviewForm span.reviewFormInput {
+	float:left;
+border-radius:0px;
+	}
+
+.reviewForm span.required {
+

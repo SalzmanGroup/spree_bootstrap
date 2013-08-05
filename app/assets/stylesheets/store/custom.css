@@ -20,7 +20,7 @@ a:active{background-color:transparent;}
 input,
 textarea,
 select {
-	font:100% Arial, Helvetica, sans-serif;
+	font:100% "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	vertical-align:middle;
 	color:#131313;
 }
@@ -69,7 +69,7 @@ figure{
 	vertical-align:top;
 	float:none;
 	margin:0 17px 0 0;
-	font:11px/14px Arial, Helvetica, sans-serif;
+	font:11px/14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-transform:uppercase;
 	letter-spacing:1px;
 	word-spacing:-2px;
@@ -143,7 +143,7 @@ figure{
 	padding:20px 9% 16px;
 	background:#000;
 	color:#fff;
-	font:14px/20px Arial, Helvetica, sans-serif;
+	font:14px/20px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-shadow:none;
 	text-transform:uppercase;
 }
@@ -204,7 +204,7 @@ figure{
 .navbar .drop>li>a{
 	display:block;
 	padding:9px 14% 8px;
-	font:14px/20px Arial, Helvetica, sans-serif;
+	font:14px/20px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#424042;
 	text-transform:uppercase;
 	text-decoration:none;
@@ -238,7 +238,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 .dropdown-menu>li:first-child{border-top:1px solid #79797a;}
 .dropdown-menu>li>a{
 	padding:9px 13px 7px;
-	font:14px/16px Arial, Helvetica, sans-serif;
+	font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#000;
 	text-decoration:none;
 }
@@ -256,7 +256,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	background:url(/assets/bg-sprite.png) no-repeat 0 -120px;
 	width:126px;
 	height:54px;
-	font:11px/14px Arial, Helvetica, sans-serif;
+	font:11px/14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#fff;
 }
 .navbar .area-text p{
@@ -300,7 +300,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	margin:-55px 0 0;
 	padding:12px 29px 13px 16px;
 	color:#fff;
-	font:21px/24px Arial, Helvetica, sans-serif;
+	font:21px/24px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .carousel a.thumbnail .price strong{display:block;}
 .carousel-indicators{
@@ -381,7 +381,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	margin:0;
 	padding:8px 29px 7px;
 	background:url(/assets/bg-thumbnail.png);
-	font:bold 37px/40px Arial, Helvetica, sans-serif;
+	font:bold 37px/40px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#575756;
 	text-transform:uppercase;
 }
@@ -417,7 +417,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 .sort-form label{
 	float:left;
 	margin:1px 7px 0 0;
-	font:12px/14px Arial, Helvetica, sans-serif;
+	font:12px/14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#000;
 	text-transform:uppercase;
 }
@@ -437,7 +437,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	position:relative;
 	display:inline;
 	padding:0 0 0 16px;
-	font:12px/14px Arial, Helvetica, sans-serif;
+	font:12px/14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .product-category li:after{
 	position:absolute;
@@ -503,7 +503,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 .products-list .thumbnail h3,
 .products-list .thumbnail h4{
 	margin:0 0 3px;
-	font:bold 14px/16px Arial, Helvetica, sans-serif;
+	font:bold 14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-transform:uppercase;
 }
 .products-list .thumbnail h4{
@@ -518,7 +518,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	padding:9px 5px 5px;
 	background:#000;
 	color:#fff;
-	font:11px/14px Arial, Helvetica, sans-serif;
+	font:11px/14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .products-list .thumbnail .area-cart .btn,
 .cart-form .btn,
@@ -535,7 +535,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	background: -o-linear-gradient(top,  #f5f5f6 0%,#c1c4c5 64%,#abaeb0 100%);
 	background: -ms-linear-gradient(top,  #f5f5f6 0%,#c1c4c5 64%,#abaeb0 100%);
 	background: linear-gradient(to bottom,  #f5f5f6 0%,#c1c4c5 64%,#abaeb0 100%);
-	font:11px/14px Arial, Helvetica, sans-serif;
+	font:11px/14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#000;
 	text-transform:uppercase;
 	text-decoration:none;
@@ -579,7 +579,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	margin:0 -15px 19px;
 	padding:6px 13px 5px;
 	background:#000;
-	font:14px/16px Arial, Helvetica, sans-serif;
+	font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#fff;
 	text-transform:uppercase;
 }
@@ -708,7 +708,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	width:0;
 }
 .block-product .box-image li a{
-	font:14px/16px Arial, Helvetica, sans-serif;
+	font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-decoration:none;
 }
 .block-product .box-image li a:hover{text-decoration:underline;}
@@ -732,11 +732,11 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 }
 .block-product h1{
 	margin:0 0 2px;
-	font:bold 30px/32px Arial, Helvetica, sans-serif;
+	font:bold 30px/32px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .block-product h2{
 	margin:0 0 14px;
-	font:18px/22px Arial, Helvetica, sans-serif;
+	font:18px/22px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .block-product .links-list{
 	overflow:hidden;
@@ -763,7 +763,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	width:0;
 }
 .block-product .links-list a{
-	font:16px/20px Arial, Helvetica, sans-serif;
+	font:16px/20px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-decoration:none;
 }
 .block-product .links-list a:hover{text-decoration:underline;}
@@ -851,7 +851,7 @@ div.star-rating{
 .block-product dt{
 	padding:10px 0 2px;
 	border-top:1px solid #808080;
-	font:bold 15px/18px Arial, Helvetica, sans-serif;
+	font:bold 15px/18px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .block-product p + dl dt:first-child{padding:11px 0 9px;}
 .block-product dt.left{float:left;}
@@ -895,7 +895,7 @@ div.star-rating{
 	border-radius:9px;
 	width:12px;
 	color:#fff;
-	font:10px/12px Arial, Helvetica, sans-serif;
+	font:10px/12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-align:center;
 }
 .intensity-list li span{
@@ -908,7 +908,7 @@ div.star-rating{
 	margin:32px 0 0;
 	padding:12px 14px 0;
 	background:#d1d2d4;
-	font:15px/18px Arial, Helvetica, sans-serif;
+	font:15px/18px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .box-price .price{
 	display:block;
@@ -969,7 +969,7 @@ div.star-rating{
 }
 .heading h3{
 	margin:0;
-	font:17px/20px Arial, Helvetica, sans-serif;
+	font:17px/20px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-transform:uppercase;
 }
 .products-carousel{
@@ -1023,7 +1023,7 @@ div.star-rating{
 .products-carousel .carousel-inner>.item .holder{
 	overflow:hidden;
 	padding:62px 0 0;
-	font:18px/20px Arial, Helvetica, sans-serif;
+	font:18px/20px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .products-carousel .carousel-inner>.item h4,
 .products-carousel .carousel-inner>.item h5{
@@ -1096,7 +1096,7 @@ div.star-rating{
 .box-user{padding:3px 0 21px;}
 .box-user .dl-horizontal{
 	margin:0 0 9px;
-	font:17px/20px Arial, Helvetica, sans-serif;
+	font:17px/20px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .box-user .dl-horizontal dt{
 	margin:0 7px 0 0;
@@ -1147,7 +1147,7 @@ div.star-rating{
 	display:inline-block;
 	padding:5px 10px;
 	background:#000;
-	font:13px/16px Arial, Helvetica, sans-serif;
+	font:13px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#fff;
 	text-decoration:none;
 	vertical-align:top;
@@ -1179,7 +1179,7 @@ div.star-rating{
 .block-reviews .star-rating{margin:0 0 12px;}
 .block-reviews blockquote h4{
 	margin:0 0 11px;
-	font:bold 21px/24px Arial, Helvetica, sans-serif;
+	font:bold 21px/24px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .block-reviews blockquote p{
 	margin:0 0 17px;
@@ -1198,7 +1198,7 @@ div.star-rating{
 }
 .heading-panel h1{
 	margin:0;
-	font:bold 32px/40px Arial, Helvetica, sans-serif;
+	font:bold 32px/40px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .table-cart{
 	width:100%;
@@ -1206,7 +1206,7 @@ div.star-rating{
 .table-cart th{
 	padding:4px 12px 5px;
 	background:#d1d2d4;
-	font:16px/20px Arial, Helvetica, sans-serif;
+	font:16px/20px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-align:left;
 	text-align:center;
 	text-transform:uppercase;
@@ -1228,7 +1228,7 @@ div.star-rating{
 .table-cart h2,
 .table-cart h3{
 	margin:3px 4px 0;
-	font:bold 18px/20px Arial, Helvetica, sans-serif;
+	font:bold 18px/20px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-transform:uppercase;
 	text-align:left;
 }
@@ -1238,7 +1238,7 @@ div.star-rating{
 	font-size:14px;
 }
 .table-cart .price{
-	font:22px/26px Arial, Helvetica, sans-serif;
+	font:22px/26px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .table-cart select{width:84px;}
 .table-cart .select-area{
@@ -1264,7 +1264,7 @@ div.star-rating{
 	display:inline-block;
 	margin:5px 0 0;
 	padding:21px 0 0;
-	font:9px/12px Arial, Helvetica, sans-serif;
+	font:9px/12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#000;
 	text-decoration:none;
 	vertical-align:middle;
@@ -1295,7 +1295,7 @@ div.star-rating{
 	background:#fff;
 	border:1px solid #d1d2d4;
 	border-width:0 19px;
-	font:18px/20px Arial, Helvetica, sans-serif;
+	font:18px/20px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .box-total th{
 	font-weight:bold;
@@ -1311,7 +1311,7 @@ div.star-rating{
 .cart-form .control-label{
 	margin:0;
 	padding:0;
-	font:18px/19px Arial, Helvetica, sans-serif;
+	font:18px/19px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	width:213px;
 	color:#000;
 }
@@ -1363,7 +1363,7 @@ div.star-rating{
 	margin:0 0 26px;
 	padding:15px 14px;
 	background:#d1d2d4;
-	font:14px/16px Arial, Helvetica, sans-serif;
+	font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .social-networks ul{
 	display:inline-block;
@@ -1442,7 +1442,7 @@ div.star-rating{
 }
 .footer-nav ul a{
 	color:#fff;
-	font:11px/14px Arial, Helvetica, sans-serif;
+	font:11px/14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-transform:uppercase;
 	text-decoration:none;
 }
@@ -1470,7 +1470,7 @@ div.star-rating{
 	border:1px solid #bbbcbf;
 	background:#fff;
 	color:#131313;
-	font:10px/12px Arial, Helvetica, sans-serif;
+	font:10px/12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .select-area .select-opener{
 	position:absolute;
@@ -1505,7 +1505,7 @@ div.star-rating{
 	padding:2px 6px;
 	height:1%;
 	color:#000;
-	font:10px/12px Arial, Helvetica, sans-serif;
+	font:10px/12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-decoration:none;
 	cursor:default;
 }

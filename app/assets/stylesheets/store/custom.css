@@ -265,6 +265,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	-o-transform:rotate(-8deg) translateX(0) scale(1);
 	-webkit-transform:rotate(-8deg) translateX(0) scale(1);
 	transform:rotate(-8deg) translateX(0) scale(1);
+	-webkit-backface-visibility: hidden;
 }
 .navbar .area-text strong{
 	display:block;

@@ -1500,15 +1500,6 @@ display:block;
 	box-sizing: border-box;
 }
 .select-area .select-holder{
-<<<<<<< HEAD
-	display:block  !important;
-	overflow:hidden  !important;
-	padding:1px 6px 2px  !important;
-	border:1px solid #bbbcbf  !important;
-	background:#fff !important;
-	color:#131313 !important;
-	font:10px/12px Arial, Helvetica, sans-serif  !important;
-=======
 	display:block;
 	overflow:hidden;
 	padding:1px 6px 2px;
@@ -1516,7 +1507,6 @@ display:block;
 	background:#fff;
 	color:#131313;
 	font:10px/12px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
->>>>>>> 024f7c3d2951c73056bea7c766471b2452ab226e
 }
 .select-area .select-opener{
 	position:absolute;

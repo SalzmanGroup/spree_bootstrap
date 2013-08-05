@@ -302,6 +302,23 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	color:#fff;
 	font:21px/24px Arial, Helvetica, sans-serif;
 }
+
+
+span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total {
+color:#000;
+}
+
+
+
+.table-cart td {
+padding: 9px 4px !important;
+}
+
+
+div[data-hook="inside_cart_form"] #subtotal {
+    margin-top: 0;
+}
+
 .carousel a.thumbnail .price strong{display:block;}
 .carousel-indicators{
 	margin:-82px 0 0;
@@ -1268,6 +1285,8 @@ div.star-rating{
 	width:22px !important;
 	height:22px !important;
 }
+
+
 .table-cart .del{
 	position:relative;
 	display:inline-block;
@@ -1291,8 +1310,15 @@ div.star-rating{
 .box-total{
 	position:relative;
 	margin:-20px 0 10px;
-	padding:15px 0;
+ padding: 15px 9px 42px;
 	background:#d1d2d4;
+}
+
+
+.box-total span{
+background-color:#fff; 
+display:block;
+ padding:5px;
 }
 .box-total table{
 	border:none;
@@ -1664,6 +1690,7 @@ div.star-rating{
 		padding:10px;
 		vertical-align:top;
 		text-align:left;
+		 width: auto !important;
 	}
 	.table-cart tbody tr td:first-child{
 		width:auto;
@@ -1739,6 +1766,14 @@ div.star-rating{
 		width:100%;
 		height:auto;
 	}
+
+ div article.block-product div.box-image div div#product-images div#main-image .image img{
+ 	margin:0px auto;
+ }
+	
+
+
+
 	.box-total{background:#fff;}
 	.box-total td,
 	.box-total th{border-color:#fff;}

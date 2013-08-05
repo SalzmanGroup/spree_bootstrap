@@ -8,10 +8,10 @@
 
     <div class="box-image span4" data-hook="product_left_part">
 
-      <div class="image" data-hook="product_left_part_wrap">
+      <div data-hook="product_left_part_wrap">
 
-        <div id="product-images" data-hook="product_images">
-          <div id="main-image " data-hook>
+        <div id="product-images" class+"image" data-hook="product_images">
+          <div class="image" id="main-image " data-hook>
             <%= render :partial => 'image' %>
           </div>
 
@@ -31,7 +31,7 @@
 
     <div class="span5">
 
-      <!--breadcrumbs-->
+      
       <div data-hook="product_taxons">
         <ul class="breadcrumb" data-hook>
           <% @product.taxons.each do |taxon| %>
@@ -41,11 +41,11 @@
       </div>
 
 
-      <!--title-->
+    
       <h1 class="product-title" itemprop="name"><%= accurate_title %>
       </h1>
 
-      <!--star rating-->
+      
       <ul class="star-rating">
         <li><a href="#" title="Rate this 1 star out of 5" class="one-star">1</a></li>
         <li><a href="#" title="Rate this 2 stars out of 5" class="two-stars">2</a></li>
@@ -68,7 +68,7 @@
         </div>
 
       </div>
-      
+
       <br/>
 
       <div data-hook="product_properties">

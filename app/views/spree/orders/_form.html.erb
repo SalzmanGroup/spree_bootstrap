@@ -1,5 +1,5 @@
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
-<table id="cart-detail" data-hook>
+<table id="cart-detail" class="table-cart" data-hook>
   <thead>
     <tr data-hook="cart_items_headers">
       <th class="cart-item-description-header" colspan="2"><%= Spree.t(:item) %></th>
@@ -14,5 +14,7 @@
       <%= render :partial => 'line_item', :locals => { :variant => item_form.object.variant, :line_item => item_form.object, :item_form => item_form } %>
     <% end %>
   </tbody>
+
+
   <%= render "spree/orders/adjustments" unless @order.adjustments.eligible.blank? %>
 </table>

@@ -36,12 +36,17 @@
 						</div>
 					</li>
 					<li><a href="#">CONTACT US</a></li>
+<<<<<<< HEAD
 					<li><a href="/login">SIGN IN</a></li>
 					<li><a class="cart-link" href="/cart">SHOPPING CART</a></li>
+=======
+					<li><a href="#">SIGN IN</a></li>
+					<li><%= link_to Spree.t('cart') + " (#{current_order.item_count})", cart_path, class: "cart-link" %> </li>
+>>>>>>> 024f7c3d2951c73056bea7c766471b2452ab226e
 				</ul>
 			</div>
 			<div class="area-text">
-				<p><strong>FREE SHIPPING!</strong> Purchase $50 or more</p>
+				<p><strong><%= Spree.t 'free_shipping' %></strong><%= Spree.t 'purchase_x_or_more' %></p>
 			</div>
 		</div>
 	</div>

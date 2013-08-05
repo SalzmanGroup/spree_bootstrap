@@ -39,7 +39,7 @@ paginated_products ||= products
 
           <div class="area-cart">
             <span class="price" itemprop="price"><%= display_price(product) %></span>
-            <a href="#" class="btn">ADD TO CART</a>
+            <%= render partial: "spree/products/add_to_cart_button", locals: { product: product } %>
           </div>
         </div>
         

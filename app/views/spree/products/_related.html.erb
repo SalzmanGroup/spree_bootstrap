@@ -1,11 +1,13 @@
-<% if @product.relations.any? %>
-	<h6 class="product-section-title">
-    <%= Spree.t('related_products') %>
-    <small><%= Spree.t 'save_when_you_buy_together' %></small>
-  </h6>
+<% if @product.relations.order(:id).any? %>
+  <div class="heading">
+    <h3>
+      <%= Spree.t('related_products') %>
+      <small><%= Spree.t 'save_when_you_buy_together' %></small>
+    </h3>
+  </div>
   <div id="related-products-carousel" class="<%= "carousel" if @product.relations.count > 3 %> slide">
     <div class="carousel-inner">
-      <% @product.relations.each_slice(3).with_index do |slide, key| %>
+      <% @product.relations.order(:id).each_slice(3).with_index do |slide, key| %>
         <div class="item<%= " active " unless key > 0 %>">
           <% slide.each do |relation| %>
             <div class="span4 related-product">

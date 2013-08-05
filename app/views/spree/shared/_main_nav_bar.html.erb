@@ -37,7 +37,7 @@
 					</li>
 					<li><a href="#">CONTACT US</a></li>
 					<li><a href="#">SIGN IN</a></li>
-					<li><%= link_to Spree.t('shopping_cart'), cart_path, class: "cart-link" %></li>
+					<li><%= link_to Spree.t('cart') + " (#{current_order.item_count})", cart_path, class: "cart-link" %> </li>
 				</ul>
 			</div>
 			<div class="area-text">

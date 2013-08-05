@@ -1,5 +1,7 @@
 <%= form_tag spree.products_path, :method => :get, class: "form-search" do %>
-	<label for="search"><%= Spree.t 'main_site' %></label>
+	<% if try_spree_current_user %>
+		<%= link_to Spree.t("my_account"), {controller: "spree/users", action: :show} %>
+	<% end %>
   <%= text_field_tag :keywords, params[:keywords], :placeholder => Spree.t(:search), id: :search, class: "search-query" %>
   <%= submit_tag Spree.t(:search), :name => nil, class: :btn %>
 <% end %>

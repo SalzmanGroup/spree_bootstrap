@@ -1,18 +1,18 @@
-<div class="row-fluid steps-data">
+<div class="row-fluid steps-data persInfo">
 
   <% if order.has_step?("address") %>
-    <div class="span3 alpha" data-hook="order-ship-address">
+    <div class="span3 inf" data-hook="order-ship-address">
       <h6><%= Spree.t(:shipping_address) %> <%= link_to "(#{Spree.t(:edit)})", checkout_state_path(:address) unless @order.completed? %></h6>
       <%= render :partial => 'spree/shared/address', :locals => { :address => order.ship_address } %>
     </div>
 
-    <div class="span3" data-hook="order-bill-address">
+    <div class="span3 inf" data-hook="order-bill-address">
       <h6><%= Spree.t(:billing_address) %> <%= link_to "(#{Spree.t(:edit)})", checkout_state_path(:address) unless @order.completed? %></h6>
       <%= render :partial => 'spree/shared/address', :locals => { :address => order.bill_address } %>
     </div>
 
     <% if @order.has_step?("delivery") %>
-      <div class="span3">
+      <div class="span3 inf">
         <h6><%= Spree.t(:shipments) %> <%= link_to "(#{Spree.t(:edit)})", checkout_state_path(:delivery) unless @order.completed? %></h6>
         <div class="delivery">
           <% order.shipments.each do |shipment| %>
@@ -26,7 +26,7 @@
     <% end %>
   <% end %>
 
-  <div class="span3 omega">
+  <div class="span3 inf">
     <h6><%= Spree.t(:payment_information) %> <%= link_to "(#{Spree.t(:edit)})", checkout_state_path(:payment) unless @order.completed? %></h6>
     <div class="payment-info">
       <% order.payments.valid.each do |payment| %>

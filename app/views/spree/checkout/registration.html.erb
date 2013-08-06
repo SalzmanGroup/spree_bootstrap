@@ -5,18 +5,18 @@
     <!-- TODO: add partial with registration form -->
   </div>
   <% if Spree::Config[:allow_guest_checkout] %>
-    
-
 
     <div id="guest_checkout" data-hook class="row-fluid span4">
       <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
       <h6><%= Spree.t(:guest_user_account) %></h6>
       <%= form_for @order, :url => update_checkout_registration_path, :method => :put, :html => { :id => 'checkout_form_registration' } do |f| %>
-        <p>
-          <span class="span2"><%= f.label :email, Spree.t(:email) %></span>
-          <span class="span10"><%= f.email_field :email, :class => 'title' %></span>
+        <p class="row-fluid">
+          <span class="span3"><%= f.label :email, Spree.t(:email) %></span>
+          <span class="span8"><%= f.email_field :email, :class => 'title' %></span>
         </p>
-        <p><%= f.submit Spree.t(:continue), :class => 'button primary' %></p>
+      <p class="row-fluid">
+      <span class="span12"><%= f.submit Spree.t(:continue), :class => 'button primary' %></span>
+      </p>
       <% end %>
     </div>
   <% end %>

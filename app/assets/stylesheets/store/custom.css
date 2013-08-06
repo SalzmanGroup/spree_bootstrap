@@ -735,7 +735,7 @@ font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	padding:0;
 	color:#000;
 }
-.block-product h1, #login h1{
+.block-product h1, #login h1, #checkout h1, #order_summary h1{
 	margin:0 0 2px;
 	font:bold 30px/32px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-transform: uppercase;
@@ -1161,6 +1161,20 @@ div.star-rating{
 	border:0px;
 	text-transform:uppercase;
 }
+
+
+input.button, a.button{
+	display:inline-block;
+	padding:5px 10px;
+	background:#000;
+	font:13px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:#fff;
+	text-decoration:none;
+	vertical-align:top;
+	border:0px;
+	text-transform:uppercase;
+}
+
 .block-reviews{
 	position:relative;
 	padding:0 0 55px;
@@ -1779,17 +1793,25 @@ display:block;
 
 
 
-.reviewForm label, #guest_checkout label {
+.reviewForm label, #guest_checkout label, #billing label, #payment-methods label{
     float: left;
     font: bold 15px/14px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     text-transform: uppercase;
 }
 
-.reviewForm span.reviewFormInput input, .reviewForm span.reviewFormInput textarea {
+.reviewForm span.reviewFormInput input, .reviewForm span.reviewFormInput textarea, #billing input, #billing textarea, #billing select, #payment-methods input, #payment-methods select{
 	float:left;
 border-radius:0px;
  resize: none;
 	}
+
+
+#billing input, #billing textarea, #billing select, #payment-methods select, #payment-methods input{
+width:100%;
+padding-left:0px;
+padding-right:0px;
+}
+
 
 .reviewForm span.required {
 }
@@ -1860,11 +1882,22 @@ div.rating-cancel, div.star-rating{
     font: 14px/16px Lucida Grande;
 }
 
-#guest_checkout{
+#guest_checkout, #checkout-summary{
     background-color: #D1D2D4;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
     
    
+}
+
+#guest_checkout label{
+position: relative;
+    top: 7px;
+
+}
+
+
+#guest_checkout input{
+	width:100%;
 }
 
 #guest_checkout h6{
@@ -1880,5 +1913,114 @@ div.rating-cancel, div.star-rating{
 }
 
 #guest_checkout form{
-	padding:10px;
+	   padding: 20px 14px 8px 8px;
 	}
+
+
+ol#checkout-step-address, ol#checkout-step-delivery, ol#checkout-step-payment{
+	font: 14px/20px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+	position:relative;
+	top:2px;
+
+}
+#checkout legend{
+	color:#000;
+}
+
+.progress-steps li.current-first, .progress-steps li.current {
+    background-color: #000;
+    color: white;
+}
+
+.progress-steps li.completed-first a, .progress-steps li.completed a {
+text-decoration: none;
+	}
+
+.progress-steps li.completed-first:hover, .progress-steps li.completed:hover {
+	    background-color: #000;
+    color: white;
+}
+
+#billing, #shipping, #shipping_method, #payment, #order_details, #order_summary {
+border:0px;
+padding:0px;
+margin:0px;
+	}
+
+.temp{
+    float: left !important;
+    margin-left: 15px;
+    width: 74% !important;
+}
+
+#shipping_method h3.stock-location{
+	background-color:#000;
+	font: 14px/20px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+
+}
+
+#checkout-summary {
+float:right;
+
+margin:0px;
+ font: 13px/20px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+	}
+
+#checkout-summary h3 {
+    background-color: #000000;
+    border-bottom: 1px solid #D9D9DB;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+    font: 14px/20px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    padding-bottom: 9px;
+    padding-top: 9px;
+}
+
+ul.shipping-methods li.shipping-method{
+	width:100%;
+}
+
+
+ul#payment-methods {
+margin:0px;
+
+}
+
+#credit-card-image{
+	margin:10px;
+}
+
+#payment-methods select{
+	width:100%;
+}
+
+
+#cvv_link{
+	font: 12px/13px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+	float:right;
+}
+
+.persInfo{
+	font: 12px/13px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+.persInfo h6{
+	text-transform:uppercase;
+}
+
+.persInfo .inf{
+	margin-left:15px !important;
+}
+
+table#line-items{
+color:#000 ;
+font: 14px/15px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+table#line-items #order_total, table#line-items td.total span, table#line-items td.price span {
+	color:#000;
+}
+
+

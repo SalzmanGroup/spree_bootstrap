@@ -1797,10 +1797,46 @@ display:block;
     text-transform: uppercase;
 }
 
-.reviewForm span.reviewFormInput {
+.reviewForm span.reviewFormInput input, .reviewForm span.reviewFormInput textarea {
 	float:left;
 border-radius:0px;
+ resize: none;
 	}
 
 .reviewForm span.required {
+}
+
+h2.new-review-title{
+    font: bold 30px/32px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    margin: 0 0 25px;
+    text-transform: uppercase;
+    display:block;
+}
+
+span.required {
+   color: #000000;
+    font-size: 15px;
+    position: relative;
+    top: -3px;
+}
+
+
+div.rating-cancel, div.star-rating{
+	height:18px !important;
+}
+
+.review_fine_print {
+   margin-bottom: 30px;
+    margin-top: 10px;
+	
+}
+
+.review_fine_print h2{
+	 font: bold 14px/16px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+	 text-transform: uppercase;
+}
+
+.review_fine_print ul li{
+    font: 13px/14px Georgia,"Times New Roman",Times,serif;
+}
 

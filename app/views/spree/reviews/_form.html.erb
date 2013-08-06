@@ -1,29 +1,36 @@
-<div class="span6 reviewForm">
+<div class="span8 reviewForm">
   <%= form_for review, :url => product_reviews_path(product), :html => {:method => :post} do |f| %>
   <%= render "spree/shared/error_messages", :target => review %>
 
   <div class="row-fluid review_rating_field">
     <span class="span4"><%= f.label :rating %> <span class="required">*</span></span>
-   <span class="span6 reviewFormInput"> <%= render :partial => "spree/reviews/stars", :locals => {:stars => review.rating, :edit_enabled => true} %></span>
+   <span class="span7 reviewFormInput"> <%= render :partial => "spree/reviews/stars", :locals => {:stars => review.rating, :edit_enabled => true} %></span>
   </div>
 
   <div class="row-fluid review_name_field">
     <span class="span4"><%= f.label :name %> <span class="required">*</span></span>
-     <span class="span6 reviewFormInput"><%= f.text_field :name, :maxlength => "255", :size => "50" %></span>
+     <span class="span7 reviewFormInput"><%= f.text_field :name, :class => 'span12', :maxlength => "255", :size => "50" %></span>
   </div>
 
    <div class="row-fluid review_title_field">
     <span class="span4"><%= f.label :title %></span>
-    <span class="span6 reviewFormInput"><%= f.text_field :title, :maxlength => "255", :size => "50" %></span>
+    <span class="span7 reviewFormInput"><%= f.text_field :title, :class => 'span12', :maxlength => "255", :size => "50" %></span>
     </div>
   
   <div class="row-fluid review_review_field">
     <span class="span4"><%= f.label :review %> <span class="required">*</span></span>
-    <span class="span6 reviewFormInput"><%= f.text_area :review, :wrap => "virtual", :rows => "10", :cols => "50" %></span>
+    <span class="span7 reviewFormInput"><%= f.text_area :review, :class => 'span12', :wrap => "virtual", :rows => "10", :cols => "50" %></span>
    </div>
 
-  <p class="review_submit">
-    <%= f.submit Spree.t(:submit_your_review), :class => "button bg_darkfirst" %>
-  </p>
+  <div class="review_submit box-user">
+    <span class="span4"> &nbsp;</span>
+    <span class="offset4"><%= f.submit Spree.t(:submit_your_review), :class => "button" %></span>
+  </div>
 </div>
+
+
+<div class="span4">
+
+
+  </div>
 <% end %>

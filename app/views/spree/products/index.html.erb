@@ -1,10 +1,6 @@
 <% content_for :sidebar do %>
-<div data-hook="homepage_sidebar_navigation">
-  <% if "spree/products" == params[:controller] && @taxon %>
-  <%= render :partial => 'spree/shared/filters' %>
-  <% else %>
-  <%= render :partial => 'spree/shared/taxonomies' %>
-  <% end %>
+<div data-hook="taxon_sidebar_navigation">
+  <%= render 'spree/shared/reviews_sidebar' %>
 </div>
 <% end %>
 
@@ -23,21 +19,17 @@
 
 <div class="row-fluid sort-panel">
   <div class="span6">
-    <form class="sort-form" action="#">
-      <label for="sort">SORT BY:</label>
-      <span class="jcf-unselectable select-area" style="width: 134px;"><span class="select-holder"><a class="select-opener"></a><span class="center jcf-unselectable">Best Selling</span></span></span><select id="sort" class="jcf-hidden">
-      <option>Best Selling</option>
-      <option>Best Selling</option>
-    </select>
-  </form>
-</div>
-<div class="span6">
-  <ul class="product-category">
-    <li>DRIP</li>
-    <li><a href="#">ALL COFFEE</a></li>
-    <li><a href="#">ESPRESSO</a></li>
-  </ul>
-</div>
+    <div class="row-fluid sort-form">
+      <div class="span12">
+        <select id="product_sort">
+          <option value="price_desc" <%= "selected" if @sort == "price_desc" %> >Price Hi &rarr; Lo</option>
+          <option value="price_asc" <%= "selected" if @sort == "price_asc" %> >Price Lo &rarr; Hi</option>
+          <option value="name_asc" <%= "selected" if @sort == "name_asc" %> >Name A &rarr; Z</option>
+          <option value="name_desc" <%= "selected" if @sort == "name_desc" %> >Name Z &rarr; A</option>
+        </select>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div data-hook="homepage_products" class="row-fluid">

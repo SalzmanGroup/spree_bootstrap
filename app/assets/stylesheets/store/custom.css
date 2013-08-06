@@ -1828,7 +1828,7 @@ div.rating-cancel, div.star-rating{
 .review_fine_print {
    margin-bottom: 30px;
     margin-top: 10px;
-	
+
 }
 
 .review_fine_print h2{
@@ -1840,3 +1840,15 @@ div.rating-cancel, div.star-rating{
     font: 13px/14px Georgia,"Times New Roman",Times,serif;
 }
 
+.itemSum .image{
+	text-align:center;
+	border:1px solid #D1D2D4;
+}
+
+.itemSum #product-description{
+	background-color:#D1D2D4;
+	padding-left:10px;
+	padding-top:15px;
+	padding-bottom:20px;
+	font: 13px/14px Georgia,"Times New Roman",Times,serif;
+}

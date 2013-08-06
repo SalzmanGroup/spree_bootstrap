@@ -19,24 +19,42 @@
   }
 }
 
-div.rating-cancel,
-div.star-rating {
+div.rating-cancel { display: none !important; }
+
+div.star-rating,
+div.star-rating a {
   float: left;
   width: 17px;
-  height: 15px;
+  height: 18px;
   text-indent: -999em;
   cursor: pointer;
   display: block;
   background: transparent;
   overflow: hidden
 }
-div.rating-cancel,
-div.rating-cancel a {
-  background: url("/assets/bg-stars-product.png") no-repeat 0 -16px; 
-}
 div.star-rating, 
 div.star-rating a
 {
-  background: url('/assets/bg-stars-product.png') no-repeat 0 4px!important ;
+  background: url('/assets/bg-stars-product.png') no-repeat 0 4px;
 }
+
+div.star-rating-hover a,
+div.star-rating-on a {
+  background: url("/assets/bg-stars-product.png") no-repeat 0 -16px;
+}
+
+.products-list {
+  div.star-rating, 
+  div.star-rating a
+  {
+    background: url('/assets/bg-stars.png') no-repeat 0 4px;
+  }
+
+  div.star-rating-hover a,
+  div.star-rating-on a {
+    background: url("/assets/bg-stars.png") no-repeat 0 -16px;
+  }
+}
+
+.product-review-small { height: 20px; }
 

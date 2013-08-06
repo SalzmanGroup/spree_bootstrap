@@ -20,13 +20,7 @@
 
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
       <div data-hook="product_price" class="columns five <% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
-     
-        
-          
           <strong class="price selling" itemprop="price"><%= display_price(@product) %></strong>
-  
-
-
             <dl class="dl-horizontal">
                 <dt><label for="s1">QUANTITY:</label></dt>
                 <dd> <span class="select-holder">
@@ -36,8 +30,6 @@
               </dl>
 
         <div class="holder">
-
-
           <%= button_tag :class => 'btn', :id => 'add-to-cart-button', :type => :submit do %>
             <%= Spree.t(:add_to_cart) %>
           <% end %>

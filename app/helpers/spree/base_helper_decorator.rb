@@ -23,5 +23,12 @@ module Spree
     def get_reviews
       Spree::Review.last(5)
     end
+
+    def social_network_link network
+      network_link = Rails.application.config.try(:social_networks).try(:[], network)
+      if network_link
+        return link_to Spree.t(network), network_link, class: network, target: "_blank"
+      end
+    end
   end
 end

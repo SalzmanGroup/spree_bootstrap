@@ -58,7 +58,8 @@
 
       <ul class="links-list">
         <li><a href="#">Read Reviews</a></li>
-        <li><%= link_to Spree.t('write_a_review'), new_product_review_path(@product) %></li>
+        <li>     <%= link_to Spree.t('write_a_review'), new_product_review_path(@product), 
+                :rel => "nofollow,noindex", :alt => 'Write a review' %></li>
       </ul>
 
       <div id="product-description" data-hook="product_description">

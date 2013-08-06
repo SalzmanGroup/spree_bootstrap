@@ -1,27 +1,48 @@
-<%= form_for review, :url => product_reviews_path(product), :html => {:method => :post} do |f| %>
+<div class="span8 reviewForm">
+  <%= form_for review, :url => product_reviews_path(product), :html => {:method => :post} do |f| %>
   <%= render "spree/shared/error_messages", :target => review %>
 
-  <p class="review_rating_field">
-    <%= f.label :rating %> <span class="required">*</span><br />
-    <%= render :partial => "spree/reviews/stars", :locals => {:stars => review.rating, :edit_enabled => true} %>
-  </p>
+  <div class="row-fluid review_rating_field">
+    <span class="span4"><%= f.label :rating %> <span class="required">*</span></span>
+   <span class="span7 reviewFormInput"> <%= render :partial => "spree/reviews/stars", :locals => {:stars => review.rating, :edit_enabled => true} %></span>
+  </div>
 
-  <p class="review_name_field">
-    <%= f.label :name %> <span class="required">*</span><br />
-    <%= f.text_field :name, :maxlength => "255", :size => "50" %>
-  </p>
+  <div class="row-fluid review_name_field">
+    <span class="span4"><%= f.label :name %> <span class="required">*</span></span>
+     <span class="span7 reviewFormInput"><%= f.text_field :name, :class => 'span12', :maxlength => "255", :size => "50" %></span>
+  </div>
 
-  <p class="review_title_field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title, :maxlength => "255", :size => "50" %>
-  </p>
+   <div class="row-fluid review_title_field">
+    <span class="span4"><%= f.label :title %></span>
+    <span class="span7 reviewFormInput"><%= f.text_field :title, :class => 'span12', :maxlength => "255", :size => "50" %></span>
+    </div>
   
-  <p class="review_review_field">
-    <%= f.label :review %> <span class="required">*</span><br />
-    <%= f.text_area :review, :wrap => "virtual", :rows => "10", :cols => "50" %>
-  </p>
+  <div class="row-fluid review_review_field">
+    <span class="span4"><%= f.label :review %> <span class="required">*</span></span>
+    <span class="span7 reviewFormInput"><%= f.text_area :review, :class => 'span12', :wrap => "virtual", :rows => "10", :cols => "50" %></span>
+   </div>
 
-  <p class="review_submit">
-    <%= f.submit Spree.t(:submit_your_review), :class => "button bg_darkfirst" %>
-  </p>
+  <div class="review_submit box-user">
+    <span class="span4"> &nbsp;</span>
+    <span class="offset4"><%= f.submit Spree.t(:submit_your_review), :class => "button" %></span>
+  </div>
+</div>
+
+
+<div class="span4">
+
+<div class="itemSum">
+  <div class="image" id="main-image " data-hook>
+            <%= render :partial => '/spree/products/image' %>
+          </div>
+
+    <div id="product-description" data-hook="product_description">
+
+        <div itemprop="description" data-hook="description">
+          <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+        </div>
+
+      </div>
+    </div>
+  </div>
 <% end %>

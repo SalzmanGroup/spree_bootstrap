@@ -665,61 +665,6 @@ font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#000;
 }
 .sidebar blockquote small:before{content:"-";}
-.star-rating{
-	position:relative;
-	margin:0;
-	background:url(/assets/bg-stars.png) repeat-x;
-	width:70px;
-	height:13px;
-	list-style:none;
-}
-.sidebar .star-rating{
-	margin:0 0 1px -1px;
-	background-position:0 -40px;
-	height:12px;
-}
-.star-rating li{float:left;}
-.star-rating a{
-	position:absolute;
-	z-index:2;
-	overflow:hidden;
-	padding:0;
-	width:14px;
-	height:13px;
-	text-decoration:none;
-	text-indent:-9999px;
-}
-.sidebar .star-rating a{height:12px;}
-.star-rating li a:hover,
-.star-rating li.active a,
-.star-rating li.setted a{
-	z-index:1;
-	left:0;
-	background:url(/assets/bg-stars.png) 0 -20px;
-}
-.sidebar .star-rating li a:hover,
-.sidebar .star-rating li.active a,
-.sidebar .star-rating li.setted a{background-position:0 -60px;}
-.star-rating a.one-star{left:0;}
-.star-rating a.one-star:hover,
-.star-rating li.active a.one-star,
-.star-rating li.setted a.one-star{width:14px;}
-.star-rating a.two-stars{left:14px;}
-.star-rating a.two-stars:hover,
-.star-rating li.active a.two-stars,
-.star-rating li.setted a.two-stars{width:28px;}
-.star-rating a.three-stars{left:28px;}
-.star-rating a.three-stars:hover,
-.star-rating li.active a.three-stars,
-.star-rating li.setted a.three-stars{width:42px;}
-.star-rating a.four-stars{left:42px;}
-.star-rating a.four-stars:hover,
-.star-rating li.active a.four-stars,
-.star-rating li.setted a.four-stars{width:56px;}
-.star-rating a.five-stars{left:56px;}
-.star-rating a.five-stars:hover,
-.star-rating li.active a.five-stars,
-.star-rating li.setted a.five-stars{width:70px;}
 .block-product{
 	margin-top:-3px;
 	margin-bottom:82px;
@@ -822,14 +767,6 @@ font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-decoration:none;
 }
 .block-product .links-list a:hover{text-decoration:underline;}
-.block-product .star-rating,
-.block-reviews .star-rating{
-	margin:0 0 13px;
-	background:url(/assets/bg-stars-product.png) repeat-x;
-	width:90px;
-	height:22px;
-	background-position:0 5px;
-}
 
 .reviews-rating{
 display:block;
@@ -2079,4 +2016,5 @@ font: 14px/15px "Lucida Sans Unicode","Lucida Grande",sans-serif;
 table#line-items #order_total, table#line-items td.total span, table#line-items td.price span {
 	color:#000;
 }
+
 

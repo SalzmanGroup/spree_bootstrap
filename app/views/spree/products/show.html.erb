@@ -46,14 +46,11 @@
       </h1>
 
       
-      <ul class="star-rating">
-        <li><a href="#" title="Rate this 1 star out of 5" class="one-star">1</a></li>
-        <li><a href="#" title="Rate this 2 stars out of 5" class="two-stars">2</a></li>
-        <li><a href="#" title="Rate this 3 stars out of 5" class="three-stars">3</a></li>
-        <li class="active"><a href="#" title="Rate this 4 stars out of 5" class="four-stars">4</a></li>
-        <li><a href="#" title="Rate this 5 stars out of 5" class="five-stars">5</a></li>
-      </ul>
-
+      <% if @product.reviews.any? %>
+        <%= render partial: 'spree/reviews/stars', locals: { stars: @product.stars } %> 
+      <% else %>
+        <p class="muted">This product has not yet been reviewed</p>
+      <% end %>
       <!--review links  NEEDS TO MADE DYNAMIC-->
 
       <ul class="links-list">

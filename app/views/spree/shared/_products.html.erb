@@ -29,13 +29,11 @@ paginated_products ||= products
           <h3 class="ellipsis product-title">
             <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
           </h3>
-          <ul class="star-rating">
-            <li><a href="#" title="Rate this 1 star out of 5" class="one-star">1</a></li>
-            <li><a href="#" title="Rate this 2 stars out of 5" class="two-stars">2</a></li>
-            <li><a href="#" title="Rate this 3 stars out of 5" class="three-stars">3</a></li>
-            <li class="active"><a href="#" title="Rate this 4 stars out of 5" class="four-stars">4</a></li>
-            <li><a href="#" title="Rate this 5 stars out of 5" class="five-stars">5</a></li>
-          </ul>
+          <div class="product-review-small">
+            <% if product.reviews.any? %>
+              <%= render partial: 'spree/reviews/stars', locals: { stars: product.stars } %> 
+            <% end %>
+          </div>
 
           <div class="area-cart">
             <span class="price" itemprop="price"><%= display_price(product) %></span>

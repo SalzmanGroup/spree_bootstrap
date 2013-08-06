@@ -58,7 +58,7 @@
 
       <ul class="links-list">
         <li><a href="#">Read Reviews</a></li>
-        <li><a href="#">Write A Review</a></li>
+        <li><%= link_to Spree.t('write_a_review'), new_product_review_path(@product) %></li>
       </ul>
 
       <div id="product-description" data-hook="product_description">

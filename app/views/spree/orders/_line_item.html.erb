@@ -26,6 +26,7 @@
     <strong class="price"><%= line_item.display_amount.to_html unless line_item.quantity.nil? %></strong>
   </td>
   <td class="cart-item-delete" data-hook="cart_item_delete">
-    <%= link_to image_tag('icons/delete.png'), '#', :class => 'delete', :id => "delete_#{dom_id(line_item)}" %>
+    <a class="delete del" id="delete_#{dom_id(line_item)}" href="#">Remove</a>
+
   </td>
 </tr>

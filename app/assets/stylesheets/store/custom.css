@@ -313,7 +313,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	color:#fff;
 }
 
-td .cart-item-price{
+td.cart-item-price span.price, td.cart-item-total span.price{
 	color:#000;
 }
 
@@ -1263,6 +1263,14 @@ div.star-rating{
 	margin:0;
 	font:bold 32px/40px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
+
+.box-total{
+		font:16px/20px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		text-transform:uppercase;
+		color:#000;
+}
+
 .table-cart{
 	width:100%;
 }
@@ -1302,6 +1310,7 @@ div.star-rating{
 }
 .table-cart .price{
 	font:22px/26px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:#000;
 }
 .table-cart select{width:84px;}
 .table-cart .select-area{
@@ -1338,7 +1347,7 @@ div.star-rating{
 	position:absolute;
 	top:0;
 	left:50%;
-	margin:0 0 0 -9px;
+	margin:0 0 0 -2px;
 	background:url(/assets/bg-sprite.png) no-repeat -125px 0;
 	width:17px;
 	height:21px;
@@ -1356,6 +1365,7 @@ div.star-rating{
 background-color:#fff; 
 display:block;
  padding:5px;
+ color:#000 !important;
 }
 .box-total table{
 	border:none;
@@ -1885,4 +1895,16 @@ div.rating-cancel, div.star-rating{
 	padding-top:15px;
 	padding-bottom:20px;
 	font: 13px/14px Georgia,"Times New Roman",Times,serif;
+}
+
+.flash.success, .success.errorExplanation {
+    background-color: #000000;
+    border-left: 9px solid #8DBA53;
+    font: 15px/16px Lucida Grande;
+}
+
+.flash.notice, .notice.errorExplanation {
+      background-color: #000000;
+    border-left: 9px solid #00ADEE;
+    font: 15px/16px Lucida Grande;
 }

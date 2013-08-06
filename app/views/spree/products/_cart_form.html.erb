@@ -3,22 +3,14 @@
 
     <% if @product.variants_and_option_values(current_currency).any? %>
       <div id="product-variants" class="columns five alpha">
-        <h6 class="product-section-title"><%= Spree.t(:variants) %></h6>
-        <ul>
-          <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
-            <li>
-              <%= radio_button_tag "products[#{@product.id}]", variant.id, index == 0, 'data-price' => variant.price_in(current_currency).display_price %>
-              <label for="<%= ['products', @product.id, variant.id].join('_') %>">
-                <span class="variant-description">
-                  <%= variant_options variant %>
-                </span>
-                <% if variant_price variant %>
-                  <span class="price diff"><%= variant_price variant %></span>
-                <% end %>
-              </label>
-            </li>
-          <% end%>
-        </ul>
+        <div class="row-fluid">
+          <h6 class="product-section-title"><%= Spree.t(:variants) %></h6>
+          <%= select_tag "products[#{@product.id}]", 
+            options_for_select(@product.variants_and_option_values(current_currency).collect {|x| 
+              ["#{variant_options(x)} #{"-" + variant_price(x) if variant_price(x)}", x.id]
+            }),
+            class: :span12 %>
+        </div>
       </div>
     <% end%>
 
@@ -28,13 +20,7 @@
 
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
       <div data-hook="product_price" class="columns five <% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
-     
-        
-          
           <strong class="price selling" itemprop="price"><%= display_price(@product) %></strong>
-  
-
-
             <dl class="dl-horizontal">
                 <dt><label for="s1">QUANTITY:</label></dt>
                 <dd> <span class="select-holder">
@@ -44,8 +30,6 @@
               </dl>
 
         <div class="holder">
-
-
           <%= button_tag :class => 'btn', :id => 'add-to-cart-button', :type => :submit do %>
             <%= Spree.t(:add_to_cart) %>
           <% end %>

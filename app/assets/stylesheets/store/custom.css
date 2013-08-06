@@ -522,7 +522,10 @@ div[data-hook="inside_cart_form"] #subtotal {
 	top:auto;
 	bottom:9px;
 }
-.products-list .thumbnail .area-image img{vertical-align:bottom;}
+.products-list .thumbnail .area-image img{
+	max-height: 100%;
+	vertical-align:bottom;
+}
 .products-list .thumbnail .area-image p{margin:0;}
 .products-list .thumbnail h3,
 .products-list .thumbnail h4{
@@ -729,6 +732,7 @@ font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-align:center;
 }
 .block-product .box-image .image img{
+	max-height: 100%;
 	display:block;
 	vertical-align:top;
 	margin:20px auto;

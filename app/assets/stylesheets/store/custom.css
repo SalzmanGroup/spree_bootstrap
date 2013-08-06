@@ -702,6 +702,7 @@ div[data-hook="inside_cart_form"] #subtotal {
 .block-product .box-image .image img{
 	display:block;
 	vertical-align:top;
+	margin:20px auto;
 }
 .block-product .box-image ul{
 	margin:0;

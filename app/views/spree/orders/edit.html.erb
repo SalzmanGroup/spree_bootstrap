@@ -1,64 +1,68 @@
 <% @body_id = 'cart' %>
 <div class="row-fluid heading-panel">
-<h1><%= Spree.t(:shopping_cart) %></h1>
+  <h1><%= Spree.t(:shopping_cart) %></h1>
 </div>
 <% if @order.line_items.empty? %>
 
-  <div data-hook="empty_cart">
-    <p><%= Spree.t(:your_cart_is_empty) %></p>
-    <p><%= link_to Spree.t(:continue_shopping), products_path, :class => 'btn' %></p>
-  </div>
+<div data-hook="empty_cart">
+  <p><%= Spree.t(:your_cart_is_empty) %></p>
+  <p><%= link_to Spree.t(:continue_shopping), products_path, :class => 'btn' %></p>
+</div>
 
 <% else %>
 
 
-  <div data-hook="outside_cart_form">
-    <%= form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
-      <div data-hook="inside_cart_form">
+<div data-hook="outside_cart_form">
+  <%= form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
+  <div data-hook="inside_cart_form">
 
-        <div data-hook="cart_items">
-          <%= render :partial => 'form', :locals => { :order_form => order_form } %>
+    <div data-hook="cart_items">
+      <%= render :partial => 'form', :locals => { :order_form => order_form } %>
+    </div>
+
+
+    <div id="subtotal" class="links row-fluid"  data-hook >
+      <div class="span8 offset4">
+        <div class="box-total">
+          <span class="span6"><%= Spree.t(:subtotal) %>:</span> <span class="order-total span6"> <%= @order.display_total.to_html %> </span>
         </div>
-
-
-        <div id="subtotal" class="row-fluid"  data-hook >
-          <div class="span8 offset4">
-            <div class="box-total">
-              <span class="span6"><%= Spree.t(:subtotal) %>:</span> <span class="order-total span6"> <%= @order.display_total.to_html %> </span>
-            </div>
-          </div>
-        </div>
-
-       
-
-        <div class="links row-fluid" data-hook="cart_buttons">
-               <div class="span8 offset4">
-          <%= order_form.text_field :coupon_code, :size => 10, :placeholder => Spree.t(:coupon_code) %>
-        </div>
-         
-
-     
-          <div class="span4 offset7">
-          <%= button_tag :class => 'btn', :id => 'update-button' do %>
-            <%= Spree.t(:update) %>
-          <% end %>
-          <%= button_tag :class => 'btn', :id => 'checkout-link', :name => 'checkout' do %>
-            <%= Spree.t(:checkout) %>
-          <% end %>
-        </div>   </div>
       </div>
-    <% end %>
-  </div>
+    </div>
 
-  <div id="" class="links row-fluid" data-hook>
-    <div class="span8 offset4">
+
+
+
+
+
+    <div class="links row-fluid" data-hook="cart_buttons">
+     <div class="span8 offset4">
+      <%= order_form.text_field :coupon_code, :size => 10, :placeholder => Spree.t(:coupon_code) %>
+    </div>
+
+
+
+    <div class="span4 offset7">
+      <%= button_tag :class => 'btn', :id => 'update-button' do %>
+      <%= Spree.t(:update) %>
+      <% end %>
+      <%= button_tag :class => 'btn', :id => 'checkout-link', :name => 'checkout' do %>
+      <%= Spree.t(:checkout) %>
+      <% end %>
+    </div>   </div>
+  </div>
+  <% end %>
+</div>
+
+<div id="" class="links row-fluid" data-hook>
+  <div class="span8 offset4">
     <%= form_tag spree.empty_cart_path, :method => :put do %>
-      <span id="clear_cart_link" data-hook>
-        <%= submit_tag Spree.t(:empty_cart), :class => 'btn' %>
-        <%= Spree.t(:or) %>
-        <%= link_to Spree.t(:continue_shopping), spree.products_path, :class => 'btn button' %>
-      </span>
+    <span id="clear_cart_link" data-hook>
+      <%= submit_tag Spree.t(:empty_cart), :class => 'btn' %>
+      <%= Spree.t(:or) %>
+      <%= link_to Spree.t(:continue_shopping), spree.products_path, :class => 'btn button' %>
+    </span>
     <% end %>
   </div>       </div> 
 
-<% end %>
+  <% end %>
+

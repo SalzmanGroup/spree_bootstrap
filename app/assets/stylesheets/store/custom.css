@@ -784,9 +784,10 @@ font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	padding:0;
 	color:#000;
 }
-.block-product h1{
+.block-product h1, #login h1{
 	margin:0 0 2px;
 	font:bold 30px/32px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-transform: uppercase;
 }
 .block-product h2{
 	margin:0 0 14px;
@@ -1835,7 +1836,7 @@ display:block;
 
 
 
-.reviewForm label {
+.reviewForm label, #guest_checkout label {
     float: left;
     font: bold 15px/14px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     text-transform: uppercase;
@@ -1899,12 +1900,42 @@ div.rating-cancel, div.star-rating{
 
 .flash.success, .success.errorExplanation {
     background-color: #000000;
-    border-left: 9px solid #8DBA53;
-    font: 15px/16px Lucida Grande;
+    border-left: 20px solid #8DBA53;
+    font: 14px/16px Lucida Grande;
 }
 
 .flash.notice, .notice.errorExplanation {
       background-color: #000000;
-    border-left: 9px solid #00ADEE;
-    font: 15px/16px Lucida Grande;
+    border-left: 20px solid #00ADEE;
+    font: 14px/16px Lucida Grande;
 }
+
+.flash.error, .errorExplanation {
+
+ background-color: #000000;
+    border-left: 20px solid #E45353;
+    font: 14px/16px Lucida Grande;
+}
+
+#guest_checkout{
+    background-color: #D1D2D4;
+    padding-bottom: 15px;
+    
+   
+}
+
+#guest_checkout h6{
+	background-color:#000;
+	color:#fff;
+	font: 14px/16px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+	 text-transform: uppercase;
+	 display:block;
+	 padding-left:15px;
+	 margin:0px;
+	 padding-top:6px;
+	 padding-bottom:6px;
+}
+
+#guest_checkout form{
+	padding:10px;
+	}

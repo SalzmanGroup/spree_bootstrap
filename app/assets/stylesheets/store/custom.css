@@ -307,11 +307,15 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 }
 
 
-span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total {
-color:#000;
+
+
+.area-cart span.price{
+	color:#fff;
 }
 
-
+td .cart-item-price{
+	color:#000;
+}
 
 .table-cart td {
 padding: 9px 4px !important;

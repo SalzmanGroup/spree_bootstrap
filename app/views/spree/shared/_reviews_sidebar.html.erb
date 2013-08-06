@@ -5,13 +5,16 @@
       <% get_reviews.each do |review| %>
         <blockquote>
           "<%= review.review %>"
-        </blockquote>
-        <p>
+
+             <p>
           <%# Stars %>
         </p>
-        <p>
-          - <%= review.name %>
-        </p>
+          <p class="author">
+            - <%= review.name %>
+          </p>
+        </blockquote>
+     
+       
       <% end -%>
     </fieldset>
   </div>

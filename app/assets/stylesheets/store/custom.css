@@ -590,6 +590,28 @@ div[data-hook="inside_cart_form"] #subtotal {
 	right:10px;
 	content:">";
 }
+
+aside#sidebar{
+padding:0px;
+
+}
+
+#sidebar legend{
+
+background-color:#000;
+font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:#fff;
+	text-transform:uppercase;
+	padding:6px 15px;
+}
+
+#sidebar p.author{
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
 .sidebar{
 	overflow:hidden;
 	padding:0 15px;
@@ -605,14 +627,17 @@ div[data-hook="inside_cart_form"] #subtotal {
 }
 .sidebar blockquote{
 	position:relative;
-	margin:0 0 28px;
-	padding:5px 10px 6px;
+ 	margin-left: 14px;
+    margin-right: 14px;
 	background:#fff;
 	border:none;
+	padding: 12px;
+	font-size: 11px;
+    line-height: 14px;
 }
 .sidebar blockquote:after{
 	position:absolute;
-	bottom:-16px;
+	bottom:-11px;
 	left:7px;
 	right:9px;
 	background:#69696a;

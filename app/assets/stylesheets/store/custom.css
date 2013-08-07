@@ -2099,3 +2099,11 @@ table#line-items #order_total, table#line-items td.total span, table#line-items 
     margin-right: 7px;
 }
 
+
+#cart_adjustments td{
+	font: 15px/16px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+#cart_adjustments td.alabel{
+text-align:right;
+}

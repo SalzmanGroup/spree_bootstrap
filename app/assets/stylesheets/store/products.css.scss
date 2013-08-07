@@ -58,3 +58,15 @@ div.star-rating-on a {
 
 .product-review-small { height: 20px; }
 
+.pagination {
+  color: #191919;
+  * {
+    width: auto;
+    display: inline-block;
+    float: none;
+    *display: inline;
+    *zoom: 1;
+  }
+  a { color: #000; }
+  a:hover { text-decoration: underline }
+}

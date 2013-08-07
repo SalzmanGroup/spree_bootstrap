@@ -1877,14 +1877,14 @@ display:block;
 
 
 
-.reviewForm label, #guest_checkout label, #billing label, #shipping label, #payment-methods label{
+.reviewForm label, #guest_checkout label, #billing label, #shipping label, #payment-methods label, #contact label{
     float: left;
     font: bold 15px/14px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     text-transform: uppercase;
 }
 
 .reviewForm span.reviewFormInput input, .reviewForm span.reviewFormInput textarea, #billing input, #billing textarea, #billing select, #payment-methods input, #payment-methods select,
-#shipping input, #shipping textarea, #shipping select{
+#shipping input, #shipping textarea, #shipping select, #contact input, #contact textarea{
 	float:left;
 border-radius:0px;
  resize: none;
@@ -1906,7 +1906,7 @@ padding-right:0px;
 .reviewForm span.required {
 }
 
-h2.new-review-title, h2.login-title, h2.actTitle{
+h2.new-review-title, h2.login-title, h2.actTitle, h2.contactus{
     font: bold 30px/32px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     margin: 0 0 25px;
     text-transform: uppercase;

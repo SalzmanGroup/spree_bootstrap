@@ -8,12 +8,12 @@ body{
 }
 img{border-style:none;}
 a{
-	text-decoration:underline;
-	color:#000;
+	text-decoration:none;
+	color:#111;
 }
 a:hover,
 a:focus{
-	color:#000;
+	color:#191919;
 	text-decoration:none;
 }
 a:active{background-color:transparent;}

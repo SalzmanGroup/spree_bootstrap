@@ -12,33 +12,36 @@
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
 
-<h1><%= t('contact_us') %></h1>
+<h2 class="contactus"><%= t('contact_us') %></h2>
+
+<div id="contact" class="row-fluid">
 <%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
   <% if SpreeContactUs.require_name %>
-    <p>
-      <%= f.label :name %>
-      <span class="required">*</span><br/>
-      <%= f.text_field :name, class: 'required' %>
+    <p class="row-fluid">
+      <span class="span2"><%= f.label :name %>
+      <span class="required">*</span></span> 
+      <span class="span9"><%= f.text_field :name, class: 'required span12' %></span> 
     </p>
   <% end %>
-  <p>
-    <%= f.label :email %>
-    <span class="required">*</span><br/>
-    <%= f.email_field :email, class: 'required email' %>
+  <p class="row-fluid">
+    <span class="span2"><%= f.label :email %>
+    <span class="required">*</span></span>
+    <span class="span9"><%= f.email_field :email, class: 'required email span12' %></span>
   </p>
   <% if SpreeContactUs.require_subject %>
-    <p>
-      <%= f.label :subject %>
-      <span class="required">*</span><br/>
-      <%= f.text_field :subject, class: 'required' %>
+   <p class="row-fluid">
+      <span class="span2"><%= f.label :subject %>
+      <span class="required">*</span></span>
+      <span class="span9"><%= f.text_field :subject, class: 'required span12' %></span>
     </p>
   <% end %>
-  <p>
-    <%= f.label :message %>
-    <span class="required">*</span><br/>
-    <%= f.text_area :message, class: 'required' %>
+  <p class="row-fluid">
+    <span class="span2"><%= f.label :message %>
+    <span class="required">*</span></span>
+    <span class="span9"><%= f.text_area :message, class: 'required span12' %></span>
   </p>
-  <p>
-    <%= f.submit t('submit'), :alt => t('submit'), :id => 'contact_us_contact_submit', :title => t('submit') %>
+  <p class="row-fluid">
+    <span class="span12"><%= f.submit t('submit'), :class=> 'button span3 offset8', :alt => t('submit'), :id => 'contact_us_contact_submit', :title => t('submit') %>
   </p>
 <% end %>
+</div>

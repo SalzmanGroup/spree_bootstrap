@@ -609,14 +609,35 @@ padding:0px;
 
 }
 
-#sidebar legend{
+#sidebar legend, #sidebar h6{
 
 background-color:#000;
 font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#fff;
 	text-transform:uppercase;
 	padding:6px 15px;
+	margin:0px;
+	margin-bottom:10px;
 }
+
+#sidebar ul{
+	list-style: none;
+	background-color: white;
+	padding:7px;
+	margin:13px;
+	display:block;
+
+}
+
+
+#sidebar ul li{
+border-bottom:1px solid #ccc;
+padding-bottom:5px;
+padding-top:2px;
+padding-left:2px;
+
+}
+
 
 #sidebar p.author{
     display: block;
@@ -1856,14 +1877,14 @@ display:block;
 
 
 
-.reviewForm label, #guest_checkout label, #billing label, #shipping label, #payment-methods label{
+.reviewForm label, #guest_checkout label, #billing label, #shipping label, #payment-methods label, #contact label{
     float: left;
     font: bold 15px/14px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     text-transform: uppercase;
 }
 
 .reviewForm span.reviewFormInput input, .reviewForm span.reviewFormInput textarea, #billing input, #billing textarea, #billing select, #payment-methods input, #payment-methods select,
-#shipping input, #shipping textarea, #shipping select{
+#shipping input, #shipping textarea, #shipping select, #contact input, #contact textarea{
 	float:left;
 border-radius:0px;
  resize: none;
@@ -1885,7 +1906,7 @@ padding-right:0px;
 .reviewForm span.required {
 }
 
-h2.new-review-title, h2.login-title{
+h2.new-review-title, h2.login-title, h2.actTitle, h2.contactus{
     font: bold 30px/32px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     margin: 0 0 25px;
     text-transform: uppercase;
@@ -2099,3 +2120,40 @@ table#line-items #order_total, table#line-items td.total span, table#line-items 
     margin-right: 7px;
 }
 
+
+#cart_adjustments td{
+	font: 15px/16px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+#cart_adjustments td.alabel{
+text-align:right;
+}
+
+
+.account-my-orders h3{
+	text-transform: uppercase;
+		font: bold 25px/25px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+		margin-top:26px;
+		display:block;
+}
+
+#user-info dt{
+		font: bold 18px/18px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+.subtaxon-title{
+   background-color: #D1D2D4;
+
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-top: 3px;
+}
+
+.subtaxon-title a{
+font: bold 14px/15px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+color:#000;
+text-decoration: none;
+	}
+
+	.subtaxon-title a:hover{
+text-decoration: underline;
+ }

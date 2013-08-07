@@ -22,7 +22,7 @@ paginated_products ||= products
             <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
             <div class="caption">
               <p>
-              <%= truncate product.description, length: 75, separator: " " %>
+              <%= sanitize(truncate product.description, length: 75, separator: " ") %>
               </p>
             </div>
 

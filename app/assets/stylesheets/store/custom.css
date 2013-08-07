@@ -1793,23 +1793,29 @@ display:block;
 
 
 
-.reviewForm label, #guest_checkout label, #billing label, #payment-methods label{
+.reviewForm label, #guest_checkout label, #billing label, #shipping label, #payment-methods label{
     float: left;
     font: bold 15px/14px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     text-transform: uppercase;
 }
 
-.reviewForm span.reviewFormInput input, .reviewForm span.reviewFormInput textarea, #billing input, #billing textarea, #billing select, #payment-methods input, #payment-methods select{
+.reviewForm span.reviewFormInput input, .reviewForm span.reviewFormInput textarea, #billing input, #billing textarea, #billing select, #payment-methods input, #payment-methods select,
+#shipping input, #shipping textarea, #shipping select{
 	float:left;
 border-radius:0px;
  resize: none;
 	}
 
 
-#billing input, #billing textarea, #billing select, #payment-methods select, #payment-methods input{
+#billing input, #billing textarea, #billing select, #payment-methods select, #payment-methods input,
+#shipping input, #shipping textarea, #shipping select{
 width:100%;
 padding-left:0px;
 padding-right:0px;
+}
+
+#billing input[type=checkbox], #shipping input[type=checkbox] {
+	width: auto;
 }
 
 
@@ -1946,6 +1952,8 @@ border:0px;
 padding:0px;
 margin:0px;
 	}
+
+#billing legend, #shipping legend { width: auto; }
 
 .temp{
     float: left !important;

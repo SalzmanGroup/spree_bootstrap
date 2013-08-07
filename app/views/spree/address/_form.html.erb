@@ -1,64 +1,66 @@
 <% address_id = address_type.chars.first %>
 <div class="inner" data-hook=<%="#{address_type}_inner" %>>
   <div class="row-fluid field" id=<%="#{address_id}firstname" %>>
-    <span class="span3"><%= form.label :firstname, Spree.t(:first_name) %><span class="required">*</span></span>
-    <span class="span9"><%= form.text_field :firstname, :class => 'required' %></span>
+    <span class="span4"><%= form.label :firstname, Spree.t(:first_name) %><span class="required">*</span></span>
+    <span class="span8"><%= form.text_field :firstname, :class => 'required' %></span>
   </div>
 
   <div class="row-fluid field"  id=<%="#{address_id}lastname" %>>
-     <span class="span3"><%= form.label :lastname, Spree.t(:last_name) %><span class="required">*</span> </span>
-    <span class="span9"><%= form.text_field :lastname, :class => 'required' %> </span>
+     <span class="span4"><%= form.label :lastname, Spree.t(:last_name) %><span class="required">*</span> </span>
+    <span class="span8"><%= form.text_field :lastname, :class => 'required' %> </span>
    </div>
   
   <% if Spree::Config[:company] %>
     <div class="row-fluid field" id=<%="#{address_id}company" %>>
-       <span class="span3"><%= form.label :company, Spree.t(:company) %> </span>
-      <span class="span9"><%= form.text_field :company %> </span>
+       <span class="span4"><%= form.label :company, Spree.t(:company) %> </span>
+      <span class="span8"><%= form.text_field :company %> </span>
      </div>
   <% end %>
 
   <div class="row-fluid field"  id=<%="#{address_id}address1" %>>
-     <span class="span3"><%= form.label :address1, Spree.t(:street_address) %><span class="required">*</span> </span>
-    <span class="span9"><%= form.text_field :address1, :class => 'required' %> </span>
+     <span class="span4"><%= form.label :address1, Spree.t(:street_address) %><span class="required">*</span> </span>
+    <span class="span8"><%= form.text_field :address1, :class => 'required' %> </span>
    </div>
 
   <div class="row-fluid field"  id=<%="#{address_id}address2" %>>
-    <span class="span3"><%= form.label :address2, Spree.t(:street_address_2) %> </span>
-    <span class="span9"><%= form.text_field :address2 %> </span>
+    <span class="span4"><%= form.label :address2, Spree.t(:street_address_2) %> </span>
+    <span class="span8"><%= form.text_field :address2 %> </span>
    </div>
 
 
   <div class="row-fluid field"  id=<%="#{address_id}city" %>>
-     <span class="span3"><%= form.label :city, Spree.t(:city) %><span class="required">*</span> </span>
-    <span class="span9"><%= form.text_field :city, :class => 'required' %> </span>
+     <span class="span4"><%= form.label :city, Spree.t(:city) %><span class="required">*</span> </span>
+    <span class="span8"><%= form.text_field :city, :class => 'required' %> </span>
    </div>
 
 
   <div class="row-fluid field" id=<%="#{address_id}country" %>>
-     <span class="span3"><%= form.label :country_id, Spree.t(:country) %><span class="required">*</span> </span>
-    <span class="span9" id=<%="#{address_id}country-selection" %>>
-      <%= form.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'required'} %>
+     <span class="span4"><%= form.label :country_id, Spree.t(:country) %><span class="required">*</span> </span>
+    <span class="span8" id=<%="#{address_id}country-selection" %>>
+      United States
+      <%= form.hidden_field :country_id, value: Spree::Country.find_by_iso("US").try(:id) %>
     </span>
   </div>
 
   <% if Spree::Config[:address_requires_state] %>
    <div class="row-fluid field"  id=<%="#{address_id}state" %>>
       <% have_states = !address.country.states.empty? %>
-      <span class="span3"><%= form.label :state, Spree.t(:state) %><span class='required' id=<%="#{address_id}state-required"%>>*</span></span>
+      <span class="span4">
+        <%= form.label :state, Spree.t(:state) %>
+        <span class='required' id=<%="#{address_id}state-required"%>>*</span>
+      </span>
+      <span class="span8" id="<%="#{address_id}state_holder" %>"></span>
     
       <% state_elements = [
          form.collection_select(:state_id, address.country.states,
                             :id, :name,
                             {:include_blank => true},
-                            {:class => have_states ? 'required temp' : 'hidden',
-                            :disabled => !have_states}) +
-         form.text_field(:state_name,
-                            :class => !have_states ? 'required span9' : 'hidden',
-                            :disabled => have_states)
+                            {:class => have_states ? 'required' : 'hidden',
+                            :disabled => !have_states})
          ].join.gsub('"', "'").gsub("\n", "")
       %> 
   <%= javascript_tag do -%>
-        $('#<%="#{address_id}state" %>').append("<%== state_elements %>");
+        $('#<%="#{address_id}state_holder" %>').append("<%== state_elements %>");
 
       <% end %>
 
@@ -70,19 +72,19 @@
   <% end %>
 
  <div class="row-fluid field"  id=<%="#{address_id}zipcode" %>>
-     <span class="span3"><%= form.label :zipcode, Spree.t(:zip) %><span class="required">*</span> </span>
-    <span class="span9"><%= form.text_field :zipcode, :class => 'required' %> </span>
+     <span class="span4"><%= form.label :zipcode, Spree.t(:zip) %><span class="required">*</span> </span>
+    <span class="span8"><%= form.text_field :zipcode, :class => 'required' %> </span>
   </div>
 
  <div class="row-fluid field"  id=<%="#{address_id}phone" %>>
-     <span class="span3"><%= form.label :phone, Spree.t(:phone) %><span class="required">*</span></span>
-   <span class="span9"> <%= form.phone_field :phone, :class => 'required' %> </span>
+     <span class="span4"><%= form.label :phone, Spree.t(:phone) %><span class="required">*</span></span>
+   <span class="span8"> <%= form.phone_field :phone, :class => 'required' %> </span>
    </div>
 
   <% if Spree::Config[:alternative_shipping_phone] %>
    <div class="row-fluid field"  id=<%="#{address_id}altphone" %>>
-       <span class="span3"><%= form.label :alternative_phone, Spree.t(:alternative_phone) %> </span>
-      <span class="span9"><%= form.phone_field :alternative_phone %> </span>
+       <span class="span4"><%= form.label :alternative_phone, Spree.t(:alternative_phone) %> </span>
+      <span class="span8"><%= form.phone_field :alternative_phone %> </span>
     </div>
   <% end %>
 </div>

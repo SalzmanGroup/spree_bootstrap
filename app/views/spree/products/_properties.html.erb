@@ -1,13 +1,16 @@
 <% unless @product_properties.empty? %>  
-
+  <div class="heading">
+    <h3 class="product-section-title">
+      Properties
+    </h3>
+  </div>
   <div id="" class="properties" data-hook>
    
       <% @product_properties.each do |product_property| %>
         <% css_class = cycle('even', 'odd', :name => "properties") %>
-        <dl class="">
-          <dt><strong><%= product_property.property.presentation %>:</strong></dt>
-          <dd ><%= product_property.value %></dd>
-        </dl>
+        <p>
+          <strong><%= product_property.property.presentation %>:</strong> <%= product_property.value %>
+        </p>
       <% end %>
       <% reset_cycle('properties') %>
    

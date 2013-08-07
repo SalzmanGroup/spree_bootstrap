@@ -1,8 +1,7 @@
 <% if @product.relations.order(:id).any? %>
   <div class="heading">
-    <h3>
+    <h3 class="product-section-title">
       <%= Spree.t('related_products') %>
-      <small><%= Spree.t 'save_when_you_buy_together' %></small>
     </h3>
   </div>
   <div id="related-products-carousel" class="<%= "carousel" if @product.relations.count > 3 %> slide">

@@ -2140,3 +2140,20 @@ text-align:right;
 #user-info dt{
 		font: bold 18px/18px "Lucida Sans Unicode","Lucida Grande",sans-serif;
 }
+.subtaxon-title{
+   background-color: #D1D2D4;
+
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-top: 3px;
+}
+
+.subtaxon-title a{
+font: bold 14px/15px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+color:#000;
+text-decoration: none;
+	}
+
+	.subtaxon-title a:hover{
+text-decoration: underline;
+ }

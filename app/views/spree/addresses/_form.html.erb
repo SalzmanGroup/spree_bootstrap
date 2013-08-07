@@ -1,5 +1,6 @@
 <% address_id = address_type.chars.first %>
 <% country_id = address_type == 'billing' ? 'bcountry' : 'scountry' %>
+
 <% ADDRESS_FIELDS.each do |field| %>
   <% if field == "country" %>
 
@@ -37,7 +38,7 @@
 
   <% else %>
     <% next if field == "company" && !Spree::Config[:company] %>
-    <%= address_field(address_form, field.to_sym, address_name) %>
+ <%= address_field(address_form, field.to_sym, address_name) %>
   <% end %>
 <% end %>
 <% if Spree::Config["alternative_#{address_name[0] == 'b' ? 'billing' : 'shipping'}_phone"] %>

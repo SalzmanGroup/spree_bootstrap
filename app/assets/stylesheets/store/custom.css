@@ -1913,6 +1913,29 @@ h2.new-review-title, h2.login-title, h2.actTitle, h2.contactus{
     display:block;
 }
 
+
+h3.uAddress{
+    font: bold 25px/26px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    margin: 0 0 13px;
+    text-transform: uppercase;
+    display:block;
+
+}
+
+#new_address_link a{
+  font: bold 15px/15px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+  text-decoration: underline;
+}
+
+td.extraLinks a{
+  font: bold 15px/15px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+  text-decoration: underline;
+}
+
+td.extraLinks{
+	padding-left: 80px;
+}
+
 span.required {
    color: #000000;
     font-size: 15px;
@@ -2157,3 +2180,20 @@ text-decoration: none;
 	.subtaxon-title a:hover{
 text-decoration: underline;
  }
+
+#checkout_form_address legend{
+	font: bold 25px/25px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+	text-transform: uppercase;
+	margin-bottom:20px;
+	padding-bottom:10px;
+}
+
+#checkout_form_address label, #checkout_form_address input{
+	font: bold 14px/15px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+
+}
+
+#checkout_form_address p{
+	float:left;
+	width:100%
+}

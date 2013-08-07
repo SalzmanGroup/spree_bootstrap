@@ -21,7 +21,7 @@
     </div>
 
 
-    <div id="subtotal" class="links row-fluid"  data-hook >
+    <div id="" class="row-fluid"  data-hook >
       <div class="span8 offset4">
         <div class="box-total">
           <span class="span6"><%= Spree.t(:subtotal) %>:</span> <span class="order-total span6"> <%= @order.display_total.to_html %> </span>
@@ -34,32 +34,38 @@
 
 
 
-    <div class="links row-fluid" data-hook="cart_buttons">
-     <div class="span8 offset4">
-      <%= order_form.text_field :coupon_code, :size => 10, :placeholder => Spree.t(:coupon_code) %>
+    <div class="row-fluid" data-hook="cart_buttons">
+     <div class="span4 offset8">
+      <%= order_form.text_field :coupon_code, :class => 'span12', :size => 10, :placeholder => Spree.t(:coupon_code) %>
     </div>
 
 
 
-    <div class="span4 offset7">
-      <%= button_tag :class => 'btn', :id => 'update-button' do %>
+    <div class="row-fluid">
+      <span class="span3 offset9"><%= button_tag :class => 'btn span12', :id => 'update-button' do %>
       <%= Spree.t(:update) %>
       <% end %>
-      <%= button_tag :class => 'btn', :id => 'checkout-link', :name => 'checkout' do %>
+    </span>
+    </div>
+    <div class="row-fluid">
+
+     <span class="span3 offset9" style="margin-top:10px;">
+      <%= button_tag :class => 'btn span12', :id => 'checkout-link', :name => 'checkout' do %>
       <%= Spree.t(:checkout) %>
       <% end %>
-    </div>   </div>
+    </span>
+    </div></div>  
   </div>
   <% end %>
 </div>
 
-<div id="" class="links row-fluid" data-hook>
-  <div class="span8 offset4">
+<div id="" class="row-fluid" style="float:left" data-hook>
+<div class="span4 offset8" style="margin-top:15px">
     <%= form_tag spree.empty_cart_path, :method => :put do %>
     <span id="clear_cart_link" data-hook>
-      <%= submit_tag Spree.t(:empty_cart), :class => 'btn button' %>
-      <%= Spree.t(:or) %>
-      <%= link_to Spree.t(:continue_shopping), spree.products_path, :class => 'btn button' %>
+      <span class="span6"><%= submit_tag Spree.t(:empty_cart), :class => 'span12 btn button' %></span>
+      
+       <span class="span6" style=" display:block; text-align:center;"><%= link_to Spree.t(:continue_shopping), spree.products_path, :class => 'span12 btn button' %></span>
     </span>
     <% end %>
   </div>       </div> 

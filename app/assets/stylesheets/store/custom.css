@@ -609,14 +609,35 @@ padding:0px;
 
 }
 
-#sidebar legend{
+#sidebar legend, #sidebar h6{
 
 background-color:#000;
 font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#fff;
 	text-transform:uppercase;
 	padding:6px 15px;
+	margin:0px;
+	margin-bottom:10px;
 }
+
+#sidebar ul{
+	list-style: none;
+	background-color: white;
+	padding:7px;
+	margin:13px;
+	display:block;
+
+}
+
+
+#sidebar ul li{
+border-bottom:1px solid #ccc;
+padding-bottom:5px;
+padding-top:2px;
+padding-left:2px;
+
+}
+
 
 #sidebar p.author{
     display: block;
@@ -1885,7 +1906,7 @@ padding-right:0px;
 .reviewForm span.required {
 }
 
-h2.new-review-title, h2.login-title{
+h2.new-review-title, h2.login-title, h2.actTitle{
     font: bold 30px/32px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     margin: 0 0 25px;
     text-transform: uppercase;
@@ -2106,4 +2127,16 @@ table#line-items #order_total, table#line-items td.total span, table#line-items 
 
 #cart_adjustments td.alabel{
 text-align:right;
+}
+
+
+.account-my-orders h3{
+	text-transform: uppercase;
+		font: bold 25px/25px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+		margin-top:26px;
+		display:block;
+}
+
+#user-info dt{
+		font: bold 18px/18px "Lucida Sans Unicode","Lucida Grande",sans-serif;
 }

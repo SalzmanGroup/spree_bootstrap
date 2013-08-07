@@ -5,3 +5,9 @@
 [data-hook="logo-wrapper"] img {
 	visibility: hidden;
 }
+
+#taxonomy_tree .jstree-icon,
+.icon-search:before, 
+.select2-search:before,
+[class*=icon-]
+{ font-family: FontAwesome;}

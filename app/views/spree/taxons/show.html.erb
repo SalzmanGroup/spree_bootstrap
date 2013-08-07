@@ -11,10 +11,11 @@
 		<div class="row-fluid sort-form">
 			<div class="span12">
 				<select id="product_sort">
-					<option value="price desc">Price Hi &rarr; Lo</option>
-					<option value="price asc">Price Lo &rarr; Hi</option>
-					<option value="name">Name</option>
-				</select>
+          <option value="price_desc" <%= "selected" if @sort == "price_desc" %> >Price Hi &rarr; Lo</option>
+          <option value="price_asc" <%= "selected" if @sort == "price_asc" %> >Price Lo &rarr; Hi</option>
+          <option value="name_asc" <%= "selected" if @sort == "name_asc" %> >Name A &rarr; Z</option>
+          <option value="name_desc" <%= "selected" if @sort == "name_desc" %> >Name Z &rarr; A</option>
+        </select>
 			</div>
 		</div>
 	</div>

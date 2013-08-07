@@ -8,12 +8,12 @@ body{
 }
 img{border-style:none;}
 a{
-	text-decoration:underline;
-	color:#000;
+	text-decoration:none;
+	color:#111;
 }
 a:hover,
 a:focus{
-	color:#000;
+	color:#191919;
 	text-decoration:none;
 }
 a:active{background-color:transparent;}
@@ -311,6 +311,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 
 .area-cart span.price{
 	color:#fff;
+	float: left;
 }
 
 td.cart-item-price span.price, td.cart-item-total span.price{
@@ -320,6 +321,11 @@ td.cart-item-price span.price, td.cart-item-total span.price{
 .table-cart td {
 padding: 9px 4px !important;
 }
+.cart-item-delete .delete  {
+	width: 60px !important;
+	text-align: center;
+}
+.table-cart .del:after { left: 40% !important;}
 
 
 div[data-hook="inside_cart_form"] #subtotal {

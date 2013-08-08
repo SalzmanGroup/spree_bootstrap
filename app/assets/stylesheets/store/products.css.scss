@@ -19,6 +19,29 @@
   }
 }
 
+#product-thumbnails {
+  .product-thumbnail {
+    padding: 3px;
+    margin: 5px 5px 5px 0px;
+    display: inline-block;
+    height: 60px;
+  }
+}
+
+.block-product .box-image li:after { display: none; }
+
+#product-images #main-image img {
+  min-height: 0;
+  max-width: 100%;
+  width: auto;
+  max-height: 200px;
+  height: auto;
+  &.zoomImg {
+    max-height: none;
+    max-width: none;
+  }
+}
+
 div.rating-cancel { display: none !important; }
 
 div.star-rating,

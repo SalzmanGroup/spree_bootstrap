@@ -1,4 +1,5 @@
-<h3 class="uAddress"><%= Spree.t(:shipping_addresses, :scope => :address_book) %></h3>
+<div class="span12">
+  <h3 class="uAddress"><%= Spree.t(:shipping_addresses, :scope => :address_book) %></h3>
 <% if spree_current_user.addresses.present? %>
 <table id="user_addresses">
   <tbody>
@@ -6,8 +7,8 @@
     <tr class="<%= cycle('even', 'odd') %>">
       <td><%= address %></td>
       <td class="extraLinks">
-        <%= link_to Spree.t(:edit), edit_address_path(address) %>&nbsp;
-        <%= link_to Spree.t(:remove), address_path(address), :method => :delete, :confirm => Spree.t(:are_you_sure) %>
+        <%= link_to Spree.t(:edit), edit_address_path(address), :class => 'button' %>&nbsp;
+        <%= link_to Spree.t(:remove), address_path(address), :class => 'button', :method => :delete, :confirm => Spree.t(:are_you_sure) %>
       </td>
     </tr>
     <% end %>
@@ -20,4 +21,5 @@
 <% end %>
 <div id="new_address_link" style="margin-top:10px;">
   <%= link_to Spree.t(:add_new_shipping_address, :scope => :address_book), :controller => :addresses, :action => :new %>
+</div>
 </div>

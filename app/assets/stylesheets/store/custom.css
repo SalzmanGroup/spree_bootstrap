@@ -996,10 +996,10 @@ div.star-rating{
 }
 .intensity-list li.active span{background:#a70829;}
 .box-price{
-	margin:32px 0 0;
-	padding:12px 14px 0;
-	background:#d1d2d4;
-	font:15px/18px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+ background: none repeat scroll 0 0 #D1D2D4;
+    font: 15px/18px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+      margin: 32px 0 0;
+    padding: 9px 9px 0;
 }
 .box-price .price{
 	display:block;
@@ -1037,10 +1037,10 @@ div.star-rating{
 .box-price .select-area{padding-right:16px;}
 .box-price .select-area .select-holder{padding-top:2px;}
 .box-price .holder{
-	overflow:hidden;
-	margin:0 -14px;
-	padding:0 4px 1px;
-	background:#000;
+    background: none repeat scroll 0 0 #000000;
+    margin: 0 -9px;
+    overflow: hidden;
+    padding: 0 4px 1px;
 }
 .box-price .btn{
 	margin:6px 0;
@@ -1247,7 +1247,7 @@ div.star-rating{
 }
 
 
-input.button, a.button{
+input.button, a.button, button.button{
 	display:inline-block;
 	padding:5px 10px;
 	background:#000;
@@ -1927,10 +1927,7 @@ h3.uAddress{
   text-decoration: underline;
 }
 
-td.extraLinks a{
-  font: bold 15px/15px "Lucida Sans Unicode","Lucida Grande",sans-serif;
-  text-decoration: underline;
-}
+
 
 td.extraLinks{
 	padding-left: 80px;
@@ -2181,7 +2178,7 @@ text-decoration: none;
 text-decoration: underline;
  }
 
-#checkout_form_address legend{
+#checkout_form_address legend {
 	font: bold 25px/25px "Lucida Sans Unicode","Lucida Grande",sans-serif;
 	text-transform: uppercase;
 	margin-bottom:20px;
@@ -2196,4 +2193,14 @@ text-decoration: underline;
 #checkout_form_address p{
 	float:left;
 	width:100%
+}
+
+.fq_t{
+	margin-bottom:4px;
+	display:block;
+}
+
+#user-info .sub{
+	font: bold 15px/17px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+	text-transform: uppercase;
 }

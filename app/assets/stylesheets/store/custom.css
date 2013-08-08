@@ -1247,7 +1247,7 @@ div.star-rating{
 }
 
 
-input.button, a.button{
+input.button, a.button, button.button{
 	display:inline-block;
 	padding:5px 10px;
 	background:#000;
@@ -2196,4 +2196,9 @@ text-decoration: underline;
 #checkout_form_address p{
 	float:left;
 	width:100%
+}
+
+.fq_t{
+	margin-bottom:4px;
+	display:block;
 }

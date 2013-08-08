@@ -22,7 +22,7 @@
   <% end %>
 
 
-
+<br/>
   <% if Spree::Reviews::Config[:feedback_rating] && (!Spree::Reviews::Config[:require_login] || spree_current_user) %>
   <div class="feedback_review" id="feedback_review_<%= review.id %>">
     <%= render :partial => "spree/feedback_reviews/form", :locals => {:review => review} %>
@@ -33,5 +33,6 @@
 
 
   <meta itemprop="reviewRating" content="<%= review.rating %>" />
+ 
 </blockquote>
 

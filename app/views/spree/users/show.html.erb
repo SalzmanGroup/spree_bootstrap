@@ -1,13 +1,13 @@
 <h2 class="actTitle"><%= accurate_title %></h2>
 
 <div data-hook="account_summary" class="account-summary">
-  <dl id="user-info">
-    <dt><%= Spree.t(:email) %></dt>
-    <dd><%= @user.email %> (<%= link_to Spree.t(:edit), spree.edit_account_path %>)</dd>
-  </dl>
+  <div class="span9 offset1" id="user-info">
+    <span class="sub"><%= Spree.t(:email) %></span><br/>
+    <span><%= @user.email %> (<%= link_to Spree.t(:edit), spree.edit_account_path %>)</span>
+  </div>
 </div>
 
-<div data-hook="account_my_orders" class="account-my-orders">
+<div data-hook="account_my_orders" class="span12 account-my-orders">
 
   <h3><%= Spree.t(:my_orders) %></h3>
   <% if @orders.present? %>

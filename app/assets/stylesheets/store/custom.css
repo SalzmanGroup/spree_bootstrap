@@ -2204,3 +2204,23 @@ text-decoration: underline;
 	font: bold 15px/17px "Lucida Sans Unicode","Lucida Grande",sans-serif;
 	text-transform: uppercase;
 }
+
+form#checkout_form_address label {
+    display: inline-block;
+    margin-bottom: 5px;
+    *display:inline;
+}
+
+form#checkout_form_address input, form#checkout_form_address select{
+    width:100%;
+    border-radius:0px;
+ padding-left: 0;
+    padding-right: 0;
+}
+
+form#checkout_form_address input.button{
+	width:50%;
+	   margin-top: 20px;
+    max-width: 150px;
+    width: 30%;
+}

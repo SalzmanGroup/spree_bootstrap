@@ -1,8 +1,8 @@
 <% if image %> 
-  <%= image_tag image.attachment.url(:product), :itemprop => "image" %>
+  <%= image_tag image.attachment.url(:large), :itemprop => "image", data: {zoom: "/favicon.ico"} %>
 
 <% else %>
   
-  <%= product_image(@product, :itemprop => "image") %>
+  <%= large_image(@product, :itemprop => "image", data: {zoom: "/favicon.ico"}) %>
 
 <% end %>

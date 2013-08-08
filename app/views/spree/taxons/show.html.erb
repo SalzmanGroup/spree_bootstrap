@@ -15,9 +15,7 @@
 	</div>
 	<div class="span6">
 		<ul class="product-category">
-			<% @taxon.children.each do |child| %>
-			<li><%= link_to child.name, seo_url(child) %></li>
-			<% end %>
+			<%= taxon_subnav @taxon %>
 		</ul>
 	</div>
 </div>

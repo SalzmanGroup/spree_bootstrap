@@ -8,7 +8,7 @@ module Spree
 	      else
 	      	html = ""
 	        is_required = Spree::Address.required_fields.include?(method)
-	        separator = is_required ? '<span class="req">*</span><br />' : '<br />'
+	        separator = is_required ? '<span class="required">*</span><br />' : '<br />'
 	        html += content_tag :div, class: :span3 do
 	        	form.label(method) + separator.html_safe 
 	        end

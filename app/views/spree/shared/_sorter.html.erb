@@ -1,8 +1,9 @@
 <div class="row-fluid sort-form">
 	<div class="span12">
-		<select id="product_sort" class="span8">
+		<select id="product_sort" class="span12">
       <option value="price_desc" <%= "selected" if sort == "price_desc" %> >Price Hi &rarr; Lo</option>
       <option value="price_asc" <%= "selected" if sort == "price_asc" %> >Price Lo &rarr; Hi</option>
+      <option value="rating_desc" <%= "selected" if sort == "rating_desc" %> >Highest Rated</option>
       <option value="name_asc" <%= "selected" if sort == "name_asc" %> >Name A &rarr; Z</option>
       <option value="name_desc" <%= "selected" if sort == "name_desc" %> >Name Z &rarr; A</option>
     </select>

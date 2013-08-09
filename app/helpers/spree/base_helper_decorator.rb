@@ -30,5 +30,35 @@ module Spree
         return link_to Spree.t(network), network_link, class: network, target: "_blank"
       end
     end
+
+    def taxon_subnav taxon
+      html = ""
+      if taxon.children.any?
+        html += content_tag :li, class: 'parent' do
+          taxon.name
+        end
+        taxon.children.each do |child| 
+          html += content_tag :li do
+            link_to child.name, seo_url(child)
+          end
+        end
+      else
+        html += content_tag :li, class: 'parent' do
+          link_to(taxon.parent.name, seo_url(taxon.parent))
+        end
+        taxon.parent.children.each do |t|
+          html += content_tag :li do
+            t == taxon ? t.name : link_to(t.name, seo_url(t))
+          end
+        end
+      end
+      html.html_safe
+    end
+
+    def should_be_active taxon, category
+      if (category == taxon) || (taxon && taxon.ancestors.include?(category))
+        "active"
+      end
+    end
   end
 end

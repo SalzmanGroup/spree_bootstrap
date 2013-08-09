@@ -1,5 +1,6 @@
 
 <% content_for :top_banner do %>
+	<h2><%= @taxon.name %></h2>
 	<%= render 'spree/taxons/info' %>
 <% end %>
 
@@ -10,14 +11,12 @@
 <% end %>
 
 <div class="row-fluid sort-panel">
-	<div class="span6">
+	<div class="span4">
 		<%= render "spree/shared/sorter", sort: @sort %>	
 	</div>
-	<div class="span6">
+	<div class="span8">
 		<ul class="product-category">
-			<% @taxon.children.each do |child| %>
-			<li><%= link_to child.name, seo_url(child) %></li>
-			<% end %>
+			<%= taxon_subnav @taxon %>
 		</ul>
 	</div>
 </div>

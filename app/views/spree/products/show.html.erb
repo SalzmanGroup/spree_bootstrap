@@ -21,11 +21,6 @@
         </div>
 
       </div>
-      
-      <ul style="display:none;">
-        <li><a href="#">[+] View Larger</a></li>
-        <li><a href="#">View Other Images</a></li>
-      </ul>
 
     </div>
 
@@ -59,6 +54,8 @@
         <li>     <%= link_to Spree.t('write_a_review'), new_product_review_path(@product), 
                 :rel => "nofollow,noindex", :alt => 'Write a review' %></li>
       </ul>
+
+      <%= render 'spree/shared/social_buttons' %>
 
       <div id="product-description" data-hook="product_description">
 
@@ -95,8 +92,5 @@
 <div data-hook="promotions">
   <%= render :partial => 'promotions' %>
 </div>
-
-
-
 
 </div>

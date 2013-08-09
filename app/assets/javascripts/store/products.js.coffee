@@ -15,7 +15,6 @@ $ ->
   	console.log 'clicked'
   	return if $(this).closest('.product-thumbnail').hasClass 'selected'
   	console.log 'through'
-  	$('#main-image img').attr 'src', $(this).attr('href')
-  	$('#main-image img').attr('data-zoom', $(this).attr('data-zoom'))
+  	$('#main-image #img_container img').attr 'src', $(this).attr('href')
 
-  $('#main-image').zoom()
+  $('#img_container').zoom()

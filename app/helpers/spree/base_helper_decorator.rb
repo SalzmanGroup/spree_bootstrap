@@ -56,7 +56,7 @@ module Spree
     end
 
     def should_be_active taxon, category
-      if (category == taxon) || taxon.ancestors.include?(category)
+      if (category == taxon) || (taxon && taxon.ancestors.include?(category))
         "active"
       end
     end

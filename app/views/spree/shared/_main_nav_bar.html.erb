@@ -24,7 +24,7 @@
 										<%= link_to category.name, seo_url(category) %>
 										<% if category.children.any? %>
 											<ul class="dropdown-menu">
-												<% category.children.each do |subcategory| %>
+												<% category.children.order('position').each do |subcategory| %>
 													<li><%= link_to subcategory.name, seo_url(subcategory) %></li>													
 												<% end -%>
 											</ul>

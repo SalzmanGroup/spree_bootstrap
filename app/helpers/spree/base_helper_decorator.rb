@@ -25,7 +25,7 @@ module Spree
     end
 
     def social_network_link network
-      network_link = Rails.application.config.try(:social_networks).try(:[], network)
+      network_link = Spree::Config.get("#{network}_url")
       if network_link
         return link_to Spree.t(network), network_link, class: network, target: "_blank"
       end

@@ -3,11 +3,32 @@
 <% end -%>
 
 <% content_for :sidebar do %>
-  <% if "products" == @current_controller && @taxon %>
-    <%= render :partial => "spree/shared/filters" %>
-  <% else %>
-    <%= render :partial => "spree/shared/taxonomies" %>
+  <% if Spree::Config.store_phone_number.present? || Spree::Config.store_address.present? %>
+    <fieldset>
+      <legend>Contact Info</legend>
+      <% if Spree::Config.store_phone_number.present? %>
+        <div class="row-fluid">
+          <div class="span12">
+            <blockquote>
+              <i class="icon-phone"></i> <%= Spree::Config.store_phone_number %>
+            </blockquote>
+          </div>
+        </div>
+      <% end %>
+      <% if Spree::Config.store_address.present? %>
+        <div class="row-fluid">
+          <div class="span12">
+            <blockquote>
+              <address>
+                <%= simple_format Spree::Config.store_address %>
+              </address>
+            </blockquote>
+          </div>
+        </div>
+      <% end %>
+    </fieldset>
   <% end %>
+
 <% end %>
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>

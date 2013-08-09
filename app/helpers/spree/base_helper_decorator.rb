@@ -54,5 +54,11 @@ module Spree
       end
       html.html_safe
     end
+
+    def should_be_active taxon, category
+      if (category == taxon) || taxon.ancestors.include?(category)
+        "active"
+      end
+    end
   end
 end

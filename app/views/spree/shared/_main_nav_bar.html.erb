@@ -20,7 +20,7 @@
 
 								
 								<% get_categories.each do |category| %>
-									<li class="dropdown" data-trigger="hover">
+									<li class="dropdown <%= should_be_active @taxon, category %>" data-trigger="hover">
 										<%= link_to category.name, seo_url(category) %>
 										<% if category.children.any? %>
 											<ul class="dropdown-menu">

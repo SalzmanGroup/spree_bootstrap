@@ -1,11 +1,16 @@
+
 /*
  *= require store/spree_frontend
+ *= require store/bootstrap
+ *= require font-awesome
+ *= require store/ie
+ *= require store/custom
+ *= require store/spree_reviews
+ *= require store/spree_address_book
+ *= require store/products
+ *= require store/orders
 */
 
-@import 'bootstrap';
-@import 'bootstrap-responsive';
-@import 'font-awesome';
-@import 'products';
 
 /* Cancel out default spree styles */
 

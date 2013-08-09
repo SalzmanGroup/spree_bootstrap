@@ -10,6 +10,37 @@
 
     <br class="clear" />
 
+    <h3 class="share-order-header"><%= Spree.t 'social.share_order' %></h3>
+    <p data-hook="share_order" class="share-order">
+      <a href="#" 
+        onclick="
+          window.open(
+            'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('<%= root_url %>'), 
+            'facebook-share-dialog', 
+            'width=626,height=436'); 
+          return false;">
+        <i class="icon-facebook-sign"></i>
+      </a>
+      <a href="#" 
+        onclick="
+          window.open(
+            'https://twitter.com/share?url='+encodeURIComponent('<%= root_url %>')+
+            '&text='+encodeURIComponent('<%= Spree.t 'social.tweet_text' %>'), 
+            'twitter-share-dialog', 
+            'width=626,height=436'); 
+          return false;">
+        <i class="icon-twitter-sign"></i>
+      </a>
+      <a href="#" 
+        onclick="
+          window.open(
+            'https://plus.google.com/share?url='+encodeURIComponent('<%= root_url %>'), 
+            'twitter-share-dialog', 
+            'width=626,height=436'); 
+          return false;">
+        <i class="icon-google-plus-sign"></i>
+      </a>
+    </p>
     <p data-hook="links">
       <%= link_to Spree.t(:back_to_store), spree.root_path, :class => "button" %>
       <% unless params.has_key? :checkout_complete %>

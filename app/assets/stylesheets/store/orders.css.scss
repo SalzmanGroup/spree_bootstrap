@@ -1,0 +1,16 @@
+$facebook-blue: #3B5998;
+$twitter-blue: #4099FF;
+$google-plus-red: #D34836;
+
+.share-order-header {
+	text-align: center;
+}
+.share-order {
+	text-align: center;
+	i {
+		font-size: 54px;
+		&.icon-facebook-sign { color: $facebook-blue }
+		&.icon-twitter-sign { color: $twitter-blue }
+		&.icon-google-plus-sign { color: $google-plus-red }
+	}
+}

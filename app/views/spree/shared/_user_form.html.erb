@@ -12,6 +12,14 @@
     <%= f.label :password_confirmation, Spree.t(:confirm_password) %><br />
     <%= f.password_field :password_confirmation, :class => 'title' %>
   </p>
+
+  <p>
+    <%= f.label :subscribe_to_newsletter do %>
+      <%= f.check_box :subscribe_to_newsletter %>
+      <%= Spree.t(:subscribe_to_newsletter) %>
+    <% end %>
+
+  </p>
 </div>
 
 <div data-hook="signup_below_password_fields"></div>

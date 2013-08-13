@@ -2224,3 +2224,5 @@ form#checkout_form_address input.button{
     max-width: 150px;
     width: 30%;
 }
+
+.center {text-align: center}

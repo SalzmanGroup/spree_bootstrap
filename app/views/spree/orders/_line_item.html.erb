@@ -7,8 +7,8 @@
     <% end %>
   </td>
   <td class="cart-item-description" data-hook="cart_item_description">
-    <h2><%= link_to variant.product.name, product_path(variant.product) %></h2>
-    <h3><%= variant.options_text %>
+    <h2 style="margin-bottom:5px;"><%= link_to variant.product.name, product_path(variant.product) %></h2>
+    <h3><strong><%= variant.options_text %></strong><br/>
     <% if @order.insufficient_stock_lines.include? line_item %>
       <span class="out-of-stock">
         <%= Spree.t(:out_of_stock) %>&nbsp;&nbsp;<br />

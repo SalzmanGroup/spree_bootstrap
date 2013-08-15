@@ -190,7 +190,7 @@ figure{
 	top:63px;
 	left:0;
 	right:0;
-	padding:8px 176px 8px 182px;
+	padding: 8px 161px 8px 101px;
 	background:#d1d2d4;
 }
 .navbar .drop{
@@ -234,7 +234,7 @@ ul.nav li.dropdown[data-trigger=hover]:hover > ul.dropdown-menu{
 	border-radius:0;
 	box-shadow:none;
 	-webkit-box-shadow:none;
-	min-width:129px;
+	    min-width: 154px;
 }
 .dropdown-menu>li{border-bottom:1px solid #69696a;}
 .dropdown-menu>li:first-child{border-top:1px solid #79797a;}
@@ -666,8 +666,8 @@ padding-left:2px;
 	background:#fff;
 	border:none;
 	padding: 12px;
-	font-size: 11px;
-    line-height: 14px;
+	font-size: 12px;
+    line-height: 17px;
 }
 .sidebar blockquote:after{
 	position:absolute;
@@ -1517,8 +1517,8 @@ display:block;
 .social-networks li a{
 	position:relative;
 	float:left;
+		font:14px/16px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	padding:0 0 0 46px;
-	font:italic 14px/16px Georgia, "Times New Roman", Times, serif;
 	text-decoration:none;
 	color:#000;
 }
@@ -1877,14 +1877,14 @@ display:block;
 
 
 
-.reviewForm label, #guest_checkout label, #billing label, #shipping label, #payment-methods label, #contact label{
+.reviewForm label, #guest_checkout label, #billing label, #shipping label, #payment-methods label, #contact label, #password-credentials label{
     float: left;
     font: bold 15px/14px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     text-transform: uppercase;
 }
 
 .reviewForm span.reviewFormInput input, .reviewForm span.reviewFormInput textarea, #billing input, #billing textarea, #billing select, #payment-methods input, #payment-methods select,
-#shipping input, #shipping textarea, #shipping select, #contact input, #contact textarea{
+#shipping input, #shipping textarea, #shipping select, #contact input, #contact textarea, #password-credentials input {
 	float:left;
 border-radius:0px;
  resize: none;
@@ -2136,8 +2136,12 @@ table#line-items #order_total, table#line-items td.total span, table#line-items 
 }
 
 .remMe{
-    float: left;
-    margin-right: 7px;
+  float: left;
+    font: bold 15px/14px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    text-transform: uppercase;
+padding-left:5px;
+  display:block;
+  padding-top:3px;
 }
 
 
@@ -2226,3 +2230,5 @@ form#checkout_form_address input.button{
 }
 
 .center {text-align: center}
+
+.drop-holder ul

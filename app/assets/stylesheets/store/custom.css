@@ -2231,4 +2231,9 @@ form#checkout_form_address input.button{
 
 .center {text-align: center}
 
-.drop-holder ul
+.pagination span.current{
+ font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: underline;
+  }

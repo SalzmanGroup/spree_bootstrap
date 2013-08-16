@@ -5,11 +5,16 @@
       <div id="product-variants" class="columns five alpha">
         <div class="row-fluid">
           <h6 class="product-section-title"><%= Spree.t(:variants) %></h6>
-          <%= select_tag "products[#{@product.id}]", 
-            options_for_select(@product.variants_and_option_values(current_currency).collect {|x| 
-              ["#{variant_options(x)} #{"-" + variant_price(x) if variant_price(x)}", x.id]
-            }),
-            class: :span12 %>
+          <select class="span12" id="<%= "products_#{@product.id}" %>" name="<%= "products[#{@product.id}]" %>">
+            <% @product.variants_and_option_values(current_currency).each do |v| %>
+              <option 
+                value="<%= v.id %>" 
+                data-stock="<%= variant_availability v %>"
+                data-price="<%= v.price.to_f %>">
+                <%= "#{variant_options(v)} #{"-" + variant_price(v) if variant_price(v)} #{stock_status(v)}" %>
+              </option>
+            <% end %>
+          </select>
         </div>
       </div>
     <% end%>

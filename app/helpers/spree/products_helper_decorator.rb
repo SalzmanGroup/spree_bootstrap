@@ -2,7 +2,7 @@ module Spree
   ProductsHelper.class_eval do
     def stock_status variant
       if ["out_of_stock","preorder"].include?(variant_availability(variant))
-        Spree.t variant_availability(variant)
+        "(#{Spree.t variant_availability(variant)})"
       end
     end
 

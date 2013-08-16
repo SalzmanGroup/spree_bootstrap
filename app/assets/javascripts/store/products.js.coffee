@@ -18,3 +18,28 @@ $ ->
   	$('#main-image #img_container img').attr 'src', $(this).attr('href')
 
   $('#img_container').zoom()
+
+  $('#product-variants select').on 'change', update_cart_button_text
+  update_cart_button_text()
+
+
+update_cart_button_text = ->
+  selected_variant = $('#product-variants select :selected')
+  cart_button = $('#add-to-cart-button')
+
+  if selected_variant.length
+    if selected_variant.data('stock') == "in_stock"
+      updated_text = "Add To Cart"
+      disable_button = false
+    else if selected_variant.data('stock') == "preorder"
+      updated_text = "Preorder"
+      disable_button = false
+    else
+      updated_text = "Out of Stock"
+      disable_button = true
+
+    cart_button.attr 'disabled', disable_button
+    cart_button.text updated_text
+    $('[itemprop="price"]').text "$" + selected_variant.data('price').toFixed(2)
+
+

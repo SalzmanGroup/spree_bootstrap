@@ -11,7 +11,7 @@
                 value="<%= v.id %>" 
                 data-stock="<%= variant_availability v %>"
                 data-price="<%= v.price.to_f %>">
-                <%= "#{variant_options(v)} #{"-" + variant_price(v) if variant_price(v)} #{stock_status(v)}" %>
+                <%= "#{variant_options(v)} - #{number_to_currency v.price} #{stock_status(v)}" %>
               </option>
             <% end %>
           </select>

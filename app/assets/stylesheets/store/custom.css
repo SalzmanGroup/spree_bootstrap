@@ -2244,3 +2244,9 @@ form#checkout_form_address input.button{
 .btn-inverse {
 	background-color: #000;
 }
+.pagination span.current{
+ font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: underline;
+  }

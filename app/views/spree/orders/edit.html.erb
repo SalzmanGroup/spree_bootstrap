@@ -42,17 +42,20 @@
 
 
     <div class="row-fluid">
-      <span class="span3 offset9"><%= button_tag :class => 'btn span12', :id => 'update-button' do %>
-      <%= Spree.t(:update) %>
-      <% end %>
-    </span>
+      <span class="span3 offset9">
+        <div class="btn-group pull-right">
+          <%= button_tag :class => 'btn btn-inverse', :id => 'update-button' do %>
+            <%= Spree.t(:update) %>
+          <% end %>
+          <%= button_tag :class => 'btn btn-success', :id => 'checkout-link', :name => 'checkout' do %>
+            <%= Spree.t(:checkout) %>
+          <% end %>
+        </div>
+      </span>
     </div>
     <div class="row-fluid">
 
      <span class="span3 offset9" style="margin-top:10px;">
-      <%= button_tag :class => 'btn span12 btn-success', :id => 'checkout-link', :name => 'checkout' do %>
-      <%= Spree.t(:checkout) %>
-      <% end %>
     </span>
     </div></div>  
   </div>

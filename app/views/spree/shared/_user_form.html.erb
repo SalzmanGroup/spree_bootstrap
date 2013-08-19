@@ -1,25 +1,27 @@
-<p>
-  <%= f.label :email, Spree.t(:email) %><br />
-  <%= f.email_field :email, :class => 'title' %>
-</p>
+<span class="row-fluid">
+  <span class="span3"><%= f.label :email, Spree.t(:email) %></span>
+  <span class="span9"><%= f.email_field :email, :class => 'span12 title' %></span>
+</span>
 <div id="password-credentials">
-  <p>
-    <%= f.label :password, Spree.t(:password) %><br />
-    <%= f.password_field :password, :class => 'title' %>
-  </p>
+<span class="row-fluid">
+   <span class="span3">  <%= f.label :password, Spree.t(:password) %></span>
+   <span class="span9"> <%= f.password_field :password, :class => 'span12 title' %></span>
+ </span>
 
-  <p>
-    <%= f.label :password_confirmation, Spree.t(:confirm_password) %><br />
-    <%= f.password_field :password_confirmation, :class => 'title' %>
-  </p>
+ <span class="row-fluid">
+     <span class="span3"><%= f.label :password_confirmation, Spree.t(:confirm_password) %></span>
+   <span class="span9"> <%= f.password_field :password_confirmation, :class => 'span12 title' %></span>
+</span>
 
-  <p>
+<br/>
+<br/>
+  <span class="row-fluid">
     <%= f.label :subscribe_to_newsletter do %>
       <%= f.check_box :subscribe_to_newsletter %>
       <%= Spree.t(:subscribe_to_newsletter) %>
     <% end %>
 
-  </p>
+ </span>
 </div>
-
+<br/><br/>
 <div data-hook="signup_below_password_fields"></div>

@@ -1877,7 +1877,7 @@ display:block;
 
 
 
-.reviewForm label, .account-summary label, #guest_checkout label, #billing label, #shipping label, #payment-methods label, #contact label, #password-credentials label, #signup label, #forgot-password label{
+.reviewForm label, .account-summary label, #status label, #guest_checkout label, #billing label, #shipping label, #payment-methods label, #contact label, #password-credentials label, #signup label, #forgot-password label{
     float: left;
     font: bold 15px/14px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     text-transform: uppercase;

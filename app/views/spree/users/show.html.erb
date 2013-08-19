@@ -1,9 +1,9 @@
 <h2 class="actTitle"><%= accurate_title %></h2>
 
 <div data-hook="account_summary" class="account-summary">
-  <div class="span9">
-    <span class="sub"><%= Spree.t(:email) %></span><br/>
-    <span><%= @user.email %> (<%= link_to Spree.t(:edit), spree.edit_account_path %>)</span>
+  <div class="row-fluid">
+    <span class="sub span2"><label><%= Spree.t(:email) %></label></span>
+    <span class="span10"><%= @user.email %> (<%= link_to Spree.t(:edit), spree.edit_account_path %>)</span>
   </div>
 </div>
 <div class="row-fluid">

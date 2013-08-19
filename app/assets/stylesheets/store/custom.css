@@ -1877,7 +1877,7 @@ display:block;
 
 
 
-.reviewForm label, #guest_checkout label, #billing label, #shipping label, #payment-methods label, #contact label, #password-credentials label, #signup label, #forgot-password label{
+.reviewForm label, .account-summary label, #guest_checkout label, #billing label, #shipping label, #payment-methods label, #contact label, #password-credentials label, #signup label, #forgot-password label{
     float: left;
     font: bold 15px/14px "Lucida Sans Unicode","Lucida Grande",sans-serif;
     text-transform: uppercase;
@@ -2027,7 +2027,7 @@ position: relative;
 	}
 
 
-ol#checkout-step-address, ol#checkout-step-delivery, ol#checkout-step-payment{
+ol#checkout-step-address, ol#checkout-step-delivery, ol#checkout-step-payment, ol#checkout-step-confirm{
 	font: 14px/20px "Lucida Sans Unicode","Lucida Grande",sans-serif;
 	position:relative;
 	top:2px;
@@ -2049,6 +2049,15 @@ text-decoration: none;
 .progress-steps li.completed-first:hover, .progress-steps li.completed:hover {
 	    background-color: #000;
     color: white;
+}
+
+.progress-steps li {
+    color: #727276;
+    float: left;
+    font-weight: bold;
+    margin-right: 9px;
+    padding: 3px 17px;
+    text-transform: uppercase;
 }
 
 #billing, #shipping, #shipping_method, #payment, #order_details, #order_summary {

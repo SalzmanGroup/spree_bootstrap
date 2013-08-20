@@ -2254,3 +2254,72 @@ form#checkout_form_address input.button{
     padding-right: 5px;
     text-decoration: underline;
   }
+
+table.order-summary tbody tr td a, table.order-summary tbody tr td:first-child a  {
+  	color:#818181;
+
+  }
+
+
+table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
+background-color:#eeeeee;
+}
+
+
+
+ table.order-summary tbody tr td a:hover, table.order-summary tbody tr td:first-child a:hover  {
+  	color:#000000;
+
+  }
+
+#myModal {
+    background-color: #FFFFFF;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 25px #000000;
+    display: block;
+    min-width: 300px;
+}
+
+  .modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 0.4;
+}
+
+button.close {
+    color: #000000;
+    margin-right: 8px;
+    margin-top: 3px;
+}
+
+ul.quickMap{
+margin:0px;
+padding:0px;
+  list-style-type: none;
+  text-transform: uppercase;
+  	font: bold 13px/13px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+ul.quickMap li, ul.quickMap ul li{
+	line-height:16px;
+	color:#626262;
+}
+
+ul.quickMap li a, ul.quickMap ul li a{
+color:#626262;
+}
+
+ul.quickMap li a:hover, ul.quickMap ul li a:hover{
+color:#000000;
+}
+
+ul.quickMap ul{
+	  list-style-type: none;
+	  font-weight:100;
+	   margin: 0 0 20px 9px;
+}
+
+.modal-header h3 {
+    font-family: Lucida Grande;
+    line-height: 30px;
+    margin: 0;
+    text-transform: uppercase;
+}

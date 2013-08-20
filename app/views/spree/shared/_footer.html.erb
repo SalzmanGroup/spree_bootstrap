@@ -18,7 +18,7 @@
 					<div class="footer-nav">
 						<div class="container-fluid">
 							<ul>
-								<li><a href="#">QUICK MAP+</a></li>
+								<li><a href="#myModal" role="button" class="" data-toggle="modal">Quick Map +</a></li>
 								<li><a target="_blank" href="http://www.lavazza.us/us/about-lavazza/ethics.html">TERMS &amp; CONDITIONS</a></li>
 								<li><a href="#">CREDITS</a></li>
 							</ul>
@@ -26,5 +26,11 @@
 					</div>
 				</div>
 			</div>
+
+			<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+     <%= render :partial => 'spree/shared/quick_map' %>
+
+</div>
 
 </footer>

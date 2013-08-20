@@ -11,7 +11,7 @@
           <% slide.each do |relation| %>
             <div class="span4 related-product">
               <div class="row-fluid">
-                <div class="span6"><%= product_image(relation.related_to, :itemprop => "image") %></div> 
+                <div class="span6"><%= link_to product_image(relation.related_to, :itemprop => "image"), relation.related_to %></div> 
                 <div class="span6">
                   <div class="product-title"><%= link_to relation.related_to.name, relation.related_to %></div>
                   <div class="price"><%= display_discounted_price relation %></div>

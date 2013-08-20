@@ -40,7 +40,16 @@
 <hr />
 
 <div id="status" class="row-fluid">
-<span class="span2"><label>order status:</label> </span><span class="span10"><%= @order.state %> </span>
+  <span class="row-fluid">
+<span class="span3"><label>order status:</label> </span><span class="span9"><%= @order.state %></span>
+  </span>
+    <span class="row-fluid">
+<span class="span3"><label>payment status:</label> </span><span class="span9"><%= @order.payment_state %></span>
+  </span>
+    <span class="row-fluid">
+<span class="span3"><label>shipment status:</label> </span><span class="span9"><%= @order.shipment_state %></span>
+  </span>
+
   </div>
 
   <hr />

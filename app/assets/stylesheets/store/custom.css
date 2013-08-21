@@ -2378,3 +2378,8 @@ div.tab-content{
 background-color:#fff;
 
 }
+
+
+.table-cart td img {
+	width: 100%;
+}

@@ -7,3 +7,7 @@
 //= require store/jquery.main
 //= require store/products
 //= require jquery.rating
+
+$(function() {
+	jQuery(parent).trigger('initialize:frame');
+})

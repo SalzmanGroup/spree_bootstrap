@@ -19,8 +19,9 @@
 						<div class="container-fluid">
 							<ul>
 								<li><a href="#myModal" role="button" class="" data-toggle="modal">Quick Map +</a></li>
-								<li><a target="_blank" href="http://www.lavazza.us/us/about-lavazza/ethics.html">TERMS &amp; CONDITIONS</a></li>
-								<li><a href="#">CREDITS</a></li>
+								<% get_linked_pages.each do |page| %>
+									<li><%= link_to page.name, page %></li>
+								<% end %>
 							</ul>
 						</div>
 					</div>

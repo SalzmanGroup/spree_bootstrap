@@ -2322,3 +2322,59 @@ ul.quickMap ul{
     margin: 0;
     text-transform: uppercase;
 }
+
+
+.accordion-inner {
+	border:0px;
+}
+
+.accordion-group {
+    border-bottom: 1px solid #E5E5E5;
+    border-radius:0px;
+    border-top: 1px solid #E5E5E5;
+    margin-bottom: 10px;
+    border-right:0px;
+    border-left:0px;
+}
+
+.accordion-group h2{
+margin:0px;
+  	font: 18px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+
+div.tabbable ul.nav-tabs{
+    background-color: #EEEEEE;
+}
+
+
+
+.tabs-left > .nav-tabs > li > a {
+ border-radius: 0 0 0 0;
+    margin-left: -5px;
+    margin-right: -2px;
+}
+
+h1#name {
+    font: 36px/20px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    margin-bottom: 24px;
+    margin-top: 13px;
+    text-transform: uppercase;
+    font-weight:100;
+}
+
+#content{
+    font: 13px/20px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+div.tab-content{
+	   color: #666666;
+}
+
+.tabs-left > .nav-tabs {
+    text-align: right;
+}
+
+.tabs-left > .nav-tabs > li > a:hover{
+background-color:#fff;
+
+}

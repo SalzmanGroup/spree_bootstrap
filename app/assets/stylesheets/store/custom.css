@@ -2323,3 +2323,34 @@ ul.quickMap ul{
     margin: 0;
     text-transform: uppercase;
 }
+
+
+.accordion-inner {
+	border:0px;
+}
+
+.accordion-group {
+    border-bottom: 1px solid #E5E5E5;
+    border-radius:0px;
+    border-top: 1px solid #E5E5E5;
+    margin-bottom: 10px;
+    border-right:0px;
+    border-left:0px;
+}
+
+.accordion-group h2{
+margin:0px;
+  	font: 18px "Lucida Sans Unicode","Lucida Grande",sans-serif;
+}
+
+
+div.tabbable ul.nav-tabs{
+    background-color: #EEEEEE;
+}
+
+
+.tabs-left > .nav-tabs > li > a {
+    border-radius: 0 0 0 0;
+    margin-left: -9px;
+    margin-right: -1px;
+}

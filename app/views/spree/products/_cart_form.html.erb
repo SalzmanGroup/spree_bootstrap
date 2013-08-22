@@ -33,7 +33,7 @@
                <span class="span5" style="padding-top:4px;"><label for="s1">QUANTITY:</label></span>
                 <span class="span7 select-holder">
           <%= number_field_tag (@product.variants_and_option_values.any? ? :quantity : "variants[#{@product.master.id}]"),
-            1, :class => 'span12 title', :min => 1 %> </span>
+            1, :class => 'span12 title', :min => 1, :max => 50 %> </span>
                 
               </div><br/>
 

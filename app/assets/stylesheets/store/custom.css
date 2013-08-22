@@ -2408,7 +2408,10 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 
 
 
+.navbar .area-text {
 
+background:url('https://s3.amazonaws.com/lavazza_assets/barkers/tag.png') no-repeat 0px 4px;
+}
 
 
 

@@ -38,9 +38,20 @@
               </div><br/>
 
         <div class="holder">
+        <% if @product.variants_and_option_values.any? || variant_availability(@product.master) == "in_stock" %>
           <%= button_tag :class => 'btn', :id => 'add-to-cart-button', :type => :submit do %>
             <%= Spree.t(:add_to_cart) %>
           <% end %>
+        <% elsif variant_availability(@product.master) == "preorder" %>
+          <%= button_tag :class => 'btn', :id => 'add-to-cart-button', :type => :submit do %>
+            <%= Spree.t(:preorder) %>
+          <% end %>
+        <% else %>
+          <%= button_tag :class => 'btn', :id => 'add-to-cart-button', disabled: true, :type => :submit do %>
+            <%= Spree.t(:out_of_stock) %>
+          <% end %>
+        <% end %>
+
         </div>
       </div>
     <% else %>

@@ -16,7 +16,6 @@
         <h6><%= Spree.t(:shipments) %> <%= link_to "(#{Spree.t(:edit)})", checkout_state_path(:delivery) unless @order.completed? %></h6>
         <div class="delivery">
           <% order.shipments.each do |shipment| %>
-            <%= shipment.stock_location.name %>
             <%= shipment.shipping_method.name %>
             <br/>
           <% end %>
@@ -41,13 +40,13 @@
 
 <div id="status" class="row-fluid">
   <span class="row-fluid">
-<span class="span3"><label>order status:</label> </span><span class="span9"><%= @order.state %></span>
+<span class="span3"><label>order status:</label> </span><span class="span9"><%= Spree.t @order.state %></span>
   </span>
     <span class="row-fluid">
-<span class="span3"><label>payment status:</label> </span><span class="span9"><%= @order.payment_state %></span>
+<span class="span3"><label>payment status:</label> </span><span class="span9"><%= Spree.t @order.payment_state %></span>
   </span>
     <span class="row-fluid">
-<span class="span3"><label>shipment status:</label> </span><span class="span9"><%= @order.shipment_state %></span>
+<span class="span3"><label>shipment status:</label> </span><span class="span9"><%= Spree.t @order.shipment_state %></span>
   </span>
 
   </div>

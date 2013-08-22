@@ -16,11 +16,8 @@
 <br/>
 <br/>
   <span class="row-fluid">
-    <%= f.label :subscribe_to_newsletter do %>
-      <%= f.check_box :subscribe_to_newsletter %>
-      <%= Spree.t(:subscribe_to_newsletter) %>
-    <% end %>
-
+    <%= f.check_box :subscribe_to_newsletter, class: "remMe" %>
+    <%= f.label :subscribe_to_newsletter, Spree.t(:subscribe_to_newsletter), class: "remMe" %>
  </span>
 </div>
 <br/><br/>

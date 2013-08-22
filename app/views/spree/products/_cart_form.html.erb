@@ -33,14 +33,25 @@
                <span class="span5" style="padding-top:4px;"><label for="s1">QUANTITY:</label></span>
                 <span class="span7 select-holder">
           <%= number_field_tag (@product.variants_and_option_values.any? ? :quantity : "variants[#{@product.master.id}]"),
-            1, :class => 'span12 title', :min => 1 %> </span>
+            1, :class => 'span12 title', :min => 1, :max => 50 %> </span>
                 
               </div><br/>
 
         <div class="holder">
+        <% if @product.variants_and_option_values.any? || variant_availability(@product.master) == "in_stock" %>
           <%= button_tag :class => 'btn', :id => 'add-to-cart-button', :type => :submit do %>
             <%= Spree.t(:add_to_cart) %>
           <% end %>
+        <% elsif variant_availability(@product.master) == "preorder" %>
+          <%= button_tag :class => 'btn', :id => 'add-to-cart-button', :type => :submit do %>
+            <%= Spree.t(:preorder) %>
+          <% end %>
+        <% else %>
+          <%= button_tag :class => 'btn', :id => 'add-to-cart-button', disabled: true, :type => :submit do %>
+            <%= Spree.t(:out_of_stock) %>
+          <% end %>
+        <% end %>
+
         </div>
       </div>
     <% else %>

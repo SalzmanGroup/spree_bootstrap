@@ -1,0 +1,44 @@
+
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h3>Quick Map</h3>
+</div>
+  <div class="modal-body" >
+
+
+<div class="row-fluid">
+  <div class="span6">
+  <ul class="quickMap">
+
+                <li>The Collections</li>
+                 <ul>
+                  <li><a href="/t/collections/the-drip-coffee-experience">The Espresso Experience</a></li>
+                  <li><a href="/t/collections/the-espresso-coffee-experience">The Drip Coffee Experience</a></li>
+                 </ul>
+
+                
+                <% get_categories.each do |category| %>
+                  <li class=" <%= should_be_active @taxon, category %>" data-trigger="hover">
+                    <%= link_to category.name, seo_url(category) %>
+                    <% if category.children.any? %>
+                      <ul class="">
+                        <% category.children.order('position').each do |subcategory| %>
+                          <li><%= link_to subcategory.name, seo_url(subcategory) %></li>                          
+                        <% end -%>
+                      </ul>
+                    <% end -%>
+                  </li>
+                <% end -%>
+
+              </ul>
+            </div>
+            <div class="span6">
+              <ul class="quickMap">
+
+                <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="/contact-us">Contact Us</a></li>
+                 </ul>
+
+            </div>
+  </div>

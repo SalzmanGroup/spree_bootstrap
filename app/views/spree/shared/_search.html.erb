@@ -1,4 +1,6 @@
 <%= form_tag spree.products_path, :method => :get, class: "form-search" do %>
+	<span style="float:left"><a href="http://www.lavazza.us/us/">lavazza.us</a></span>
+
 	<% if try_spree_current_user %>
 		<%= link_to Spree.t("my_account"), {controller: "spree/users", action: :show} %>
 	<% end %>

@@ -13,7 +13,7 @@
 
 			<div class="nav-collapse collapse">
 				<ul class="nav">
-					<li class="active">
+					<li class="<%= 'active' if current_page?('/products') %>">
 						<%= link_to Spree.t('shop_products'), products_path %>
 						<div class="drop-holder">
 							<ul class="drop">
@@ -35,13 +35,13 @@
 							</ul>
 						</div>
 					</li>
-					<li><%= link_to Spree.t('contact_uss'), contact_us_path %></li>
+					<li class="<%= 'active' if current_page?('/contact-us') %>"><%= link_to Spree.t('contact_uss'), contact_us_path %></li>
 					<% if try_spree_current_user %>
 						<li><%= link_to Spree.t("sign_out"), spree_logout_path %></li>
 					<% else %>
 						<li><%= link_to Spree.t("sign_in"), spree_login_path %></li>
 					<% end %>
-					<li><%= link_to Spree.t('cart') + " (#{current_order ? current_order.item_count : 0})", cart_path, class: "cart-link" %> </li>
+					<li ><%= link_to Spree.t('cart') + " (#{current_order ? current_order.item_count : 0})", cart_path, class: "cart-link" %> </li>
 				</ul>
 			</div>
 			<div class="area-text">

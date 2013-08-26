@@ -62,7 +62,9 @@
         <div itemprop="description" data-hook="description">
           <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
         </div>
-
+<div data-hook="product_properties">
+  <%= render :partial => 'properties' %>
+</div> 
       </div>
 
       <br/>
@@ -85,9 +87,7 @@
   <%= render partial: 'related' %>
 </div>
 
-<div data-hook="product_properties">
-  <%= render :partial => 'properties' %>
-</div> 
+
       
 <div data-hook="promotions">
   <%= render :partial => 'promotions' %>

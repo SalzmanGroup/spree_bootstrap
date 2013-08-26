@@ -28,13 +28,6 @@
     <div class="span5">
 
       
-      <div data-hook="product_taxons">
-        <ul class="breadcrumb" data-hook>
-          <% @product.taxons.each do |taxon| %>
-          <li><%= link_to taxon.name, seo_url(taxon) %> <span> / </span><%= accurate_title %></li>
-          <% end %>
-        </ul>
-      </div>
 
 
     

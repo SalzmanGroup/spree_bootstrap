@@ -15,8 +15,15 @@
 
 <br/>
 <br/>
+
+
+
   <span class="row-fluid">
-    <%= f.check_box :subscribe_to_newsletter, :checked=> true, class: "remMe" %>
+<% if f.object.new_record? %>
+  <%= f.check_box :subscribe_to_newsletter, :checked => true, class: "remMe" %>
+<% else %>
+  <%= f.check_box :subscribe_to_newsletter, class: "remMe" %>
+<% end %>
     <%= f.label :subscribe_to_newsletter, Spree.t(:subscribe_to_newsletter), class: "remMe" %>
  </span>
 </div>

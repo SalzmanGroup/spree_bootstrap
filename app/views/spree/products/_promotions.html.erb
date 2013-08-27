@@ -5,9 +5,9 @@
     <h3><%= Spree.t(:promotions) %></h3>
     <% promotions.each do |promotion| %>
     <div class="inner">
-      <h4><%= promotion.name %></h4>
-      <p><%= promotion.description %></p>
-  
+      
+      <p><%= promotion.description %><br/><span class="coupon">COUPON CODE:  <%= promotion.try(:code)%></span></p>
+
     
       <% if promotion.products.any? %>
         <h5>Elligble Products</h5>

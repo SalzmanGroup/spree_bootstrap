@@ -1,16 +1,24 @@
 <% unless @product_properties.empty? %>  
 <br/>
-  <div id="" class="properties" data-hook>
+<div id="collapse_container">
+  <div  class="properties" data-hook>
    
       <% @product_properties.each do |product_property| %>
         <% css_class = cycle('even', 'odd', :name => "properties") %>
     
         <p style="border-top:1px solid #000000; margin-bottom: 10px !important; padding: 10px 0 0;">
-          <strong style="text-transform:uppercase;"><%= product_property.property.presentation %>:</strong><br/> <%= product_property.value %>
+          <strong style="text-transform:uppercase;"><%= product_property.property.presentation %>:</strong><br/> 
+          <%= product_property.value %>
         </p>
 
       <% end %>
       <% reset_cycle('properties') %>
    
   </div>
+   <a class="height-toggle"><span></span></a>
+</div>
+
+
+
 <% end %>
+

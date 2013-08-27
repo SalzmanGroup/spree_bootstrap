@@ -2414,8 +2414,63 @@ background:url('https://s3.amazonaws.com/lavazza_assets/barkers/tag.png') no-rep
 }
 
 
+#promotions{
+   background:#D1D2D4;
+    margin-top: 30px;
+}
 
+#promotions .inner{
+   margin-bottom: 20px;
+    padding: 10px;
+}
 
+#promotions h3{
+text-transform: uppercase;
+margin:0px;
+font-weight:normal;
+padding-left:5px;
+color:#fff;
+background-color:#000;
+font-size:19px;
+
+}
+
+#promotions h4{
+ margin: 0;
+    padding: 2px;
+    	  background-color: #FFFFFF;
+	}
+
+#promotions p{
+	  background-color: #FFFFFF;
+    margin: 0;
+    padding: 5px;
+}
+#promotions h5{
+	margin:0px;
+	background-color: #000000;
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+ul.promotions{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+}
+
+ul.promotions li{
+border-bottom: 1px solid #000;
+padding-top:3px;
+padding-bottom:5px;
+padding-left:5px;
+
+	}
+
+	ul.promotions li:hover{
+background-color:#fff;
+
+	}
 
 
 

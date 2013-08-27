@@ -1,6 +1,7 @@
 <div class="row-fluid sort-form">
 	<div class="span12">
 		<select id="product_sort" class="span12">
+      <option value="featured" <%= "selected" if sort == "featured" %> >Featured</option>
       <option value="price_desc" <%= "selected" if sort == "price_desc" %> >Price Hi &rarr; Lo</option>
       <option value="price_asc" <%= "selected" if sort == "price_asc" %> >Price Lo &rarr; Hi</option>
       <option value="rating_desc" <%= "selected" if sort == "rating_desc" %> >Highest Rated</option>

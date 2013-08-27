@@ -749,7 +749,7 @@ padding-left:2px;
 .star-rating li.setted a.five-stars{width:70px;}
 .block-product{
 	margin-top:-3px;
-	margin-bottom:82px;
+	margin-bottom:5px;
 	font-size:14px;
 	line-height:20px;
 }
@@ -2413,10 +2413,60 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 background:url('https://s3.amazonaws.com/lavazza_assets/barkers/tag.png') no-repeat 0px 4px;
 }
 
+#collapse_container .properties{
+
+        overflow: hidden; 
+}
+
+
+.collapsed div.properties{
+height: 170px;
+
+ overflow: hidden; 
+}
+
+
+
+#product-description .collapsed a span::after {
+
+             background-color: #D5D5D5;
+    color: #818181;
+    content: "read more [+]";
+    display: block;
+    margin-top: 17px;
+    padding: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+        }
+
+
+#product-description a:hover span::after {
+color:#000000;
+}
+
+#product-description a span::after {
+            content: "read less [-]";
+            cursor: pointer;
+	background-color: #D5D5D5;
+    color: #818181;
+    display: block;
+    margin-top: 17px;
+    padding: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+        }
+
+ .collapsed  a span {cursor: pointer}  {
+
+ }    
 
 #promotions{
    background:#D1D2D4;
     margin-top: 30px;
+     font-size: 13px;
+    line-height: 20px;
 }
 
 #promotions .inner{
@@ -2453,6 +2503,19 @@ font-size:19px;
     padding: 5px;
 }
 
+#promotions span.coupon{
+    text-transform: uppercase;
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+    display: block;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+    width: 100%;
+    margin-top:8px;
+    font-weight:bold;
+}
+
 ul.promotions{
 	margin:0px;
 	padding:0px;
@@ -2470,6 +2533,10 @@ padding-left:5px;
 	ul.promotions li:hover{
 background-color:#fff;
 
+	}
+
+.display{
+	display:block !important;
 	}
 
 

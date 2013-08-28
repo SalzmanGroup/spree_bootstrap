@@ -1,85 +1,76 @@
 <% content_for :head do -%>
-  <meta name="title" content="<%= t('contact_us') %>">
+<meta name="title" content="<%= t('contact_us') %>">
 <% end -%>
 
 <% content_for :sidebar do %>
-  <% if Spree::Config.store_phone_number.present? || Spree::Config.store_address.present? %>
-    <fieldset>
-      <legend>Contact Info</legend>
-      <% if Spree::Config.store_phone_number.present? %>
-        <div class="row-fluid">
-          <div class="span12">
-            <blockquote>
-              <i class="icon-phone"></i> <%= Spree::Config.store_phone_number %>
-            </blockquote>
-          </div>
-        </div>
-      <% end %>
-      <% if Spree::Config.store_address.present? %>
-        <div class="row-fluid">
-          <div class="span12">
-            <blockquote>
-              <address>
-                <%= simple_format Spree::Config.store_address %>
-              </address>
-            </blockquote>
-          </div>
-        </div>
-      <% end %>
-    </fieldset>
+<% if Spree::Config.store_phone_number.present? || Spree::Config.store_address.present? %>
+<fieldset>
+  <legend>Contact Info</legend>
+  <% if Spree::Config.store_phone_number.present? %>
+  <div class="row-fluid">
+    <div class="span12">
+      <blockquote>
+        <i class="icon-phone"></i> <%= Spree::Config.store_phone_number %>
+      </blockquote>
+    </div>
+  </div>
   <% end %>
+  <% if Spree::Config.store_address.present? %>
+  <div class="row-fluid">
+    <div class="span12">
+      <blockquote>
+        <address>
+          <%= simple_format Spree::Config.store_address %>
+        </address>
+      </blockquote>
+    </div>
+  </div>
+  <% end %>
+</fieldset>
+<% end %>
 
 <% end %>
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
-
-<h2 class="contactus"><%= t('contact_us') %></h2>
-
+<div class="row-fluid" style="margin-bottom:20px;">
+  <h2 class="contactus span3"><%= t('contact_us') %></h2><span class="span9" style="p font-size: 15px; position: relative; top: 8px;"><b>Phone:</b> 855.328.5892 | <b>Sales:</b> sales@shoplavazza.com | <b>Tech-Support:</b> help@shoplavazza.com </span> 
+</div>
 
 <div id="contact" class="row-fluid">
-<%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
+  <%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
   <% if SpreeContactUs.require_name %>
-    <p class="row-fluid">
-      <span class="span2"><%= f.label :name %>
+  <p class="row-fluid">
+    <span class="span2"><%= f.label :name %>
       <span class="required">*</span></span> 
       <span class="span9"><%= f.text_field :name, class: 'required span12' %></span> 
     </p>
-  <% end %>
-  <p class="row-fluid">
-    <span class="span2"><%= f.label :email %>
-    <span class="required">*</span></span>
-    <span class="span9"><%= f.email_field :email, class: 'required email span12' %></span>
-  </p>
-  <% if SpreeContactUs.require_subject %>
-   <p class="row-fluid">
-      <span class="span2"><%= f.label :subject %>
-      <span class="required">*</span></span>
-      <span class="span9"><%= f.text_field :subject, class: 'required span12' %></span>
-    </p>
-  <% end %>
-  <p class="row-fluid">
-    <span class="span2"><%= f.label :message %>
-    <span class="required">*</span></span>
-    <span class="span9"><%= f.text_area :message, class: 'required span12' %></span>
-  </p>
-  <p class="row-fluid">
-    <span class="span12"><%= f.submit t('submit'), :class=> 'button span3 offset8', :alt => t('submit'), :id => 'contact_us_contact_submit', :title => t('submit') %>
-  </p>
-<% end %>
-</div>
-<br/><br/>
+    <% end %>
+    <p class="row-fluid">
+      <span class="span2"><%= f.label :email %>
+        <span class="required">*</span></span>
+        <span class="span9"><%= f.email_field :email, class: 'required email span12' %></span>
+      </p>
+      <% if SpreeContactUs.require_subject %>
+      <p class="row-fluid">
+        <span class="span2"><%= f.label :subject %>
+          <span class="required">*</span></span>
+          <span class="span9"><%= f.text_field :subject, class: 'required span12' %></span>
+        </p>
+        <% end %>
+        <p class="row-fluid">
+          <span class="span2"><%= f.label :message %>
+            <span class="required">*</span></span>
+            <span class="span9"><%= f.text_area :message, class: 'required span12' %></span>
+          </p>
+          <p class="row-fluid">
+            <span class="span12"><%= f.submit t('submit'), :class=> 'button span3 offset8', :alt => t('submit'), :id => 'contact_us_contact_submit', :title => t('submit') %>
+            </p>
+            <% end %>
+          </div>
+          <br/><br/>
 
-<div class="row-fluid span8 offset7" style="text-align:right;">
+          <div class="row-fluid span8 offset7" style="text-align:right;">
 
-<div class="row-fluid">
-<span class="span3">Phone:</span> <span class="span2">855.328.5892 </span> 
-</div>
-<div class="row-fluid">
-<span class="span3">Sales:</span><span class="span2">sales@shoplavazza.com</span> 
-</div>
-<div class="row-fluid">
 
-<span class="span3">Tech-Support:</span> <span class="span2">help@shoplavazza.com</span> 
-</div>
 
-</div>
+          </div>

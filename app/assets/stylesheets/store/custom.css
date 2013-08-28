@@ -2458,10 +2458,10 @@ span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child str
 	width: 100%;
 }
 
-.collapsed  a span {cursor: pointer}  {
+ .collapsed  a span {cursor: pointer} 
 
-}    
 
+ 
 #promotions{
 	background:#D1D2D4;
 	margin-top: 30px;

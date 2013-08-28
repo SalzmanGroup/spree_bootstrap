@@ -67,7 +67,7 @@ module Spree
     end
 
     def nonbreaking text
-      text.gsub(' ', '&nbsp;').html_safe
+      text
     end
   end
 end

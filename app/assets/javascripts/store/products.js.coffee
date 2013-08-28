@@ -43,7 +43,6 @@ update_cart_button_text = ->
     $('[itemprop="price"]').text "$" + selected_variant.data('price').toFixed(2)
 
 
-
     if $('#collapse_container').height() > 150
         $('#collapse_container').addClass('collapsed')
 

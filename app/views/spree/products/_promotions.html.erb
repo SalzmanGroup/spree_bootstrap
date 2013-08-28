@@ -1,23 +1,23 @@
 <% promotions = @product.possible_promotions %>
 
 <% if promotions.any? %>
-  <div id="promotions">
-    <h3><%= Spree.t(:promotions) %></h3>
-    <% promotions.each do |promotion| %>
-    <div class="inner">
-      
-      <p><%= promotion.description %><br/><span class="coupon">COUPON CODE:  <%= promotion.try(:code)%></span></p>
+<div id="promotions">
+  <h3><%= Spree.t(:promotions) %></h3>
+  <% promotions.each do |promotion| %>
+  <div class="inner">
+    
+    <p ><span class="promo"><%= promotion.description %></span><br/><span class="coupon">coupon code:  <%= promotion.try(:code)%></span></p>
 
     
-      <% if promotion.products.any? %>
-        <h5>Elligble Products</h5>
-      <ul class="promotions">
-        <% promotion.products.each do |product| %>
-          <li><%= link_to product.name, product_path(product) %></li>
-        <% end %>
-      </ul>
+    <% if promotion.products.any? %>
+    <h5>Elligble Products</h5>
+    <ul class="promotions">
+      <% promotion.products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
       <% end %>
-    </div>
+    </ul>
     <% end %>
   </div>
+  <% end %>
+</div>
 <% end %>

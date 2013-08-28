@@ -1,8 +1,7 @@
 // page init
 jQuery(function(){
 	jcf.customForms.replaceAll();
-	// initRating();
-	initSameHeight();
+	$('#myCarousel').carousel();
 });
 
 // star rating init

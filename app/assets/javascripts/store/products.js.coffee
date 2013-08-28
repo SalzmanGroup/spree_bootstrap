@@ -22,6 +22,12 @@ $ ->
   $('#product-variants select').on 'change', update_cart_button_text
   update_cart_button_text()
 
+  if $('#collapse_container').height() > 150
+      $('#collapse_container').addClass('collapsed')
+      
+  $('#collapse_container a').on 'click', (e) ->
+      e.preventDefault()
+      $('#collapse_container').toggleClass('collapsed', 500)
 
 update_cart_button_text = ->
   selected_variant = $('#product-variants select :selected')
@@ -42,12 +48,4 @@ update_cart_button_text = ->
     cart_button.text updated_text
     $('[itemprop="price"]').text "$" + selected_variant.data('price').toFixed(2)
 
-
-    if $('#collapse_container').height() > 150
-        $('#collapse_container').addClass('collapsed')
-
-        
-    $('#collapse_container a').on 'click', (e) =>
-        e.preventDefault()
-        $('#collapse_container').toggleClass('collapsed', 500)
 

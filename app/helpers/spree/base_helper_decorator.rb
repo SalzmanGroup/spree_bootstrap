@@ -35,20 +35,20 @@ module Spree
       html = ""
       if taxon.children.any?
         html += content_tag :li, class: 'parent' do
-          taxon.name
+          nonbreaking(taxon.name)
         end
         taxon.children.each do |child| 
           html += content_tag :li do
-            link_to child.name, seo_url(child)
+            link_to nonbreaking(child.name), seo_url(child)
           end
         end
       else
         html += content_tag :li, class: 'parent' do
-          link_to(taxon.parent.name, seo_url(taxon.parent))
+          link_to(nonbreaking(taxon.parent.name), seo_url(taxon.parent))
         end
         taxon.parent.children.each do |t|
           html += content_tag :li do
-            t == taxon ? t.name : link_to(t.name, seo_url(t))
+            t == taxon ? nonbreaking(t.name) : link_to(nonbreaking(t.name), seo_url(t))
           end
         end
       end
@@ -59,6 +59,15 @@ module Spree
       if (category == taxon) || (taxon && taxon.ancestors.include?(category))
         "active"
       end
+    end
+
+    def create_product_image_tag(image, product, options, style)
+      options.reverse_merge! alt: image.alt.blank? ? product.name : image.alt
+      image_tag image.attachment.url(style), options
+    end
+
+    def nonbreaking text
+      text.gsub(' ', '&nbsp;').html_safe
     end
   end
 end

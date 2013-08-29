@@ -1,20 +1,224 @@
-<%= Spree.t('order_mailer.confirm_email.dear_customer') %>
+<table width="100%" style="text-align:center; ">
+	<tr>
+		<td>
 
-<%= Spree.t('order_mailer.confirm_email.instructions') %>
+			<table width="600px" align="center" style="border-collapse:collapse; text-align:left; background-color:#ffffff; color:#666666; font-family: Lucida Grande, Lucida Sans Unicode, Sans-Serif; padding:0px;">
 
-============================================================
-<%= Spree.t('order_mailer.confirm_email.order_summary') %>
-============================================================
-<% @order.line_items.each do |item| %>
-  <%= item.variant.sku %> <%= raw(item.variant.product.name) %> <%= raw(item.variant.options_text) -%> (<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %>
-<% end %>
-============================================================
-<%= Spree.t('order_mailer.confirm_email.subtotal', :subtotal => @order.display_item_total) %>
+				<tr>
+					<td colspan="5" style="background-color:#000000;">
+						<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
+					</td>
+				</tr>
 
-<% @order.adjustments.eligible.each do |adjustment| %>
-  <%= raw(adjustment.label) %> <%= adjustment.display_amount %>
-<% end %>
+				<tr>
+					<td width="10px" style="background-color:#000000;">
+						<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
+					</td>
 
-<%= Spree.t('order_mailer.confirm_email.total', :total => @order.display_total) %>
+					<td colspan="2" style="background-color:#000000;">
+						<a href="#" border="0"><img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/logo_small.gif" alt="Lavazza Store"/></a>
+					</td>
 
-<%= Spree.t('order_mailer.confirm_email.thanks') %>
+					<td style="background-color:#000000; color:#ffffff; font-size:15px;">
+						<span style="text-transform:uppercase;"></span>
+					</td>
+					
+					<td width="10px" style="background-color:#000000;">
+						<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
+					</td>
+
+				</tr>
+
+				<tr>
+					<td colspan="5" style="padding:0px;">
+						<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/top_swoosh.jpg"/>
+					</td>
+				</tr>
+
+				<tr>
+					
+					<td width="10px">
+						<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+					</td>
+
+					<td colspan="3" style="padding-right:15px; padding-top:10px; font-size:14px;">
+
+
+						<%= Spree.t('order_mailer.confirm_email.dear_customer') %>
+
+						<p>
+							This email is a confirmation from the Lavazza Store that your order has been processed. You will
+
+							find all the details of your purchase listed below.</p>
+
+							============================================================
+							<%= Spree.t('order_mailer.confirm_email.order_summary') %>
+							============================================================
+							<% @order.line_items.each do |item| %>
+							<%= item.variant.sku %> <%= raw(item.variant.product.name) %> <%= raw(item.variant.options_text) -%> (<%=item.quantity%>) @ <%= item.single_money %> = <%= item.display_amount %>
+							<% end %>
+							============================================================
+							<%= Spree.t('order_mailer.confirm_email.subtotal', :subtotal => @order.display_item_total) %>
+
+							<% @order.adjustments.eligible.each do |adjustment| %>
+							<%= raw(adjustment.label) %> <%= adjustment.display_amount %>
+							<% end %>
+
+							<%= Spree.t('order_mailer.confirm_email.total', :total => @order.display_total) %>
+
+							<p>You will receive another email when your order has shipped (orders generally ship within 48
+
+								business hours). For full policy information, please see the terms and conditions section. 
+
+								Follow the progress of your order and find more information in<a href="www.shoplavazza.com/account" style="color:#000; text-decoration:none; font-weight:bold;">your account page</a>.</p>
+
+							</td>
+							
+
+							<td width="10px">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+							</td>
+
+
+
+						</tr>
+						
+
+						<tr>
+							<td colspan="5">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="5">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="5">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="5">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="5">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="5">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td colspan="5" style="padding:0px;">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/btm_swoosh.jpg"/>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td colspan="5" style="background-color:#000000;">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
+							</td>
+						</tr>
+
+						<tr style="color:#ffffff; background-color:#000000; font-size:12px;">	
+							<td style="">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
+							</td>
+
+							<td valign="top">
+								<ul style="margin:0px; padding:0px; display:inline; list-style-type:none;font-size:11px">
+									<li style="font-weight:bold; font-size:12px;"><a href="http://www.shoplavazza.com/t/categories/coffee" style="text-decoration:none; color:#fff">SHOP COFFEE</a></li>
+									<li><a href="http://www.shoplavazza.com/t/categories/coffee/drip" style="text-decoration:none; color:#fff">Drip</a></li>
+									<li><a href="http://www.shoplavazza.com/t/categories/coffee/espresso" style="text-decoration:none; color:#fff">Espresso</a></li>
+									<li><a href="http://www.shoplavazza.com/t/categories/coffee/single-serve" style="text-decoration:none; color:#fff">Single Serve</a></li>
+								</ul>
+							</td>
+							<td valign="top">
+								<ul style="margin:0px; padding:0px; display:inline; list-style-type:none;font-size:11px">
+									<li style="font-weight:bold; font-size:12px;">SHOP COLLECTIONS</a></li>
+									<li><a href="http://www.shoplavazza.com/t/collections/the-drip-coffee-experience" style="text-decoration:none; color:#fff">The Drip Experience</a></li>
+									<li><a href="http://www.shoplavazza.com/t/collections/the-espresso-coffee-experience" style="text-decoration:none; color:#fff">The Espresso Experience</a></li>
+								</ul>
+							</td>
+
+							<td>
+								&nbsp;
+							</td>
+							<td width="10px">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="5" style="background-color:#000000;">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
+							</td>
+						</tr>
+
+						<tr style="color:#ffffff; background-color:#000000; font-size:12px;">	
+							<td style="">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
+							</td>
+
+							<td valign="top">
+								<ul style="margin:0px; padding:0px; display:inline; list-style-type:none;font-size:11px">
+									<li style="font-weight:bold; font-size:12px;"><a href="http://www.shoplavazza.com/t/categories/equipment" style="text-decoration:none; color:#fff">SHOP EQUIPMENT</li>
+									<li><a href="http://www.shoplavazza.com/t/categories/equipment/coffee-makers" style="text-decoration:none; color:#fff">Coffee Makers</a></li>
+									<li><a href="http://www.shoplavazza.com/t/categories/equipment/espresso-machines" style="text-decoration:none; color:#fff">Espresso Machines</a></li>
+									<li><a href="http://www.shoplavazza.com/t/categories/equipment/single-serve" style="text-decoration:none; color:#fff">Single Serve</a></li>
+								</ul>
+							</td>
+							<td valign="top">
+								<ul style="margin:0px; padding:0px; display:inline; list-style-type:none;font-size:11px">
+									<li style="font-weight:bold; font-size:12px;"><a href="http://www.shoplavazza.com/t/categories/drinkware" style="text-decoration:none; color:#fff">SHOP DRINKWARE</a></li>
+									<li style="font-weight:bold; font-size:12px;"><a href="http://www.shoplavazza.com/t/categories/gifts-slash-extras" style="text-decoration:none; color:#fff">SHOP GIFTS/EXTRAS</a></li>
+								</ul>
+							</td>
+
+							<td valign="bottom" style="text-align:right;">
+								<ul style="margin:0px; padding:0px; display:inline; list-style-type:none;">
+									<li style="display:inline; padding-left:7px"><a href="https://www.facebook.com/LavazzaUSA" border="0"><img border="0" alt="facebook" src="https://s3.amazonaws.com/lavazza_assets/emails/fb.png"/></a></li>	
+									<li style="display:inline; padding-left:7px"><a href="https://twitter.com/LavazzaUSA" border="0"><img border="0" alt="twitter" src="https://s3.amazonaws.com/lavazza_assets/emails/tw.png"/></a></li>
+									<li style="display:inline; padding-left:7px"><a href="http://instagram.com/lavazzaus" border="0"><img border="0" alt="instagram" src="https://s3.amazonaws.com/lavazza_assets/emails/ig.png"/></a></li>
+									<li style="display:inline; padding-left:7px"><a href="http://pinterest.com/lavazzausa/" border="0"><img border="0" alt="pinterest" src="https://s3.amazonaws.com/lavazza_assets/emails/pi.png"/></a></li>
+								</ul>	<br/>
+								<span><a href="http://www.shoplavazza.com/pages/terms-and-conditions" style="color:#ffffff; text-decoration:none; text-transform:uppercase;" title="terms & conditions">terms & conditions</a>
+								</td>
+								<td width="10px">
+									<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="5" style="background-color:#000000;">
+									<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="5" style="background-color:#000000;">
+									<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
+								</td>
+							</tr>
+							
+
+						</table>
+						
+
+
+
+
+
+					</td>
+				</tr>
+			</table>
+
+
+

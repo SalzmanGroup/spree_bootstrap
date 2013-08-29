@@ -10,7 +10,7 @@
 
     
     <% if promotion.products.any? %>
-    <h5>Elligble Products</h5>
+    <h5>Eligible Products</h5>
     <ul class="promotions">
       <% promotion.products.each do |product| %>
       <li><%= link_to product.name, product_path(product) %></li>

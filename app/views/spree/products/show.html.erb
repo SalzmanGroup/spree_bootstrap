@@ -35,11 +35,7 @@
       </h1>
 
       
-      <% if @product.reviews.any? %>
       <%= render partial: 'spree/reviews/stars', locals: { stars: @product.stars } %> 
-      <% else %>
-      <p class="muted">This product has not yet been reviewed</p>
-      <% end %>
       
 
       <ul class="links-list">

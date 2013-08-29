@@ -32,9 +32,7 @@ paginated_products ||= products
             <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
           </h3>
           <div class="product-review-small">
-            <% if product.reviews.any? %>
-              <%= render partial: 'spree/reviews/stars', locals: { stars: product.stars } %> 
-            <% end %>
+            <%= render partial: 'spree/reviews/stars', locals: { stars: product.stars } %> 
           </div>
 
           <div class="area-cart">

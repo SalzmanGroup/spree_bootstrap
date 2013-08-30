@@ -2053,10 +2053,12 @@ ol#checkout-step-address, ol#checkout-step-delivery, ol#checkout-step-payment, o
 
 .progress-steps li {
 	color: #727276;
+	display: block;
 	float: left;
 	font-weight: bold;
 	margin-right: 9px;
-	padding: 3px 17px;
+	padding: 5px 30px;
+	text-align: center;
 	text-transform: uppercase;
 }
 

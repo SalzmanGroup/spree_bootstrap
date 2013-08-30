@@ -49,42 +49,43 @@
 				<tr>
 
 
-					<td colspan="3">
+					<td colspan="6">
 						<%= Spree.t('shipment_mailer.shipped_email.dear_customer') %>
 
 					</td>
 				</tr>
 				<tr>
-					<td colspan="3">
+					<td colspan="6">
 
-						<p>This email is a notification that your Lavazza Store order has been shipped and is on its way!
+						<p>
+							This email is a confirmation from the Lavazza Store that your order has been processed. You will
 
-							Follow the progress of your order and find more information on <a href="https://www.shoplavazza.com/account" style="color:#000; text-decoration:none; font-weight:bold;">your account page.</a></p>
+							find all the details of your purchase listed below.</p>
 						</td>
 					</tr>
 
 					<tr>
-						<td colspan="3">
+						<td colspan="6">
 							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
 						</td>
 					</tr>
 
 
 					<tr>
-						<td colspan="3">
+						<td colspan="6">
 
-							<%= Spree.t('shipment_mailer.shipped_email.shipment_summary') %>
+							<%= Spree.t('order_mailer.confirm_email.order_summary') %>
 							
 						</td>
 					</tr>
 
 					<tr>
-						<td colspan="3">
+						<td colspan="6">
 							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
 						</td>
 					</tr>
 					<tr>
-						<td colspan="3">
+						<td colspan="6">
 							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
 						</td>
 					</tr>
@@ -99,46 +100,88 @@
 						<td style="font-weight:bold; text-transform:uppercase;">
 							Options
 						</td>
+						<td style="font-weight:bold; text-transform:uppercase;">
+							Quantity
+						</td>
+						<td style="font-weight:bold; text-transform:uppercase;">
+							Price
+						</td>
+						<td style="font-weight:bold; text-transform:uppercase;">
+							Total
+						</td>
 					</tr>
 
-					<% @shipment.manifest.each do |item| %>
+					<% @order.line_items.each do |item| %>
 					<tr>
 						<td>
-							<%= item.variant.sku %> 
+							<%= item.variant.sku %>
 						</td>
 						<td>
-							<%= item.variant.product.name %> 
+							<%= raw(item.variant.product.name) %> 
 						</td>
 						<td>
-
-							<%= item.variant.options_text %>
+							<%= raw(item.variant.options_text) -%> 
+						</td>
+						<td>
+							<%=item.quantity%>
+						</td>
+						<td>
+							<%= item.single_money %>
+						</td>
+						<td>
+							<%= item.display_amount %>
 						</td>
 					</tr>
 					<% end %>
 					
 					<tr>
-						<td colspan="3">
-							<%= Spree.t('shipment_mailer.shipped_email.track_information', :tracking => @shipment.tracking)     if @shipment.tracking %>
+						<td colspan="6">
+							<%= Spree.t('order_mailer.confirm_email.subtotal', :subtotal => @order.display_item_total) %>
 						</td>
 					</tr>
 					<tr>
-						<td colspan="3">
-							<%= Spree.t('shipment_mailer.shipped_email.track_link',        :url      => @shipment.tracking_url) if @shipment.tracking_url %>
+						<td colspan="6">
+								<% @order.adjustments.eligible.each do |adjustment| %>
+							<%= raw(adjustment.label) %> <%= adjustment.display_amount %>
+							<% end %>
 						</td>
 					</tr>
-			<tr>
-							<td colspan="3">
-								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
-							</td>
-						</tr>
-									<tr>
-							<td colspan="3">
-								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
-							</td>
-						</tr>
+					<tr>
+						<td colspan="6">
+							<%= Spree.t('order_mailer.confirm_email.total', :total => @order.display_total) %>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+						</td>
+					</tr>
+<tr>
+						<td colspan="6">
+							<p>You will receive another email when your order has shipped (orders generally ship within 48
 
+								business hours). For full policy information, please see the terms and conditions section. 
+
+								Follow the progress of your order and find more information in <a href="www.shoplavazza.com/account" style="color:#000; text-decoration:none; font-weight:bold;">your account page</a>.</p>
+						</td>
+					</tr>
+						<tr>
+						<td colspan="6">
+							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+						</td>
+					</tr>
 					<tr>
-						<td colspan="3">
+						<td colspan="6">
+							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
 							<p>Grazie for shopping with Lavazza!<br/>
 
 								The Lavazza Team
@@ -187,11 +230,6 @@
 						</td>
 					</tr>
 
-		<tr>
-		<td colspan="5" style="padding:0px; background-color:#000000;">
-				<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/btm_swoosh.jpg"/>
-			</td>
-		</tr>
 
 
 					<tr>

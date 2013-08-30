@@ -12,7 +12,7 @@
 
 				<tr>
 					<td width="10" style="background-color:#000000;">
-						<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/> 
+						<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/black_spacer.gif"/>
 					</td>
 
 					<td colspan="2" style="background-color:#000000;">
@@ -41,29 +41,172 @@
 						<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
 					</td>
 
-					<td colspan="3" style="padding-right:15px; padding-top:10px; font-size:14px;">
-						<p>Dear Customer,</p>
+				</tr>
 
-						<p>We are sending you this email in response to the forgotten password notification we received
-							regarding your Lavazza Store account.</p>
+			</table>
 
+			<table width="600" align="center" style="border-collapse:collapse; text-align:left; background-color:#ffffff; color:#666666; font-family: Lucida Grande, Lucida Sans Unicode, Sans-Serif; padding:0px;">
+
+
+	<tr>
+
+
+					<td colspan="6">
+						<%= Spree.t('order_mailer.confirm_email.dear_customer') %>
+
+					</td>
+				</tr>
+				
+				<tr>
+
+
+					<td colspan="6">
+						<%= Spree.t('shipment_mailer.shipped_email.dear_customer') %>
+
+					</td>
+				</tr>
+				<tr>
+					<td colspan="6">
+
+						<p>
+						<%= Spree.t('order_mailer.cancel_email.instructions') %></p>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="6">
+							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+						</td>
+					</tr>
+
+
+					<tr>
+						<td colspan="6">
+
+						<p><%= Spree.t('order_mailer.cancel_email.order_summary_canceled') %></p>
+							
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="6">
+							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+						</td>
+					</tr>
+
+					<tr>
+						<td style="font-weight:bold; text-transform:uppercase;">
+							SKU
+						</td>
+						<td style="font-weight:bold; text-transform:uppercase;">
+							Product
+						</td>
+						<td style="font-weight:bold; text-transform:uppercase;">
+							Options
+						</td>
+						<td style="font-weight:bold; text-transform:uppercase;">
+							Quantity
+						</td>
+						<td style="font-weight:bold; text-transform:uppercase;">
+							Price
+						</td>
+						<td style="font-weight:bold; text-transform:uppercase;">
+							Total
+						</td>
+					</tr>
+
+					<% @order.line_items.each do |item| %>
+					<tr>
+						<td>
+							<%= item.variant.sku %>
+						</td>
+						<td>
+							<%= raw(item.variant.product.name) %> 
+						</td>
+						<td>
+							<%= raw(item.variant.options_text) -%> 
+						</td>
+						<td>
+							<%=item.quantity%>
+						</td>
+						<td>
+							<%= item.single_money %>
+						</td>
+						<td>
+							<%= item.display_amount %>
+						</td>
+					</tr>
+					<% end %>
+					
+					<tr>
+						<td colspan="6">
+							<%= Spree.t('order_mailer.cancel_email.subtotal', :subtotal => @order.display_item_total) %>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<% @order.adjustments.eligible.each do |adjustment| %>
+							<%= raw(adjustment.label) %> <%= adjustment.display_amount %>
+							<% end %>
+
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<%= Spree.t('order_mailer.cancel_email.total', :total => @order.display_total) %>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<p>In the event that there was something wrong with the item, or if you were dissatisfied for any
+
+reason, please notify us in the field provided. We will address all problems immediately, so that 
+
+we can improve our order process and make your Lavazza Store experience as enjoyable as
+
+possible!</p>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="6">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="6">
+								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="6">
 							<p>
-								Please click <a href="<%= @edit_password_reset_url %>" style="color:#000; text-decoration:none; font-weight:bold;">here</a>, to reset your password </p>
+Grazie!<br/>
+The Lavazza Team
+</p>
 
-
-								<p>
-									If you did not send a forgotten password notification to the Lavazza Store, another party may
-
-									have tried to access your account. If this is the case, please <a href="www.shoplavazza.com/contact-us" style="color:#000; text-decoration:none; font-weight:bold;">contact us</a> so we can address the situation as quickly as possible.
-								</p>
-
-								<p>
-									Grazie!<br/>
-									The Lavazza Team
-								</p>
 							</td>
 
+						</tr>
 
+					</table>
+
+					<table  width="600" align="center" style="border-collapse:collapse; text-align:left; background-color:#ffffff; color:#666666; font-family: Lucida Grande, Lucida Sans Unicode, Sans-Serif; padding:0px;">
+						<tr>
 							<td width="10">
 								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
 							</td>
@@ -98,18 +241,7 @@
 								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
 							</td>
 						</tr>
-						<tr>
-							<td colspan="5">
-								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/white_spacer.gif"/>
-							</td>
-						</tr>
 
-
-						<tr>
-							<td colspan="5" style="padding:0px; background-color:#000000;">
-								<img border="0" src="https://s3.amazonaws.com/lavazza_assets/emails/btm_swoosh.jpg"/>
-							</td>
-						</tr>
 
 
 						<tr>

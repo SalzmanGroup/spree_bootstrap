@@ -4,7 +4,7 @@
 
 This email is a notification that your Lavazza Store order has been shipped and is on its way!
 
-Follow the progress of your order and find more information on your account page (https://www.shoplavazza.com/account).
+Follow the progress of your order and find more information on your account page.
 
 =========================================================================
 <%= Spree.t('shipment_mailer.shipped_email.shipment_summary') %>

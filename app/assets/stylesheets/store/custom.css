@@ -2070,6 +2070,12 @@ ol#checkout-step-address, ol#checkout-step-delivery, ol#checkout-step-payment, o
 
 #billing legend, #shipping legend { width: auto; }
 
+
+
+#billing legend, #shipping legend, #shipping_method legend, #payment legend, #order_details legend, #order_summary legend {
+	font-size:19px;
+}
+
 .temp{
 	float: left !important;
 	margin-left: 15px;

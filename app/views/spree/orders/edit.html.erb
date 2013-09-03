@@ -66,9 +66,9 @@
 <div class="span4 offset8" style="margin-top:15px">
     <%= form_tag spree.empty_cart_path, :method => :put do %>
     <span id="clear_cart_link" data-hook>
-      <span class="span6"><%= submit_tag Spree.t(:empty_cart), :class => 'span12 btn button' %></span>
+      <span class="span6" style="position: relative; top: -2px;"><%= submit_tag Spree.t(:empty_cart), :class => 'span12 btn button' %></span>
       
-       <span class="span6" style=" display:block; text-align:center;"><%= link_to Spree.t(:continue_shopping), spree.products_path, :class => 'span12 btn button' %></span>
+       <span class="span6" style=" display:block; text-align:center; "><%= link_to Spree.t(:continue_shopping), spree.products_path, :class => 'span12 btn button' %></span>
     </span>
     <% end %>
   </div>       </div> 

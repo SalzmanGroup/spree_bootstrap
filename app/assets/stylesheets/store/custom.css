@@ -2561,3 +2561,7 @@ ul.promotions li:hover{
 	z-index: -1;
 }
 
+
+body#product-details #products span.price {
+	display:none;
+}

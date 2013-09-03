@@ -21,7 +21,7 @@ module Spree
     end
 
     def get_reviews
-      Spree::Review.last(5)
+      Spree::Review.approved.last(5)
     end
 
     def social_network_link network

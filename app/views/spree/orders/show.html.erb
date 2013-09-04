@@ -31,7 +31,15 @@
           return false;">
         <i class="icon-twitter-sign"></i>
       </a>
-     
+      <a href="#" 
+        onclick="
+          window.open(
+            'https://plus.google.com/share?url='+encodeURIComponent('<%= root_url %>'), 
+            'twitter-share-dialog', 
+            'width=626,height=436'); 
+          return false;">
+        <i class="icon-google-plus-sign"></i>
+      </a>
     </p>
     <p data-hook="links">
       <%= link_to Spree.t(:back_to_store), spree.root_path, :class => "button" %>

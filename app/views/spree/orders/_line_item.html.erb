@@ -8,8 +8,7 @@
   </td>
   <td class="cart-item-description" data-hook="cart_item_description">
     <h2 style="margin-bottom:5px;"><%= link_to variant.product.name, product_path(variant.product) %> <%= stock_status variant %></h2>
-    <h3><strong><%= variant.options_text %></strong><br/>
-    <%= line_item_description(variant) %></h3>
+    <h3><strong><%= variant.options_text %></strong><br/></h3>
   </td>
   <td class="cart-item-price" data-hook="cart_item_price">
     <span class="price"><%= line_item.single_money.to_html %></span>
